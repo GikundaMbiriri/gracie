@@ -40,7 +40,7 @@ const home = () => {
                   alt="First slide"
                   style={{ height: "150px" }}
                 />
-                <div class="carousel-caption ">
+                <div className="carousel-caption ">
                   <h5>Hello there</h5>
                   <p>we write code</p>
                 </div>
@@ -52,7 +52,7 @@ const home = () => {
                   alt="Second slide"
                   style={{ height: "150px" }}
                 />
-                <div class="carousel-caption ">
+                <div className="carousel-caption ">
                   <h5>Hello there</h5>
                   <p>we write code</p>
                 </div>
@@ -64,7 +64,7 @@ const home = () => {
                   alt="Third slide"
                   style={{ height: "150px" }}
                 />
-                <div class="carousel-caption ">
+                <div className="carousel-caption ">
                   <h5>Hello there</h5>
                   <p>we write code</p>
                 </div>
