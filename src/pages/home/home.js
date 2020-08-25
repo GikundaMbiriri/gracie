@@ -6,10 +6,10 @@ import pic5 from "../../images/pic5.jpg";
 import "./home.css";
 const home = () => {
   return (
-    <div className="container">
+    <div className="container" style={{ margin: "0px" }}>
       <div className="row">
-        <div className="col-sm" style={{ marginBottom: "10px" }}>
-          <img src={homepage} alt="homie" />
+        <div className="col-sm" id="p">
+          <img src={homepage} alt="homie" style={{ height: "80%" }} />
         </div>
         <div className="col-sm">
           <div
