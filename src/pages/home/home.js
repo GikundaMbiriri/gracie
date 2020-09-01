@@ -15,8 +15,10 @@ const home = () => {
           <img
             src={homepage}
             alt="homie"
-            height="80%"
-            style={{ width: ww > 600 ? "100%" : ww }}
+            height={ww > 600 ? "500px" : "150px"}
+            style={{
+              width: ww > 600 ? "100%" : ww,
+            }}
           />
         </div>
         <div className="col-sm">
