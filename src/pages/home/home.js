@@ -126,173 +126,213 @@ const home = () => {
               <Btn />
             </div>
           </div>
-          <div
-            id="carouselExampleIndicators"
-            className="carousel slide"
-            data-ride="carousel"
-            style={{ padding: "10px", width: "100%" }}
-          >
-            <ol className="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                className="active"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="1"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-            </ol>
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  className="d-block w-100"
-                  src={pic1}
-                  alt="First slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>we write code</p>
+          <div className="card">
+            <div
+              id="carouselExampleIndicators"
+              className="carousel slide"
+              data-ride="carousel"
+              style={{ padding: "10px", width: "100%" }}
+            >
+              <ol className="carousel-indicators">
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="0"
+                  className="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src={pic1}
+                    alt="First slide"
+                    style={{ height: "150px" }}
+                  />
+                  <div className="carousel-caption ">
+                    <h5>Hello there</h5>
+                    <p>we write code</p>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src={pic2}
+                    alt="Second slide"
+                    style={{ height: "150px" }}
+                  />
+                  <div className="carousel-caption ">
+                    <h5>Hello there</h5>
+                    <p>we write code</p>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src={pic5}
+                    alt="Third slide"
+                    style={{ height: "150px" }}
+                  />
+                  <div className="carousel-caption ">
+                    <h5>Hello there</h5>
+                    <p>we write code</p>
+                  </div>
                 </div>
               </div>
-              <div className="carousel-item">
-                <img
-                  className="d-block w-100"
-                  src={pic2}
-                  alt="Second slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>we write code</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  className="d-block w-100"
-                  src={pic5}
-                  alt="Third slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>we write code</p>
-                </div>
-              </div>
+              <a
+                className="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a
+                className="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Next</span>
+              </a>
             </div>
-            <a
-              className="carousel-control-prev"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="prev"
+            <p className="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-evenly",
+                marginBottom: "5px",
+              }}
             >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="sr-only">Previous</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="sr-only">Next</span>
-            </a>
+              <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+                Read more
+              </a>
+
+              <Btn />
+            </div>
           </div>
-          <div
-            id="carouselExampleIndicators"
-            className="carousel slide"
-            data-ride="carousel"
-            style={{ padding: "10px", width: "100%" }}
-          >
-            <ol className="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                className="active"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="1"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-            </ol>
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  className="d-block w-100"
-                  src={pic1}
-                  alt="First slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>we write code</p>
+          <div className="card">
+            <div
+              id="carouselExampleIndicators"
+              className="carousel slide"
+              data-ride="carousel"
+              style={{ padding: "10px", width: "100%" }}
+            >
+              <ol className="carousel-indicators">
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="0"
+                  className="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    className="d-block w-100"
+                    src={pic1}
+                    alt="First slide"
+                    style={{ height: "150px" }}
+                  />
+                  <div className="carousel-caption ">
+                    <h5>Hello there</h5>
+                    <p>we write code</p>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src={pic2}
+                    alt="Second slide"
+                    style={{ height: "150px" }}
+                  />
+                  <div className="carousel-caption ">
+                    <h5>Hello there</h5>
+                    <p>we write code</p>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <img
+                    className="d-block w-100"
+                    src={pic5}
+                    alt="Third slide"
+                    style={{ height: "150px" }}
+                  />
+                  <div className="carousel-caption ">
+                    <h5>Hello there</h5>
+                    <p>we write code</p>
+                  </div>
                 </div>
               </div>
-              <div className="carousel-item">
-                <img
-                  className="d-block w-100"
-                  src={pic2}
-                  alt="Second slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>we write code</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  className="d-block w-100"
-                  src={pic5}
-                  alt="Third slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>we write code</p>
-                </div>
-              </div>
+              <a
+                className="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a
+                className="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Next</span>
+              </a>
             </div>
-            <a
-              className="carousel-control-prev"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="prev"
+            <p className="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-evenly",
+                marginBottom: "5px",
+              }}
             >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="sr-only">Previous</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="sr-only">Next</span>
-            </a>
+              <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+                Read more
+              </a>
+
+              <Btn />
+            </div>
           </div>
         </div>
       </div>
