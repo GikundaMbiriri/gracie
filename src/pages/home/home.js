@@ -5,7 +5,7 @@ import pic1 from "../../images/pic1.jpg";
 import pic2 from "../../images/pic2.jpg";
 import pic5 from "../../images/pic5.jpg";
 import "./home.css";
-import { WhatsappShareButton } from "react-share";
+
 const home = () => {
   const ww = window.screen.width;
   return (
