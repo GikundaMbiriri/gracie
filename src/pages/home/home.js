@@ -24,8 +24,8 @@ const home = () => {
         <div className="col-sm">
           <div className="card">
             <div
-              id="carouselExampleIndicators"
-              className="carousel slide"
+              id="carouselExampleFade"
+              className="carousel slide carousel-fade"
               data-ride="carousel"
               style={{ padding: "10px", width: "100%" }}
             >
