@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Btn from "../../components/Modal/Index";
 import homepage from "../../images/pic1.jpg";
 import pic1 from "../../images/pic1.jpg";
 import pic2 from "../../images/pic2.jpg";
 import pic5 from "../../images/pic5.jpg";
-import "./home.css";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { getScreams } from "../../redux/actions/dataAction";
 
-const home = () => {
+const Home = (props) => {
+  useEffect(() => {
+    props.getScreams();
+  }, []);
   const ww = window.screen.width;
+  const { screams, loading } = props.data;
+  const p = Object.keys(screams);
+  console.log(p);
   return (
     <div className="container" style={{ margin: "0px" }}>
       <div className="row">
@@ -340,4 +348,12 @@ const home = () => {
   );
 };
 
-export default home;
+Home.propTypes = {
+  getScreams: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+};
+const mapStateToProps = (state) => ({
+  data: state.data,
+});
+
+export default connect(mapStateToProps, { getScreams })(Home);

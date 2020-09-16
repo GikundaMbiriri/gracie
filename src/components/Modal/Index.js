@@ -137,7 +137,7 @@ const Index = () => {
                   aria-describedby="inputGroup-sizing-default"
                   style={{ height: "40px" }}
                 />{" "}
-                <button className="cpy" onclick="myFunction()">
+                <button className="cpy" onClick="myFunction()">
                   <i className="far fa-clone"></i>
                 </button>{" "}
               </div>
