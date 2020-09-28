@@ -1,8 +1,10 @@
 {
+  "homepage": "http://GikundaMbiriri.github.io/gracie",
   "name": "gracie",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,6 +15,7 @@
     "axios": "^0.18.0",
     "dayjs": "^1.8.31",
     "formik": "^1.5.8",
+    "gh-pages": "^3.1.0",
     "highlight.js": "^9.16.2",
     "jwt-decode": "^2.2.0",
     "moment": "^2.24.0",
@@ -30,6 +33,7 @@
     "redux-form": "^8.2.6",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
+    "save-dev": "0.0.1-security",
     "share-buttons": "^1.6.0",
     "socket.io-client": "^2.2.0",
     "yup": "^0.27.0"
@@ -38,7 +42,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
