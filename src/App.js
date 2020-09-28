@@ -33,11 +33,11 @@ function App() {
           <Navbar />
 
           <Switch>
-            <Route exact path="/" component={home} />
-            <Route exact path="/tiny" component={Tiny} />
-            <Route exact path="/solo/:id" component={Solo} />
+            <Route exact path="/gh-pages-url" component={home} />
+            <Route exact path="/gh-pages-url/tiny" component={Tiny} />
+            <Route exact path="/gh-pages-url/solo/:id" component={Solo} />
 
-            <Route exact path="/login" component={login} />
+            <Route exact path="/gh-pages-url/login" component={login} />
           </Switch>
         </Router>
       </Provider>
