@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gracie/static/css/main.d5ce1020.chunk.css",
+    "main.js": "/gracie/static/js/main.53c65e2b.chunk.js",
+    "main.js.map": "/gracie/static/js/main.53c65e2b.chunk.js.map",
+    "runtime~main.js": "/gracie/static/js/runtime~main.9d0acb66.js",
+    "runtime~main.js.map": "/gracie/static/js/runtime~main.9d0acb66.js.map",
+    "static/js/2.34a4bfbb.chunk.js": "/gracie/static/js/2.34a4bfbb.chunk.js",
+    "static/js/2.34a4bfbb.chunk.js.map": "/gracie/static/js/2.34a4bfbb.chunk.js.map",
+    "index.html": "/gracie/index.html",
+    "precache-manifest.e6721a7afd6a7ef138608e4cedaf3113.js": "/gracie/precache-manifest.e6721a7afd6a7ef138608e4cedaf3113.js",
+    "service-worker.js": "/gracie/service-worker.js",
+    "static/css/main.d5ce1020.chunk.css.map": "/gracie/static/css/main.d5ce1020.chunk.css.map"
+  }
+}
