@@ -11,7 +11,10 @@ import axios from "axios";
 export const loginUser = (userData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
-    .post("/login", userData)
+    .post(
+      "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/login",
+      userData
+    )
     .then((res) => {
       const FBIdToken = `Bearer ${res.data.token}`;
       localStorage.setItem("FBIdToken", FBIdToken);

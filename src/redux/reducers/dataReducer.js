@@ -3,6 +3,7 @@ import {
   LIKE_SCREAM,
   UNLIKE_SCREAM,
   LOADING_DATA,
+  LOADING_UI,
   DELETE_SCREAM,
   POST_SCREAM,
   SET_SCREAM,
@@ -58,6 +59,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         loading: false,
+      };
+    case LOADING_UI:
+      return {
+        ...state,
+        loading: true,
       };
     case CLEAR_DATA:
       return {

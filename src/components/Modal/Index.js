@@ -24,7 +24,7 @@ const Index = () => {
       <div
         className="modal fade"
         id="exampleModal"
-        tabindex="-1"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -137,7 +137,7 @@ const Index = () => {
                   aria-describedby="inputGroup-sizing-default"
                   style={{ height: "40px" }}
                 />{" "}
-                <button className="cpy" onClick="myFunction()">
+                <button className="cpy" onClick={() => "myFunction()"}>
                   <i className="far fa-clone"></i>
                 </button>{" "}
               </div>

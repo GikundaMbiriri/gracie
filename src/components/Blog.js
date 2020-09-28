@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link } from "react-router-dom";
+import Btn from "./Modal/Index";
+import Solo from "../pages/solo";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -9,7 +11,11 @@ import Typography from "@material-ui/core/Typography";
 import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { likeScream, unlikeScream } from "../redux/actions/dataAction";
+import {
+  likeScream,
+  unlikeScream,
+  getScream,
+} from "../redux/actions/dataAction";
 import MyButton from "../util/MyButton";
 import { Chat as ChatIcon } from "@material-ui/icons"; //
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
@@ -66,6 +72,7 @@ export class Blog extends Component {
         credentials: { name, email },
       },
     } = this.props;
+    const kk = `/solo/${blogId}`;
     const likeButton = !authenticated ? (
       <MyButton tip="Like">
         <Link to="/login">
@@ -87,7 +94,110 @@ export class Blog extends Component {
       ) : null;
     return (
       <>
-        <Card className={classes.card}>
+        <div className="card">
+          <div
+            id="carouselExampleFade"
+            className="carousel slide carousel-fade"
+            data-ride="carousel"
+            style={{ padding: "10px", width: "100%" }}
+          >
+            <ol className="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                className="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+            </ol>
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img
+                  className="d-block w-100"
+                  src={image}
+                  alt="First slide"
+                  style={{ height: "150px" }}
+                />
+                <div className="carousel-caption ">
+                  <h5>Hello there</h5>
+                  <p>{catchy}</p>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <img
+                  className="d-block w-100"
+                  src={image}
+                  alt="Second slide"
+                  style={{ height: "150px" }}
+                />
+                <div className="carousel-caption ">
+                  <h5>Hello there</h5>
+                  <p>{catchy}</p>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <img
+                  className="d-block w-100"
+                  src={image}
+                  alt="Third slide"
+                  style={{ height: "150px" }}
+                />
+                <div className="carousel-caption ">
+                  <h5>Hello there</h5>
+                  <p>{catchy}</p>
+                </div>
+              </div>
+            </div>
+            <a
+              className="carousel-control-prev"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Previous</span>
+            </a>
+            <a
+              className="carousel-control-next"
+              href="#carouselExampleIndicators"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Next</span>
+            </a>
+          </div>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              marginBottom: "5px",
+            }}
+          >
+            <Link to={kk}>
+              <button> Read more</button>
+            </Link>
+            <Btn />
+          </div>
+        </div>
+        {/* <Card className={classes.card}>
           <CardMedia
             src={image}
             title="Profile image"
@@ -111,13 +221,14 @@ export class Blog extends Component {
             <span>{commentCount} comments</span>
             {deleteButton}
           </CardContent>
-        </Card>
+        </Card> */}
       </>
     );
   }
 }
 Blog.propTypes = {
   likeScream: PropTypes.func.isRequired,
+
   unlikeScream: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
   scream: PropTypes.object.isRequired,
@@ -129,7 +240,9 @@ const mapStateToProps = (state) => ({
 const mapActionsToProps = {
   likeScream,
   unlikeScream,
+  getScream,
 };
+
 export default connect(
   mapStateToProps,
   mapActionsToProps

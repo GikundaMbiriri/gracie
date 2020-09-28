@@ -13,10 +13,23 @@ import {
   CLEAR_DATA,
 } from "../types";
 import axios from "axios";
+export const getScream = (blogId) => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  axios
+    .get(
+      `https://us-central1-zigzag-d2feb.cloudfunctions.net/api/one/${blogId}`
+    )
+    .then((res) => {
+      dispatch({ type: SET_SCREAM, payload: res.data });
+      dispatch({ type: STOP_LOADING_UI });
+    })
+    .catch((err) => console.log(err));
+};
+
 export const getScreams = () => (dispatch) => {
   dispatch({ type: LOADING_DATA });
   axios
-    .get("https://us-central1-zigzag-d2feb.cloudfunctions.net/api/topics")
+    .get("https://us-central1-zigzag-d2feb.cloudfunctions.net/api/screams")
     .then((res) => {
       dispatch({
         type: SET_SCREAMS,
@@ -30,6 +43,7 @@ export const getScreams = () => (dispatch) => {
       });
     });
 };
+
 export const likeScream = (blogId) => (dispatch) => {
   axios
     .get(
@@ -87,16 +101,4 @@ export const clearErrors = () => (dispatch) => {
 };
 export const clearData = () => (dispatch) => {
   dispatch({ type: CLEAR_DATA });
-};
-export const getScream = (blogId) => (dispatch) => {
-  dispatch({ type: LOADING_UI });
-  axios
-    .get(
-      `https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog/${blogId}`
-    )
-    .then((res) => {
-      dispatch({ type: SET_SCREAM, payload: res.data });
-      dispatch({ type: STOP_LOADING_UI });
-    })
-    .catch((err) => console.log(err));
 };
