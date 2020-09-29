@@ -4,6 +4,7 @@ import home from "./pages/home/home";
 import Tiny from "./pages/tiny";
 import Solo from "./pages/solo";
 import login from "./pages/login";
+import signup from "./pages/signup";
 import Navbar from "./nav/nav";
 import { Provider } from "react-redux";
 import store from "./redux/store";
@@ -36,6 +37,7 @@ function App() {
             <Route exact path="/" component={home} />
             <Route exact path="/tiny" component={Tiny} />
             <Route exact path="/solo/:id" component={Solo} />
+            <Route exact path="/signup" component={signup} />
 
             <Route exact path="/login" component={login} />
           </Switch>

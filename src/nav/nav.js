@@ -32,12 +32,14 @@ const navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="https://en.wikipedia.org/wiki/Kenya"
-              >
-                Disabled
-              </a>
+              <Link className="nav-link" to="/login">
+                login
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/signup">
+                sign up
+              </Link>
             </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">
