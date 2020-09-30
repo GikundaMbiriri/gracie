@@ -49,24 +49,21 @@ class Tiny extends React.Component {
   onCatchyChange = (event) => {
     this.setState({ catchy: event.target.value });
   };
-  handleImageChange = (event) => {
+  handleImageChange = async (event) => {
     const image = event.target.files[0];
     const formData = new FormData();
     formData.append("image", image, image.name);
 
-    setTimeout(() => {
-      axios
-        .post(
-          "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/upload",
-          formData
-        )
-        .then((response) => {
-          this.setState({ image: response.data });
+    axios
+      .post(
+        "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/upload",
+        formData
+      )
+      .then((response) => {
+        this.setState({ image: response.data });
 
-          console.log(response.data);
-        });
-    }, 2000);
-
+        console.log(response.data);
+      });
     //this.props.uploadImage(formData);
   };
   render() {
