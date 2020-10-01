@@ -10,33 +10,34 @@ class Tiny extends React.Component {
     catchy: "",
   };
   onSubmit = (event) => {
-    console.log("hut");
-    event.preventDefault();
+    var x = this.state;
+    var k = this.props.history;
+    setTimeout(function () {
+      console.log("hut");
+      event.preventDefault();
 
-    const variables = {
-      body: this.state.body,
-      topic: this.state.topic,
-      image: this.state.image,
-      catchy: this.state.catchy,
-    };
-    console.log(variables);
-    axios
-      .post(
-        "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog",
-        variables
-      )
-      .then((response) => {
-        if (response) {
-          console.log(response);
-
-          setTimeout(() => {
-            console.log("rre");
-          }, 2000);
-        }
-      })
-      .catch((err) => {
-        console.log(variables);
-      });
+      const variables = {
+        body: x.body,
+        topic: x.topic,
+        image: x.image,
+        catchy: x.catchy,
+      };
+      console.log(variables);
+      axios
+        .post(
+          "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog",
+          variables
+        )
+        .then((response) => {
+          if (response) {
+            console.log(response);
+          }
+          k.push("/");
+        })
+        .catch((err) => {
+          console.log(variables);
+        });
+    }, 5000);
   };
   handleEditorChange = (content, editor) => {
     console.log("Content was updated:", content);
@@ -245,6 +246,7 @@ class Tiny extends React.Component {
                   type="button"
                   className="btn btn-primary"
                   onClick={this.onSubmit}
+                  data-dismiss="modal"
                 >
                   Submit
                 </button>

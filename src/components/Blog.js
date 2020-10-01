@@ -175,10 +175,7 @@ export class Blog extends Component {
               <span className="sr-only">Next</span>
             </a>
           </div>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+          <p className="card-text">Am working on this text...</p>
           <div
             style={{
               display: "flex",

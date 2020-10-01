@@ -7,7 +7,7 @@ const Solo = (props) => {
     props.getScream(props.match.params.id);
   }, []);
 
-  return <div>{props.scream.body}</div>;
+  return <div dangerouslySetInnerHTML={{ __html: props.scream.body }} />;
 };
 const mapStateToProps = (state) => ({
   scream: state.data.scream,
