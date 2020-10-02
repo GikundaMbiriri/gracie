@@ -146,7 +146,7 @@ export class Blog extends Component {
                 />
                 <div className="carousel-caption ">
                   <h5>Hello there</h5>
-                  <p>{catchy}</p>
+                  <p>this is empty</p>
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@ export class Blog extends Component {
               <span className="sr-only">Next</span>
             </a>
           </div>
-          <p className="card-text">Am working on this text...</p>
+          <p className="card-text">{catchy}</p>
           <div
             style={{
               display: "flex",
