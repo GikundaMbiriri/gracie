@@ -1,0 +1,23 @@
+.Acard-body {
+  margin-top: 10px;
+  padding-right: 30px;
+}
+.card {
+  width: 270px;
+  height: 270px;
+}
+.card-img-top {
+  height: 100px;
+  width: 270px;
+  object-fit: cover;
+}
+@media screen and (max-width: 550px) {
+  .card-img-top {
+    width: 100vw;
+    height: 200px;
+  }
+  .card {
+    width: 100vw;
+    height: 350px;
+  }
+}

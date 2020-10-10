@@ -1,1 +1,25 @@
+.home {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+}
+img {
+  width: 50vw;
+  height: 75vh;
+}
 
+.card-dec {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 550px) {
+  .home {
+    display: block;
+  }
+  img {
+    width: 100vw;
+    height: 20vh;
+  }
+}

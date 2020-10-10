@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import homepage from "../../images/pic1.jpg";
-
+import './home.css'
 import PropTypes from "prop-types";
 import Blog from "../../components/Blog";
 import { connect } from "react-redux";
@@ -15,25 +15,23 @@ const Home = (props) => {
   const ks = Object.keys(screams);
   console.log(ks);
   return (
-    <div className="container" style={{ margin: "0px" }}>
-      <div className="row">
-        <div className="col-sm" id="p">
+      <div className="home">
+        <div className="side-img">
           <img
             src={homepage}
             alt="homie"
-            height={ww > 600 ? "500px" : "150px"}
-            style={{
-              width: ww > 600 ? "100%" : ww,
-            }}
+            // height={ww > 600 ? "500px" : "150px"}
+            // style={{
+            //   width: ww > 600 ? "100%" : ww,
+            // }}
           />
         </div>
-        <div className="col-sm">
+          <div className="card-dec">
           {ks.map((scream) => (
             <Blog key={screams[scream].blogId} scream={screams[scream]} />
           ))}{" "}
-        </div>
       </div>
-    </div>
+      </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './Blog.css'
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link } from "react-router-dom";
 import Btn from "./Modal/Index";
@@ -90,93 +90,12 @@ export class Blog extends Component {
       ) : null;
     return (
       <>
-        <div className="card">
-          <div
-            id="carouselExampleFade"
-            className="carousel slide carousel-fade"
-            data-ride="carousel"
-            style={{ padding: "10px", width: "100%" }}
-          >
-            <ol className="carousel-indicators">
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="0"
-                className="active"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="1"
-              ></li>
-              <li
-                data-target="#carouselExampleIndicators"
-                data-slide-to="2"
-              ></li>
-            </ol>
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  className="d-block w-100"
-                  src={image}
-                  alt="First slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>{catchy}</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  className="d-block w-100"
-                  src={image}
-                  alt="Second slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>{catchy}</p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  className="d-block w-100"
-                  src={image}
-                  alt="Third slide"
-                  style={{ height: "150px" }}
-                />
-                <div className="carousel-caption ">
-                  <h5>Hello there</h5>
-                  <p>this is empty</p>
-                </div>
-              </div>
-            </div>
-            <a
-              className="carousel-control-prev"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="sr-only">Previous</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#carouselExampleIndicators"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="sr-only">Next</span>
-            </a>
-          </div>
-          <p className="card-text">{catchy}</p>
-          <div
+      
+        <div className="card" >
+  <img className="card-img-top" src={image}    alt="..."/>
+  <div className="card-body">
+    <p className="card-text">{catchy}</p>
+    <div
             style={{
               display: "flex",
               flexDirection: "row",
@@ -189,7 +108,8 @@ export class Blog extends Component {
             </Link>
             <Btn />
           </div>
-        </div>
+  </div>
+</div>
         {/* <Card className={classes.card}>
           <CardMedia
             src={image}
