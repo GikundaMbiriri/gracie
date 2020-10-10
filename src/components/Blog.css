@@ -19,5 +19,6 @@
   .card {
     width: 100vw;
     height: 350px;
+    margin-bottom: 5px;
   }
 }
