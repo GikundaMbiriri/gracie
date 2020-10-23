@@ -8,7 +8,9 @@ import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { IconButton, Tooltip } from "@material-ui/core";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+//import { Carousel } from 'react-responsive-carousel';
+import CrossfadeImage from 'react-crossfade-image';
 import {
   likeScream,
   unlikeScream,
@@ -101,16 +103,15 @@ export class Blog extends Component {
       
         <div className="card" >
         <div className="slide-container">
-
-      <Zoom {...inds}>
-
+        <Link to={kk}> 
+<Zoom {...inds}>
       {image.map ((im,index)=>
       <div key={index}>
-           <Link to={kk}> <img key={index} className="card-img-top" src={im}    alt="..."/> </Link>
+          <img key={index} className="card-img-top" src={im}    alt="..."/> 
           </div>
          )}
-        
- </Zoom> </div>
+        </Zoom>
+ </Link> </div>
   <div className="card-body">
     <p className="card-text">{catchy}</p>
     <Btn />
