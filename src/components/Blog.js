@@ -19,7 +19,6 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import Favorite from "@material-ui/icons/Favorite";
 import relativeTime from "dayjs/plugin/relativeTime";
 import DeleteScream from "./DeleteScream";
-import 'react-slideshow-image/dist/styles.css'
 
 export class Blog extends Component {
   likedScream = () => {
