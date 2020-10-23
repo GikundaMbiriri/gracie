@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import 'react-slideshow-image/dist/styles.css'
+//import 'react-slideshow-image/dist/styles.css'
 import './Blog.scss'
 import { Link } from "react-router-dom";
 import Btn from "./Modal/Index";
-import { Zoom } from 'react-slideshow-image';
+//import { Zoom } from 'react-slideshow-image';
 import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
