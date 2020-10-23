@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import 'react-slideshow-image/dist/styles.css'
+//import 'react-slideshow-image/dist/styles.css'
 import './Blog.scss'
 import { Link } from "react-router-dom";
 import Btn from "./Modal/Index";
-import { Zoom } from 'react-slideshow-image';
+//import { Zoom } from 'react-slideshow-image';
 import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -104,10 +104,11 @@ export class Blog extends Component {
         <div className="card" >
         <div className="slide-container">
         <Link to={kk}> 
-        <Zoom {...inds}>
+        <div className="image-container">
       {image.map ((im,index)=>
           <img key={index} className="card-img-top" src={im}    alt="..."/> 
-         )}</Zoom>
+         )}
+        </div>
  </Link> </div>
   <div className="card-body">
     <p className="card-text">{catchy}</p>
