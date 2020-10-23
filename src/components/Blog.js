@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import 'react-slideshow-image/dist/styles.css'
 import './Blog.css'
 import { Link } from "react-router-dom";
 import Btn from "./Modal/Index";
