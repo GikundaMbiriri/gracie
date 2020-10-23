@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import './Blog.css'
-import withStyles from "@material-ui/core/styles/withStyles";
 import { Link } from "react-router-dom";
 import Btn from "./Modal/Index";
-
+import { Zoom } from 'react-slideshow-image';
 import dayjs from "dayjs";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import { IconButton, Tooltip } from "@material-ui/core";
+
 import {
   likeScream,
   unlikeScream,
@@ -18,18 +19,8 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import Favorite from "@material-ui/icons/Favorite";
 import relativeTime from "dayjs/plugin/relativeTime";
 import DeleteScream from "./DeleteScream";
+import 'react-slideshow-image/dist/styles.css'
 
-const styles = {
-  card: {
-    maxWidth: 400,
-    position: " relative",
-    padding: 30,
-    margin: 15,
-    minWidth: 345,
-  },
-  image: {},
-  content: {},
-};
 export class Blog extends Component {
   likedScream = () => {
     if (
@@ -39,7 +30,8 @@ export class Blog extends Component {
       )
     )
       return true;
-    else return false;
+    else
+    { return false;}
   };
   likeScream = () => {
     this.props.likeScream(this.props.scream.blogId);
@@ -69,20 +61,36 @@ export class Blog extends Component {
       },
     } = this.props;
     const kk = `/solo/${blogId}`;
+    const inds={
+      indicators:false,
+      arrows:false,
+      scale: 1.4
+     
+    }
+    //const images=Object.keys(image);
     const likeButton = !authenticated ? (
-      <MyButton tip="Like">
-        <Link to="/login">
+      <Tooltip title="like" >
+    <IconButton onClick={this.likeScream} >
+    <Link to="/login">
           <FavoriteBorder color="primary" />
         </Link>
-      </MyButton>
+    </IconButton>
+  </Tooltip>
+     
     ) : this.likedScream() ? (
-      <MyButton tip="Undo like" onClick={this.unlikeScream}>
+      <Tooltip title="Undo like" >
+        <IconButton onClick={this.unlikeScream} >
         <Favorite color="primary" />
-      </MyButton>
+
+        </IconButton>
+      </Tooltip>
     ) : (
-      <MyButton tip="like" onClick={this.likeScream}>
-        <FavoriteBorder color="primary" />
-      </MyButton>
+      <Tooltip title="like" >
+      <IconButton onClick={this.likeScream} >
+      <FavoriteBorder color="primary" />
+
+      </IconButton>
+    </Tooltip>
     );
     const deleteButton =
       authenticated && email === "petermbiriri8957@gmail.com" ? (
@@ -92,22 +100,37 @@ export class Blog extends Component {
       <>
       
         <div className="card" >
-  <img className="card-img-top" src={image}    alt="..."/>
+        <div className="slide-container">
+
+      <Zoom {...inds}>
+
+      {image.map ((im,index)=>
+      <div key={index}>
+           <Link to={kk}> <img key={index} className="card-img-top" src={im}    alt="..."/> </Link>
+          </div>
+         )}
+        
+ </Zoom> </div>
   <div className="card-body">
     <p className="card-text">{catchy}</p>
+    <Btn />
     <div
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-evenly",
-              marginBottom: "5px",
             }}
           >
-            <Link to={kk}>
-              <button> Read more</button>
-            </Link>
-            <Btn />
-          </div>
+          
+           
+           
+          <p>{likeButton} {likeCount}  </p>  
+          <div>
+          <MyButton tip="comments">
+              <ChatIcon color="primary" />
+            </MyButton>
+            <span>{commentCount} comments</span>
+            </div>
+            </div>
   </div>
 </div>
         {/* <Card className={classes.card}>
@@ -145,7 +168,6 @@ Blog.propTypes = {
   unlikeScream: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
   scream: PropTypes.object.isRequired,
-  classes: PropTypes.object.isRequired,
 };
 const mapStateToProps = (state) => ({
   user: state.user,
@@ -159,4 +181,4 @@ const mapActionsToProps = {
 export default connect(
   mapStateToProps,
   mapActionsToProps
-)(withStyles(styles)(Blog));
+)((Blog));

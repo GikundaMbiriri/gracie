@@ -15,3 +15,4 @@ export const DELETE_SCREAM = "DELETE_SCREAM";
 export const POST_SCREAM = "POST_SCREAM";
 export const STOP_LOADING_UI = "STOP_LOADING_UI";
 export const CLEAR_DATA = "CLEAR_DATA";
+export const SEND_COMMENT = "SEND_COMMENT";

@@ -8,7 +8,7 @@ import {
   POST_SCREAM,
   SET_SCREAM,
   STOP_LOADING_UI,
-  CLEAR_DATA,
+  CLEAR_DATA,SEND_COMMENT
 } from "../types";
 const initialState = {
   screams: {},
@@ -35,13 +35,14 @@ export default function (state = initialState, action) {
       };
     case LIKE_SCREAM:
     case UNLIKE_SCREAM:
-      let index = state.screams[action.payload.topic].findIndex(
-        (scream) => scream.blogId === action.payload.blogId
+      let index = state.screams.findIndex(
+        (scream) => scream.blogId == action.payload.blogId
       );
-      state.screams[action.payload.topic][index] = action.payload;
+      state.screams[index] = action.payload;
       return {
         ...state,
       };
+      
     case DELETE_SCREAM:
       let inde = state.screams.findIndex(
         (scream) => scream.screamId === action.payload
@@ -50,6 +51,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
       };
+    case SEND_COMMENT:
+      state.scream.comments.push(action.payload)
+      return {
+        ...state
+      }
     case POST_SCREAM:
       return {
         ...state,

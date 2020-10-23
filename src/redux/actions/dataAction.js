@@ -10,7 +10,7 @@ import {
   POST_SCREAM,
   SET_SCREAM,
   STOP_LOADING_UI,
-  CLEAR_DATA,
+  CLEAR_DATA,SEND_COMMENT
 } from "../types";
 import axios from "axios";
 export const getScream = (blogId) => (dispatch) => {
@@ -25,7 +25,18 @@ export const getScream = (blogId) => (dispatch) => {
     })
     .catch((err) => console.log(err));
 };
-
+export const Comment = (commentData,blogId) => (dispatch) => {
+  dispatch({ type: LOADING_UI });
+  axios
+    .post(
+      `https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog/${blogId}/comment`,commentData
+    )
+    .then((res) => {
+      dispatch({ type: SEND_COMMENT, payload: res.data });
+      dispatch({ type: STOP_LOADING_UI });
+    })
+    .catch((err) => console.log(err));
+};
 export const getScreams = () => (dispatch) => {
   dispatch({ type: LOADING_DATA });
   axios
@@ -54,17 +65,20 @@ export const likeScream = (blogId) => (dispatch) => {
         type: LIKE_SCREAM,
         payload: res.data,
       });
+      console.log(res.data)
     })
     .catch((err) => console.log(err));
 };
 export const unlikeScream = (blogId) => (dispatch) => {
   axios
-    .get(`/scream/${blogId}/unlike`)
+    .get(`https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog/${blogId}/unlike`)
     .then((res) => {
       dispatch({
         type: UNLIKE_SCREAM,
         payload: res.data,
       });
+      console.log(res.data)
+
     })
     .catch((err) => console.log(err));
 };
