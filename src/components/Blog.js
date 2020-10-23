@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import 'react-slideshow-image/dist/styles.css'
-import './Blog.css'
+import './Blog.scss'
 import { Link } from "react-router-dom";
 import Btn from "./Modal/Index";
 import { Zoom } from 'react-slideshow-image';
@@ -22,7 +22,7 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import Favorite from "@material-ui/icons/Favorite";
 import relativeTime from "dayjs/plugin/relativeTime";
 import DeleteScream from "./DeleteScream";
-
+import Rotation from 'react-rotation'
 export class Blog extends Component {
   likedScream = () => {
     if (
@@ -104,13 +104,11 @@ export class Blog extends Component {
         <div className="card" >
         <div className="slide-container">
         <Link to={kk}> 
-<Zoom {...inds}>
+        <div className="image-container">
       {image.map ((im,index)=>
-      <div key={index}>
           <img key={index} className="card-img-top" src={im}    alt="..."/> 
-          </div>
          )}
-        </Zoom>
+        </div>
  </Link> </div>
   <div className="card-body">
     <p className="card-text">{catchy}</p>
