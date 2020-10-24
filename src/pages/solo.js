@@ -48,11 +48,9 @@ let k=<p>loading</p>
    </div></>))
 
   }
- 
-console.log(comments)
-  return( <><div dangerouslySetInnerHTML={{ __html: body }} />
-  
-  <div className=" border border-success comment">
+  let p=null;
+  if(body){
+    p=<>  <div className=" border border-success comment">
     <h2>Leave a comment</h2>
   <div class="input-group mb-3">
   <div class="input-group-prepend">
@@ -77,7 +75,13 @@ console.log(comments)
   </div>
   <textarea class="form-control" onChange={onMessageChange} aria-label="With textarea"></textarea>
 </div>
-<button type="button" class="btn btn-primary" onClick={handleSubmit}>send</button></div>
+<button type="button" class="btn btn-primary" onClick={handleSubmit}>send</button></div></>
+  }
+ 
+console.log(comments)
+  return( <><div dangerouslySetInnerHTML={{ __html: body }} />
+  
+  <div>{p}</div>
 <div>{k}</div>
 
   </>);

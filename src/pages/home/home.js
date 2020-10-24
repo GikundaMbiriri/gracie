@@ -14,8 +14,11 @@ const Home = (props) => {
   const { screams, loading } = props.data;
   const ks = Object.keys(screams);
   console.log(ks);
-  return (
-      <div className="home">
+  const loader=loading?(<>
+  <div className="cover">
+<div class="loader">  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div></div></div></>):( <div className="home">
         <div className="side-img">
           <img
             src={homepage}
@@ -31,7 +34,9 @@ const Home = (props) => {
             <Blog key={screams[scream].blogId} scream={screams[scream]} />
           ))}{" "}
       </div>
-      </div>
+      </div>)
+  return (
+    <div>{loader}</div> 
   );
 };
 
