@@ -101,7 +101,7 @@ export class Blog extends Component {
     return (
       <>
       
-        <div className="card" >
+        <div className="card1" >
         <div className="slide-container">
         <Link to={kk}> 
         <div className="image-container">
@@ -110,15 +110,12 @@ export class Blog extends Component {
          )}
         </div>
  </Link> </div>
-  <div className="card-body">
-    <p className="card-text">{catchy}</p>
-    <Btn />
-    <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
+  <div className="car">
+    <p className="ca">ddddddddddddddd and we are looking for the best talent here
+    {catchy}</p>
+    <div className="ikoni"
+    
+    >
           
            
            
@@ -127,8 +124,10 @@ export class Blog extends Component {
           <MyButton tip="comments">
               <ChatIcon color="primary" />
             </MyButton>
-            <span>{commentCount} comments</span>
+            <span>{commentCount} </span>
             </div>
+            <Btn />
+
             </div>
   </div>
 </div>

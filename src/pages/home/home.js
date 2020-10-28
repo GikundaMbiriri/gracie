@@ -29,7 +29,7 @@ const Home = (props) => {
             // }}
           />
         </div>
-          <div className="card-dec">
+          <div className="card-de">
           {ks.map((scream) => (
             <Blog key={screams[scream].blogId} scream={screams[scream]} />
           ))}{" "}

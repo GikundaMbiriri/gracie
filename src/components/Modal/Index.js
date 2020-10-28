@@ -5,21 +5,19 @@ import {
   TwitterShareButton,
   InstapaperShareButton,
 } from "react-share";
+import ShareSharpIcon from '@material-ui/icons/ShareSharp';
 import "./modal.css";
 const Index = () => {
   return (
     <div>
       <div>
         {" "}
-        <button
-          type="button"
-          className="btn btn-primary mx-auto"
+        <div
+        className="icon"
           data-toggle="modal"
           data-target="#exampleModal"
         >
-          {" "}
-          Share{" "}
-        </button>{" "}
+<ShareSharpIcon/>        </div>{" "}
       </div>
       <div
         className="modal fade"
