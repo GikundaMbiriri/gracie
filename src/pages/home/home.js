@@ -16,9 +16,9 @@ const Home = (props) => {
   console.log(ks);
   const loader=loading?(<>
   <div className="cover">
-<div class="loader">  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div></div></div></>):( <div className="home">
+<div className="loader">  <div className="circle"></div>
+  <div className="circle"></div>
+  <div className="circle"></div></div></div></>):( <div className="home">
         <div className="side-img">
           <img
             src={homepage}

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import './nav.css'
 const Navbar = (props) => {
   const { authenticated, email } = props;
   return (
@@ -31,6 +32,12 @@ const Navbar = (props) => {
                     Home <span className="sr-only">(current)</span>
                   </Link>
                 </li>
+                <li className="nav-item">
+                
+                <Link className="nav-link" to="/audio">
+                  audio
+                </Link>
+              </li>
                 {email == "gracemwende101@gmail.com" ? (
                   <>
                     <li className="nav-item">
@@ -54,6 +61,13 @@ const Navbar = (props) => {
                   <Link className="nav-link" to="/signup">
                     sign up
                   </Link>
+                
+                </li>
+                <li className="nav-item">
+                
+                  <Link className="nav-link" to="/audio">
+                    audio
+                  </Link>
                 </li>
               </>
             )}
@@ -71,8 +85,40 @@ const Navbar = (props) => {
               Search
             </button>
           </form>
+          <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Subscribe
+  </button>
         </div>
       </nav>
+      <div className="modal fade" id="myModal">
+    <div className="modal-dialog"  >
+      <div className="modal-content" >
+      
+        <div className="modal-header">
+          <h4 className="modal-title">Modal Heading</h4>
+          <button type="button" className="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <div className="modal-body">
+        <div id="container">
+	<h2>Subscribe</h2>
+	<p>Stay updated with our newsletter</p>
+  
+	<form>
+		<input type="email" placeholder="Type your Email" required/>
+			<br/>
+		<button>Subscribe</button>
+	</form>
+</div>
+        </div>
+        
+        <div className="modal-footer">
+          <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
     </>
   );
 };

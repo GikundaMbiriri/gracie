@@ -14,6 +14,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { loginUser } from "../redux/actions/userAction";
+import { autofill } from "redux-form";
 const styles = (theme) => ({ ...theme.spread });
 
 class login extends Component {
@@ -55,7 +56,13 @@ class login extends Component {
       <Grid container className={classes.form}>
         <Grid item sm />
         <Grid item sm>
-          <img src={icon} alt="icon" className={classes.image} />
+          <img src={icon} alt="icon" style={{
+            width: "70px",
+            height: "70px",
+            borderRadius: "50%",
+            margin: "20px 50px 20px 90px"
+
+          }} className={classes.image} />
           <Typography variant="h4" className={classes.pageTitle}>
             Login
           </Typography>
