@@ -4,12 +4,12 @@
 }
 .card1 {
   width: 270px;
-  height: 270px;
+  height: 300px;
   padding: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card-img-top {
-  height: 100px;
+  height: 150px;
   width: 260px;
   object-fit: cover;
 }
@@ -20,12 +20,12 @@
   margin-bottom: 0;
 }
 .ca {
-  height: 50px;
+  height: 45px;
   width: 220px;
   overflow: hidden;
 }
 .slide-container {
-  height: 100px;
+  height: 150px;
   width: 240px;
 }
 .image-container {
@@ -72,7 +72,7 @@
 @media screen and (max-width: 550px) {
   .card-img-top {
     width: 90vw;
-    height: 100px;
+    height: 150px;
   }
   .card1 {
     width: 100vw;

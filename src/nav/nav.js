@@ -107,7 +107,7 @@ const Navbar = (props) => {
 	<form>
 		<input type="email" placeholder="Type your Email" required/>
 			<br/>
-		<button>Subscribe</button>
+		<button data-dismiss="modal">Subscribe</button>
 	</form>
 </div>
         </div>

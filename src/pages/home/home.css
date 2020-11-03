@@ -10,8 +10,9 @@ img {
 .card-de {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 10px;
+  justify-content: space-evenly;
+  margin: 5px;
+  padding: 10px;
 }
 .cover {
   background-color: #f6f6f6;

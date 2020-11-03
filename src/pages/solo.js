@@ -34,55 +34,64 @@ let k=<p>loading</p>
     console.log(comments)
      k= comments.map((comment)=>
    ( <>
-   <div class="message-candidate center-block">
-     <div class="row">
-       <div class="col-xs-8 col-md-6">
-         <img src="http://imgc.allpostersimages.com/images/P-473-488-90/68/6896/2GOJ100Z/posters/despicable-me-2-minions-movie-poster.jpg" class="message-photo"/>
-         <h4 class="message-name">Mr. Minion</h4>
-       </div>
-       <div class="col-xs-4 col-md-6 text-right message-date">Date here</div>
-     </div>
-     <div class="row message-text">
-         text over here text over here text over here text over here text over here text over here text over here text over here text over here 
-     </div>
-   </div></>))
+	<h1 class="comments-title">Comments (3)</h1>
+	<div class="be-comment">
+		<div class="be-img-comment">	
+			<a href="blog-detail-2.html">
+				<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment"/>
+			</a>
+		</div>
+		<div class="be-comment-content">
+			
+				<span class="be-comment-name">
+					<a href="blog-detail-2.html">Ravi Sah</a>
+					</span>
+				<span class="be-comment-time">
+					<i class="fa fa-clock-o"></i>
+					May 27, 2015 at 3:14am
+				</span>
+
+			<p class="be-comment-text">
+				Pellentesque gravida tristique ultrices. 
+				Sed blandit varius mauris, vel volutpat urna hendrerit id. 
+				Curabitur rutrum dolor gravida turpis tristique efficitur.
+			</p>
+		</div>
+	</div></>))
 
   }
   let p=null;
   if(body){
-    p=<>  <div className=" border border-success comment">
-    <h2>Leave a comment</h2>
-  <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">@</span>
-  </div>
-  <input type="text" class="form-control" onChange={onNameChange} placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
-</div>
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" onChange={onEmailChange} aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-
-
-
-
-
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text">comment here</span>
-  </div>
-  <textarea class="form-control" onChange={onMessageChange} aria-label="With textarea"></textarea>
-</div>
-<button type="button" class="btn btn-primary" onClick={handleSubmit}>send</button></div></>
+    p=<>  <form class="form-block">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<div class="form-group fl_icon">
+					<div class="icon"><i class="fa fa-user"></i></div>
+					<input class="form-input" type="text" placeholder="Your name"/>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 fl_icon">
+				<div class="form-group fl_icon">
+					<div class="icon"><i class="fa fa-envelope-o"></i></div>
+					<input class="form-input" type="text" placeholder="Your email"/>
+				</div>
+			</div>
+			<div class="col-xs-12">									
+				<div class="form-group">
+					<textarea class="form-input" required="" placeholder="Your text"></textarea>
+				</div>
+			</div>
+			<a class="btn btn-primary pull-right">submit</a>
+		</div>
+	</form></>
   }
  
 console.log(comments)
   return( <><div dangerouslySetInnerHTML={{ __html: body }} />
   
-  <div>{p}</div>
-<div>{k}</div>
+<div>  <div class="be-comment-block">
+{k}  <div>{p}</div>
+</div></div>
 
   </>);
 };
