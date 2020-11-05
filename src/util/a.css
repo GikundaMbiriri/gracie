@@ -1,6 +1,6 @@
 /* fonts  */
 @import url("https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
 .modal-dialog {
   width: 480px;
 
@@ -8,9 +8,6 @@
 }
 .navbar {
   background-color: #fcf8fc;
-}
-.nav-link {
-  font-family: "Roboto Condensed", sans-serif;
 }
 .modal-content {
   /* 80% of window height */
@@ -26,6 +23,9 @@
     rgba(205, 156, 242, 0.4) 0%,
     rgba(246, 255, 255, 0.71) 100%
   );
+  box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+  text-align: center;
+  border-radius: 5px;
   margin: 3em;
   background: rgba(255, 255, 255, 0.95);
   height: 300px;
