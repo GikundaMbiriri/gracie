@@ -9,7 +9,7 @@ const Navbar = (props) => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" to="/">
-        The Zag
+        Pizzes
         </Link>
         <button
           className="navbar-toggler"
@@ -25,18 +25,22 @@ const Navbar = (props) => {
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-            {authenticated ? (
-              <>
                 <li className="nav-item active">
                   <Link className="nav-link" to="/">
                     Home <span className="sr-only">(current)</span>
                   </Link>
                 </li>
                 <li className="nav-item">
-                
-                <Link className="nav-link" to="/audio">
-                  audio
-                </Link>
+                <li class="nav-item dropdown">
+                  <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About us</Link>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link class="dropdown-item" to="#">About Pizzes</Link>
+          <Link class="dropdown-item" to="#">About blogger</Link>
+
+        </div>
+                </li>
+               
               </li>
                 {email == "gracemwende101@gmail.com" ? (
                   <>
@@ -49,48 +53,28 @@ const Navbar = (props) => {
                 ) : (
                   <></>
                 )}
-              </>
-            ) : (
-              <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/login">
-                    login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/signup">
-                    sign up
-                  </Link>
-                
-                </li>
-                <li className="nav-item">
-                
                   <Link className="nav-link" to="/audio">
-                    audio
+                    Podcast
                   </Link>
                 </li>
-              </>
-            )}
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                    contact
+                  </Link>
+                
+                </li>
+           
           </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input
-              className="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-            />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
-          </form>
+          <div className="right">
+         
           <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal">
     Subscribe
   </button>
+  </div>
         </div>
       </nav>
-      <div className="modal fade" id="myModal">
+      <div className="modal fade" id="myModal" data-backdrop="true">
     <div className="modal-dialog"  >
       <div className="modal-content" >
       

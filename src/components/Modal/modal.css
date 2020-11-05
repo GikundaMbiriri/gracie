@@ -6,12 +6,6 @@
   font-size: 2rem;
   color: blue;
 }
-.modal {
-  background-image: linear-gradient(
-    rgb(35, 79, 71) 0%,
-    rgb(36, 121, 106) 100.2%
-  );
-}
 
 .modal-title {
   font-weight: 900;

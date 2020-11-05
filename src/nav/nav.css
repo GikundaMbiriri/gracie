@@ -12,6 +12,9 @@
 
   height: 50%;
 }
+.right {
+  padding-right: 5px;
+}
 #container {
   background-image: linear-gradient(
     to top,
