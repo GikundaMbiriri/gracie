@@ -18,7 +18,7 @@ const Home = (props) => {
   <div className="cover">
 <div className="loader">  <div className="circle"></div>
   <div className="circle"></div>
-  <div className="circle"></div></div></div></>):( <div className="home">
+  <div className="circle"></div></div></div></>):(<> <div className="home">
         <div className="side-img">
           <img
             src={homepage}
@@ -34,7 +34,16 @@ const Home = (props) => {
             <Blog key={screams[scream].blogId} scream={screams[scream]} />
           ))}{" "}
       </div>
-      </div>)
+      </div>  <div id="container">
+	<h2>Subscribe</h2>
+	<p>Stay updated with our newsletter</p>
+  
+	<form>
+		<input type="email" placeholder="Type your Email" required/>
+			<br/>
+		<button data-dismiss="modal">Subscribe</button>
+	</form>
+</div></>)
   return (
     <div>{loader}</div> 
   );

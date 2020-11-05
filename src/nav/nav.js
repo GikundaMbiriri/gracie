@@ -8,9 +8,7 @@ const Navbar = (props) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light ">
-        <Link className="navbar-brand" to="/">
-        Pizzes
-        </Link>
+       
         <button
           className="navbar-toggler"
           type="button"
@@ -30,18 +28,7 @@ const Navbar = (props) => {
                     Home <span className="sr-only">(current)</span>
                   </Link>
                 </li>
-                <li className="nav-item">
-                <li class="nav-item dropdown">
-                  <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About us</Link>
-                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <Link class="dropdown-item" to="#">About Pizzes</Link>
-          <Link class="dropdown-item" to="#">About blogger</Link>
-
-        </div>
-                </li>
-               
-              </li>
+       
                 {email == "gracemwende101@gmail.com" ? (
                   <>
                     <li className="nav-item">
@@ -64,13 +51,22 @@ const Navbar = (props) => {
                   </Link>
                 
                 </li>
-           
+                <li className="nav-item">
+                <li class="nav-item dropdown">
+                  <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About us</Link>
+                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link class="dropdown-item" to="#">About Pizzes</Link>
+          <Link class="dropdown-item" to="#">About blogger</Link>
+
+        </div>
+                </li>
+               
+              </li>
           </ul>
           <div className="right">
          
-          <button type="button"  id="k" data-toggle="modal" data-target="#myModal">
-    Subscribe
-  </button>
+       
   </div>
         </div>
       </nav>
@@ -84,16 +80,7 @@ const Navbar = (props) => {
         </div>
         
         <div className="modal-body">
-        <div id="container">
-	<h2>Subscribe</h2>
-	<p>Stay updated with our newsletter</p>
-  
-	<form>
-		<input type="email" placeholder="Type your Email" required/>
-			<br/>
-		<button data-dismiss="modal">Subscribe</button>
-	</form>
-</div>
+      
         </div>
         
         <div className="modal-footer">

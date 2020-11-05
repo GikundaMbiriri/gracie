@@ -110,7 +110,7 @@ export class Blog extends Component {
          )}
         </div>
  </Link> </div>
-  <div className="car">
+  <div className="tran">
       <h3>{topic}</h3>
     <p className="ca">ddddddddddddddd and we are looking for the best talent here
 and therefore we are doing the best we can    {catchy}</p>

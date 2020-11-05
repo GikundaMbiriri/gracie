@@ -7,7 +7,7 @@
   height: 600px !important;
 }
 .navbar {
-  background-color: #fffaf0;
+  background-color: #fcf8fc;
 }
 .modal-content {
   /* 80% of window height */
@@ -31,24 +31,8 @@
   height: 300px;
   width: 480px;
   padding: 1em;
-
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0;
 }
 .navbar-brand {
-  background: url(https://static.pexels.com/photos/5782/nature-flowers-vintage-plant.jpg);
-  /*   الكود المسؤال عن اضافة شفافية للنص */
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  /* 	background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); */
-  font-family: "Playfair Display", serif;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  letter-spacing: 2px;
 }
 #container h2 {
   background: url(https://static.pexels.com/photos/5782/nature-flowers-vintage-plant.jpg);
@@ -69,6 +53,9 @@
   margin: 3px 0 1.5em 0;
   font-size: 1.3em;
   color: #7d7d7d;
+}
+.dropdown-menu {
+  background-color: #9fb8c4f6;
 }
 
 #container input {

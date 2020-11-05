@@ -15,7 +15,7 @@ import { logoutUser, getUserData } from "./redux/actions/userAction";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import axios from "axios";
-
+import './App.css'
 axios.defaults.baseURL =
   "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/";
   const theme = createMuiTheme({
@@ -82,6 +82,8 @@ function App() {
     <>
       <Provider store={store}>
         <Router>
+
+          <h1 className="pizzes">Pizzes</h1>
           <Navbar />
 
           <Switch>
