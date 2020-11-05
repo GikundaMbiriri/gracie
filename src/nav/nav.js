@@ -7,7 +7,7 @@ const Navbar = (props) => {
   const { authenticated, email } = props;
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light ">
         <Link className="navbar-brand" to="/">
         Pizzes
         </Link>
@@ -68,7 +68,7 @@ const Navbar = (props) => {
           </ul>
           <div className="right">
          
-          <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          <button type="button"  id="k" data-toggle="modal" data-target="#myModal">
     Subscribe
   </button>
   </div>
