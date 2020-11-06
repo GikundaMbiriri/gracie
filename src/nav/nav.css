@@ -1,16 +1,27 @@
 /* fonts  */
 @import url("https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Roboto+Condensed&display=swap");
 .modal-dialog {
   width: 480px;
 
   height: 600px !important;
 }
 .navbar {
-  background-color: #fcf8fc;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 146, 202, 0.75) 0%,
+    rgba(145, 149, 251, 0.86) 100%
+  );
 }
 .nav-link {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
+  color: white;
+  font-size: 1.3em;
+  border-radius: 1rem;
+}
+.nav-link:hover {
+  background-color: #a841a3;
 }
 .modal-content {
   /* 80% of window height */
@@ -54,7 +65,8 @@
   color: #7d7d7d;
 }
 .dropdown-menu {
-  background-color: #9fb8c4f6;
+  background-color: #a841a3;
+  border-radius: 1rem;
 }
 
 #container input {

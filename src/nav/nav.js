@@ -24,7 +24,7 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/" style={{color:'white'}}>
                     Home <span className="sr-only">(current)</span>
                   </Link>
                 </li>
@@ -32,7 +32,7 @@ const Navbar = (props) => {
                 {email == "gracemwende101@gmail.com" ? (
                   <>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/tiny">
+                      <Link className="nav-link" to="/tiny" style={{color:'white'}}>
                         Create
                       </Link>
                     </li>
@@ -41,12 +41,12 @@ const Navbar = (props) => {
                   <></>
                 )}
                 <li className="nav-item">
-                  <Link className="nav-link" to="/audio">
+                  <Link className="nav-link" to="/audio" style={{color:'white'}}>
                     Podcast
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/" style={{color:'white'}}>
                     contact
                   </Link>
                 
@@ -54,7 +54,7 @@ const Navbar = (props) => {
                 <li className="nav-item">
                 <li class="nav-item dropdown">
                   <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About us</Link>
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>About us</Link>
                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <Link class="dropdown-item" to="#">About Pizzes</Link>
           <Link class="dropdown-item" to="#">About blogger</Link>
