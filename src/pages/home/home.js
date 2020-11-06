@@ -28,6 +28,15 @@ const Home = (props) => {
             //   width: ww > 600 ? "100%" : ww,
             // }}
           />
+          <div className="msee">
+        <p> <span class="badge badge-primary">Primary</span></p>
+        <p> <span class="badge badge-secondary">Secondary</span></p>
+        </div>
+        <div className="msee">
+
+        <p> <span class="badge badge-success">Success</span></p>
+        <p> <span class="badge badge-danger">Danger</span></p>
+</div>
         </div>
           <div className="card-de">
           {ks.map((scream) => (
