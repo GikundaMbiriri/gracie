@@ -2,7 +2,9 @@
 .App {
   text-align: center;
 }
-
+.hatari {
+  background-color: #a841a3;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -10,6 +12,7 @@
 .pizzes {
   font-family: "Henny Penny", cursive;
   text-align: center;
+
   background: url(./images/plant.jpg);
   /*   الكود المسؤال عن اضافة شفافية للنص */
   -webkit-text-fill-color: transparent;
@@ -19,6 +22,17 @@
   background-attachment: fixed;
   background-size: cover;
   font-size: 5rem;
+}
+.mzii {
+  margin-top: 5px;
+  margin: auto;
+  width: 300px;
+  height: 100px;
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 146, 202, 0.75) 0%,
+    rgba(145, 149, 251, 0.86) 100%
+  );
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

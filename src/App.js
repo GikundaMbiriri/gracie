@@ -82,10 +82,13 @@ function App() {
     <>
       <Provider store={store}>
         <Router>
+<div className="hatari">
 
+<div className="mzii">
           <h1 className="pizzes">Pizzes</h1>
+          </div>
           <Navbar />
-
+          </div>
           <Switch>
             <Route exact path="/" component={home} />
             <Route exact path="/tiny" component={Tiny} />
