@@ -29,8 +29,9 @@ img {
   background: url(../../images/plant.jpg);
   /*   الكود المسؤال عن اضافة شفافية للنص */
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
+
+  -webkit-background-clip: text;
 
   /* 	background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); */
   font-family: "Playfair Display", serif;
