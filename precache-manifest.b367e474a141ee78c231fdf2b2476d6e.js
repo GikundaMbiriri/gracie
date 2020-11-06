@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9a8be830ca8c69061967999fbfa6379",
+    "revision": "cb6e5b0c4818edc0f0d2f5f4347c7017",
     "url": "/gracie/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gracie/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "802c5506c5902e924533",
-    "url": "/gracie/static/css/main.8d313922.chunk.css"
+    "revision": "cd766aa8bafecf888c30",
+    "url": "/gracie/static/css/main.a5930682.chunk.css"
   },
   {
     "revision": "7d4308b14be6bf43a72f",
     "url": "/gracie/static/js/2.11aeebff.chunk.js"
   },
   {
-    "revision": "802c5506c5902e924533",
-    "url": "/gracie/static/js/main.3d1d30c4.chunk.js"
+    "revision": "cd766aa8bafecf888c30",
+    "url": "/gracie/static/js/main.4725466b.chunk.js"
   },
   {
     "revision": "6cf8c239dda7e96fd4a5",
