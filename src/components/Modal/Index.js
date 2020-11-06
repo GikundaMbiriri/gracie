@@ -17,7 +17,7 @@ const Index = () => {
           data-toggle="modal"
           data-target="#exampleModal"
         >
-<ShareSharpIcon/>        </div>{" "}
+<ShareSharpIcon style={{color:"#a841a3"}}/>        </div>{" "}
       </div>
       <div
         className="modal fade"

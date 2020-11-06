@@ -55,8 +55,8 @@ const Navbar = (props) => {
                   <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>About us</Link>
                      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <Link className="dropdown-item" to="#">About Pizzes</Link>
-          <Link className="dropdown-item" to="#">About blogger</Link>
+          <Link className="dropdown-item" to="/about">About Pizzes</Link>
+          <Link className="dropdown-item" to="/about1">About blogger</Link>
 
         </div>
                 </li>

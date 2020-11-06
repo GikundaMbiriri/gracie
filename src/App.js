@@ -1,6 +1,8 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import home from "./pages/home/home";
+import about from './pages/about1/about'
+import about1 from './pages/about/about'
 import audio from './pages/audio/audio'
 import Tiny from "./pages/tiny";
 import Solo from "./pages/solo";
@@ -93,7 +95,9 @@ function App() {
             <Route exact path="/" component={home} />
             <Route exact path="/tiny" component={Tiny} />
             <Route exact path="/solo/:id" component={Solo} />
-            <Route exact path="/signup" component={signup} />
+            <Route exact path="/about1" component={about} />
+            <Route exact path="/about" component={about1} />
+
 <Route exact path='/audio' component={audio}/>
             <Route exact path="/login" component={login} />
           </Switch>

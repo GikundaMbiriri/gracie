@@ -74,7 +74,7 @@ export class Blog extends Component {
       <Tooltip title="like" >
     <IconButton onClick={this.likeScream} >
     <Link to="/login">
-          <FavoriteBorder color="primary" />
+          <FavoriteBorder style={{color:"#a841a3"}} />
         </Link>
     </IconButton>
   </Tooltip>
@@ -82,14 +82,14 @@ export class Blog extends Component {
     ) : this.likedScream() ? (
       <Tooltip title="Undo like" >
         <IconButton onClick={this.unlikeScream} >
-        <Favorite color="primary" />
+        <Favorite style={{color:"#a841a3"}} />
 
         </IconButton>
       </Tooltip>
     ) : (
       <Tooltip title="like" >
       <IconButton onClick={this.likeScream} >
-      <FavoriteBorder color="primary" />
+      <FavoriteBorder style={{color:"#a841a3"}} />
 
       </IconButton>
     </Tooltip>
@@ -123,7 +123,7 @@ and therefore we are doing the best we can    {catchy}</p>
           <p>{likeButton} {likeCount}  </p>  
           <div>
           <MyButton tip="comments">
-              <ChatIcon color="primary" />
+              <ChatIcon style={{color:"#a841a3"}} />
             </MyButton>
             <span>{commentCount} </span>
             </div>
