@@ -8,7 +8,7 @@ const Navbar = (props) => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light ">
-       <Link></Link>
+       <Link to=""></Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -51,18 +51,16 @@ const Navbar = (props) => {
                   </Link>
                 
                 </li>
-                <li className="nav-item">
-                <li class="nav-item dropdown">
-                  <Link class="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
+                <li className="nav-item dropdown">
+                  <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>About us</Link>
-                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <Link class="dropdown-item" to="#">About Pizzes</Link>
-          <Link class="dropdown-item" to="#">About blogger</Link>
+                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+          <Link className="dropdown-item" to="#">About Pizzes</Link>
+          <Link className="dropdown-item" to="#">About blogger</Link>
 
         </div>
                 </li>
                
-              </li>
           </ul>
           <div className="right">
          
