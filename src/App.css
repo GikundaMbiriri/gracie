@@ -10,7 +10,7 @@
 .pizzes {
   font-family: "Henny Penny", cursive;
   text-align: center;
-  background: url(https://static.pexels.com/photos/5782/nature-flowers-vintage-plant.jpg);
+  background: url(./images/plant.jpg);
   /*   الكود المسؤال عن اضافة شفافية للنص */
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
