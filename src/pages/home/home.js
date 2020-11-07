@@ -10,7 +10,7 @@ const Home = (props) => {
   useEffect(() => {
     props.getScreams();
   }, []);
-  const ww = window.screen.width;
+  //const ww = window.screen.width;
   const { screams, loading } = props.data;
   const ks = Object.keys(screams);
   console.log(ks);

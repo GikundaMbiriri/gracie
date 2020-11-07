@@ -65,7 +65,7 @@ const Navbar = (props) => {
           <div className="right">
          
        
-  </div>
+  </div>` `
         </div>
       </nav>
       <div className="modal fade" id="myModal" data-backdrop="true">

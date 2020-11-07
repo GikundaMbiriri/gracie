@@ -1,10 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import './about.css'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import EmailIcon from '@material-ui/icons/Email';
-function about() {
+import { getScreams } from "../../redux/actions/dataAction";
+import PropTypes from "prop-types";
+import Blog from "../../components/Blog";
+import { connect } from "react-redux";
+
+function About(props) {
+
+    useEffect(() => {
+        props.getScreams();
+      }, []);
+      const { screams, loading } = props.data;
+
+let success;
+if(screams[0]){
+ success=<Blog scream={screams[0]}/>
+}
+else{
+    success=<p>loading</p>
+
+}
+//console.log(ks)
     return (
         <div>
+            <div className="outside">
+                <div className="about">
             <h2>ABOUT PIZZES</h2>
             <i>Re-define. Renew. Transform.</i>
             <p>A warm welcome to the Pizzes blog page! 
@@ -13,7 +36,21 @@ Pizzes is an inspirational blog, and more than just a blog website, Pizzes is a 
 Here at Pizzes, we will be opened up to re-definition of our thinking patterns, the renewal of our mindsets through knowledge that will give us the strength we need to break out of the levels that we have stagnated in. It merely enough, to simply keep talking about how messed up things have become. We need to take a step, and begin to gain intellectual, mental, social and spiritual, knowledge, wisdom insight, and may the power that works through these truths, bring us to a point of progression, healing of our hearts and minds, and transformation into our very best selves.
 For my listening audience, I gatchyu! I will keep uploading audio or podcast versions of my written content just for you!
 </p>
-<div></div>
+</div>
+<div>  
+    {success}
+    <div id="container">
+	<h2>Subscribe</h2>
+	<p>Stay updated with our newsletter</p>
+  
+	<form>
+		<input type="email" placeholder="Type your Email" required/>
+			<br/>
+		<button data-dismiss="modal">Subscribe</button>
+	</form>
+</div>
+</div>
+</div>
 <div>
     find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
 </div>
@@ -25,5 +62,12 @@ For my listening audience, I gatchyu! I will keep uploading audio or podcast ver
         </div>
     )
 }
-
-export default about
+About.propTypes = {
+    getScreams: PropTypes.func.isRequired,
+    data: PropTypes.object.isRequired,
+  };
+  const mapStateToProps = (state) => ({
+    data: state.data,
+  });
+  
+export default  connect(mapStateToProps, { getScreams })(About);
