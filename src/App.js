@@ -4,6 +4,7 @@ import home from "./pages/home/home";
 import about from './pages/about1/about'
 import about1 from './pages/about/about'
 import audio from './pages/audio/audio'
+import Footer from './components/Footer'
 import Tiny from "./pages/tiny";
 import Solo from "./pages/solo";
 import login from "./pages/login";
@@ -101,6 +102,7 @@ function App() {
 <Route exact path='/audio' component={audio}/>
             <Route exact path="/login" component={login} />
           </Switch>
+          <Footer/>
         </Router>
       </Provider>
     </>

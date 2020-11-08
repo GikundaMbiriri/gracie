@@ -7,8 +7,14 @@ img {
   width: 50vw;
   height: 50vh;
 }
+.onai {
+  display: none;
+}
 .side-img {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .msee {
   margin: 0 auto;
@@ -37,49 +43,7 @@ img {
 
   overflow: hidden;
 }
-#container h2 {
-  background: url(../../images/plant.jpg);
-  /*   الكود المسؤال عن اضافة شفافية للنص */
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 
-  -webkit-background-clip: text;
-
-  /* 	background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); */
-  font-family: "Playfair Display", serif;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  letter-spacing: 2px;
-  font-size: 3.5em;
-  margin: 0;
-}
-#container p {
-  font-family: "Farsan", cursive;
-  margin: 3px 0 1.5em 0;
-  font-size: 1.3em;
-  color: #7d7d7d;
-}
-
-#container input {
-  /* 	background: rgba(255, 13, 254, 0.90); */
-  width: 210px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 7px;
-  background: #eee;
-  padding: 1em 2em;
-  outline: none;
-  border: none;
-  color: #222;
-  transition: 0.3s linear;
-}
-::placeholder {
-  color: #999;
-}
-#container input:focus {
-  background: rgba(0, 0, 333, 0.1);
-}
 #k {
   background-image: linear-gradient(
     to left,
@@ -98,31 +62,6 @@ img {
   outline: none;
   border: none;
   transition: 0.3s linear;
-}
-#container button {
-  background-image: linear-gradient(
-    to left,
-    rgba(255, 146, 202, 0.75) 0%,
-    rgba(145, 149, 251, 0.86) 100%
-  );
-  box-shadow: 0 9px 25px -5px #df91fb;
-  font-family: "Abel", sans-serif;
-  padding: 0.5em 1.9em;
-  margin: 2.3em 0 0 0;
-  border-radius: 7px;
-  font-size: 1.4em;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 1em;
-  outline: none;
-  border: none;
-  transition: 0.3s linear;
-}
-#container button:hover {
-  transform: translatey(2px);
-}
-#container button:active {
-  transform: translatey(5px);
 }
 
 .loader {
@@ -182,6 +121,12 @@ img {
     height: 40vh;
   }
   .msee {
+    display: none;
+  }
+  .onai {
+    display: block;
+  }
+  .ona {
     display: none;
   }
 }

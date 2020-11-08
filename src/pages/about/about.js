@@ -5,9 +5,9 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import EmailIcon from '@material-ui/icons/Email';
 import { getScreams } from "../../redux/actions/dataAction";
 import PropTypes from "prop-types";
-import Blog from "../../components/Blog";
+import Latest from '../../components/latest/Latest'
 import { connect } from "react-redux";
-
+import Subscribe from '../../components/subscribe/Subscribe'
 function About(props) {
 
     useEffect(() => {
@@ -17,7 +17,7 @@ function About(props) {
 
 let success;
 if(screams[0]){
- success=<Blog scream={screams[0]}/>
+ success=<Latest scream={screams[0]}/>
 }
 else{
     success=<p>loading</p>
@@ -39,16 +39,7 @@ For my listening audience, I gatchyu! I will keep uploading audio or podcast ver
 </div>
 <div>  
     {success}
-    <div id="container">
-	<h2>Subscribe</h2>
-	<p>Stay updated with our newsletter</p>
-  
-	<form>
-		<input type="email" placeholder="Type your Email" required/>
-			<br/>
-		<button data-dismiss="modal">Subscribe</button>
-	</form>
-</div>
+   <Subscribe/>
 </div>
 </div>
 <div>

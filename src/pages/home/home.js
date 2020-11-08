@@ -3,8 +3,12 @@ import homepage from "../../images/pic1.jpg";
 import './home.css'
 import PropTypes from "prop-types";
 import Blog from "../../components/Blog";
+import Latest from "../../components/latest/Latest";
+import Subscribe from '../../components/subscribe/Subscribe'
 import { connect } from "react-redux";
 import { getScreams } from "../../redux/actions/dataAction";
+import ScrollAnimation from "react-animate-on-scroll";
+
 
 const Home = (props) => {
   useEffect(() => {
@@ -12,8 +16,18 @@ const Home = (props) => {
   }, []);
   //const ww = window.screen.width;
   const { screams, loading } = props.data;
+  let success;
+  if(screams[0]){
+   success=<Latest scream={screams[0]}/>
+  }
+  else{
+      success=<p>loading</p>
+  
+  }
   const ks = Object.keys(screams);
+  ks.shift()
   console.log(ks);
+  console.log(screams)
   const loader=loading?(<>
   <div className="cover">
 <div className="loader">  <div className="circle"></div>
@@ -29,30 +43,29 @@ const Home = (props) => {
             // }}
           />
           <div className="msee">
-        <p> <span class="badge badge-primary">Primary</span></p>
-        <p> <span class="badge badge-secondary">Secondary</span></p>
+         <span class="badge badge-primary">Primary</span>
+         <span class="badge badge-secondary">Secondary</span>
         </div>
         <div className="msee">
 
         <p> <span class="badge badge-success">Success</span></p>
         <p> <span class="badge badge-danger">Danger</span></p>
 </div>
+<div className="ona">
+<Subscribe />
+</div>
         </div>
           <div className="card-de">
+  
+            {success}
           {ks.map((scream) => (
             <Blog key={screams[scream].blogId} scream={screams[scream]} />
           ))}{" "}
       </div>
-      </div>  <div id="container">
-	<h2>Subscribe</h2>
-	<p>Stay updated with our newsletter</p>
-  
-	<form>
-		<input type="email" placeholder="Type your Email" required/>
-			<br/>
-		<button data-dismiss="modal">Subscribe</button>
-	</form>
-</div></>)
+      <div  className="onai">
+      <Subscribe/>
+</div>
+      </div>  </>)
   return (
     <div>{loader}</div> 
   );

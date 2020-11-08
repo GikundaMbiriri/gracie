@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 //import 'react-slideshow-image/dist/styles.css'
-import './Blog.css'
+import './latest.scss'
 import { Link } from "react-router-dom";
-import Btn from "./Modal/Index";
+import Btn from "../Modal/Index";
 //import { Zoom } from 'react-slideshow-image';
 import dayjs from "dayjs";
 import PropTypes from "prop-types";
@@ -15,15 +15,15 @@ import {
   likeScream,
   unlikeScream,
   getScream,
-} from "../redux/actions/dataAction";
-import MyButton from "../util/MyButton";
+} from "../../redux/actions/dataAction";
+import MyButton from "../../util/MyButton";
 import { Chat as ChatIcon } from "@material-ui/icons"; //
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 import Favorite from "@material-ui/icons/Favorite";
 import relativeTime from "dayjs/plugin/relativeTime";
-import DeleteScream from "./DeleteScream";
+import DeleteScream from "../DeleteScream";
 import Rotation from 'react-rotation'
-export class Blog extends Component {
+export class Latest extends Component {
   likedScream = () => {
     if (
       this.props.user.likes &&
@@ -100,16 +100,19 @@ export class Blog extends Component {
       ) : null;
     return (
       <>
-      
-        <div className="card1" >
-        <div className="slide-containe">
+    
+        <div className="car" >
+        <div className="slide-container">
         <Link to={kk}> 
-       
-          <img  className="card-img-top" src={image[0]}    alt="..."/> 
+        <div className="image-container">
+      {image.map ((im,index)=>
+          <img key={index} className="card-img-to" src={im}    alt="..."/> 
+         )}
+        </div>
  </Link> </div>
   <div className="tran">
       <h3>{topic}</h3>
-    <p className="ca">ddddddddddddddd and we are looking for the best talent here
+    <p className="c">ddddddddddddddd and we are looking for the best talent here
 and therefore we are doing the best we can    {catchy}</p>
     <div className="ikoni"
     
@@ -158,7 +161,7 @@ and therefore we are doing the best we can    {catchy}</p>
     );
   }
 }
-Blog.propTypes = {
+Latest.propTypes = {
   likeScream: PropTypes.func.isRequired,
 
   unlikeScream: PropTypes.func.isRequired,
@@ -177,4 +180,4 @@ const mapActionsToProps = {
 export default connect(
   mapStateToProps,
   mapActionsToProps
-)((Blog));
+)((Latest));
