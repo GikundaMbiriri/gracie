@@ -7,11 +7,12 @@
   width: 565px;
   height: 400px;
   padding: 5px;
+  margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card-img-to {
   height: 200px;
-  width: 550px;
+  width: 560px;
   object-fit: cover;
 }
 .ikoni {
@@ -21,8 +22,8 @@
   margin-bottom: 0;
 }
 .c {
-  height: 90px;
-  width: 500px;
+  height: 45px;
+  width: 540px;
   overflow: hidden;
 }
 .slide-container {
@@ -72,14 +73,18 @@
 }
 @media screen and (max-width: 550px) {
   .card-img-to {
-    width: 90vw;
+    width: 88vw;
     height: 150px;
   }
   .car {
-    width: 100vw;
+    width: 90vw;
     height: 300px;
   }
   .c {
     width: 80vw;
+  }
+  .slide-container {
+    height: 150px;
+    width: 88vw;
   }
 }
