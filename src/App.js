@@ -101,6 +101,8 @@ function App() {
 
 <Route exact path='/audio' component={audio}/>
             <Route exact path="/login" component={login} />
+            <Route exact path="/signup" component={signup} />
+
           </Switch>
           <Footer/>
         </Router>

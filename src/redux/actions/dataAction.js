@@ -92,6 +92,17 @@ export const deleteScream = (blogId) => (dispatch) => {
     })
     .catch((err) => console.log(err));
 };
+export const subscribe = (info) =>  {
+  console.log(info)
+  axios
+    .post(
+      "/subscribe",
+      info
+    ).then((res)=>{
+      console.log(res.data)
+    }).catch((err)=>{
+      console.log(err)
+    })}
 export const postScream = (newScream) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
