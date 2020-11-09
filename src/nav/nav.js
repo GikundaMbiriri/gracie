@@ -24,7 +24,9 @@ const Navbar = (props) => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li className="nav-item active">
-                  <Link className="nav-link" to="/" style={{color:'white'}}>
+                  <Link className="nav-link" to="/" style={{color:'white'}}         
+         
+          >
                     Home <span className="sr-only">(current)</span>
                   </Link>
                 </li>

@@ -76,3 +76,13 @@
 #container button:active {
   transform: translatey(5px);
 }
+@media screen and (max-width: 550px) {
+  .reject {
+    padding: 0.5em 0.5em;
+    margin: 1.5em 0 0 0;
+  }
+  .choose {
+    padding: 0.5em 0.5em;
+    margin: 1.5em 1em 0 0;
+  }
+}
