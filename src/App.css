@@ -12,25 +12,22 @@
 .pizzes {
   font-family: "Henny Penny", cursive;
   text-align: center;
+  color: #2b072586;
 
-  background: url(./images/plant.jpg);
+  /* background: url(./images/plant.jpg);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
   font-size: 5rem;
 }
 .mzii {
   margin: 0 auto;
   width: 300px;
   height: 100px;
-  background-image: linear-gradient(
-    to left,
-    rgba(255, 146, 202, 0.75) 0%,
-    rgba(145, 149, 251, 0.86) 100%
-  );
+  background-color: white;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -59,5 +56,10 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 550px) {
+  .mzii {
+    background-color: white;
   }
 }

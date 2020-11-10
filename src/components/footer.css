@@ -4,3 +4,11 @@
 .last {
   background-color: #d685d2;
 }
+@media screen and (max-width: 550px) {
+  .cool {
+    display: none;
+  }
+  .kenya {
+    background-color: white;
+  }
+}

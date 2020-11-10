@@ -7,7 +7,7 @@ function Footer() {
 <footer class="page-footer font-small mdb-color lighten-3 pt-4 kenya" >
 
   
-  <div class="container">
+  <div class="container cool">
 
   
     <div class="row">
@@ -16,7 +16,7 @@ function Footer() {
       <div class="col-lg-2 col-md-12 mb-4">
 
       
-        <div class="view overlay z-depth-1-half">
+        <div class="view overlay z-depth-1-half ">
           <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="img-fluid"
             alt=""/>
           <a href="">

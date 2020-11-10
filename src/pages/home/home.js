@@ -42,15 +42,7 @@ const Home = (props) => {
             //   width: ww > 600 ? "100%" : ww,
             // }}
           />
-          <div className="msee">
-         <span class="badge badge-primary">Primary</span>
-         <span class="badge badge-secondary">Secondary</span>
-        </div>
-        <div className="msee">
-
-        <p> <span class="badge badge-success">Success</span></p>
-        <p> <span class="badge badge-danger">Danger</span></p>
-</div>
+         
 <div className="ona">
 <Subscribe />
 </div>
