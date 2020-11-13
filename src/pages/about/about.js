@@ -43,13 +43,37 @@ For my listening audience, I gatchyu! I will keep uploading audio or podcast ver
 </div>
 </div>
 <div>
-    find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
 </div>
+<div className="con">
+  <div className="front">
+    <h1 className="title">Faisal Ansari</h1>
+    <span className="description">I am a graphic designer and art director. I am as well specialised in front end web design, user experience and creating identities. Throughout my career, I have worked with companies of all shapes and sizes that enriched my experience.</span>
+  </div>
+  <div className="back">
+    <h1 className="title">Contact Me</h1>
+    <div className="input-box">
+      <input type="text" name="name" id="name" autocomplete="off" required/>
+      <label for="name">Your name</label>
+    </div>
+    <div className="input-box">
+      <input type="text" name="email" id="email" autocomplete="off" required/>
+      <label for="email">Your email</label>
+    </div>
+    <div className="input-box">
+      <textarea name="msg" id="msg" cols="30" rows="2" autocomplete="off" required></textarea>
+      <label for="msg">Your message</label>
+    </div>
+    <button className="send">Send</button>
+  </div>
+</div>
+<div className="details">
+find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
+
 <p>thisemail@2.com</p>
 <p>website developer <a href="#">mgikunda</a></p>
 <p>blog photographer <a href="#">pizzes photography</a></p>
 <p>blog graphic designer <a href="#">ingenious</a></p>
-
+</div>
         </div>
     )
 }
