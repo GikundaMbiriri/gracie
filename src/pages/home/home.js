@@ -8,11 +8,18 @@ import Subscribe from '../../components/subscribe/Subscribe'
 import { connect } from "react-redux";
 import { getScreams } from "../../redux/actions/dataAction";
 import ScrollAnimation from "react-animate-on-scroll";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 
 const Home = (props) => {
   useEffect(() => {
     props.getScreams();
+  }, []);
+  useEffect(() => {
+    AOS.init({
+      duration : 2000
+    });
   }, []);
   //const ww = window.screen.width;
   const { screams, loading } = props.data;
@@ -43,7 +50,7 @@ const Home = (props) => {
             // }}
           />
          
-<div className="ona">
+<div className="ona" data-aos="zoom-in-left">
 <Subscribe />
 </div>
         </div>
@@ -54,7 +61,7 @@ const Home = (props) => {
             <Blog key={screams[scream].blogId} scream={screams[scream]} />
           ))}{" "}
       </div>
-      <div  className="onai">
+      <div  className="onai" data-aos="zoom-in-left">
       <Subscribe/>
 </div>
       </div>  </>)

@@ -11,6 +11,8 @@
     "@testing-library/user-event": "^7.1.2",
     "@tinymce/tinymce-react": "^3.6.1",
     "antd": "^4.5.3",
+    "aos": "^2.3.4",
+    "aos-animations": "0.0.7",
     "axios": "^0.18.0",
     "dayjs": "^1.8.31",
     "formik": "^1.5.8",

@@ -101,7 +101,7 @@ export class Latest extends Component {
     return (
       <>
     
-        <div className="car" >
+        <div className="car"  data-aos="zoom-in-left">
         <div className="slide-container">
         <Link to={kk}> 
         <div className="image-container">

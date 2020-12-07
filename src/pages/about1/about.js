@@ -3,14 +3,14 @@ import './about.css'
 function About() {
     return (
         <div className="aboutB">
-           <h2>About Blogger</h2> 
-<div className="tr" >
+           <h2  >About Blogger</h2> 
+<div className="tr"   >
     <p>
 A lot of People know me as Kanyasya, Kanyas, Grace, among many other name inventions that relate to my identity.
  However, my proper complete name is Grace Mwende Kanyasya. A girl whose loves music, especially the type that speaks to
   my soul. I love seeing people happy and at peace. I love everything about good hair, and I keep a lot of designer 
   friends because they are very interesting people, whose level of creativity intrigues me. </p>
-  <p>I enjoy fierce business 
+  <p >I enjoy fierce business 
   and financial conversations. I love adventure, events and social connections.  I love listening to different 
   perspectives and mentalities on different things. I like to eat, pizza being my favorite (utterly not the reason
    I named this blog Pizzes, something you’d actually know if you checked out; About Pizzes). Chicken for me comes 

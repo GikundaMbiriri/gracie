@@ -23,6 +23,8 @@ import Favorite from "@material-ui/icons/Favorite";
 import relativeTime from "dayjs/plugin/relativeTime";
 import DeleteScream from "./DeleteScream";
 import Rotation from 'react-rotation'
+import AOS from 'aos';
+import "aos/dist/aos.css";
 export class Blog extends Component {
   likedScream = () => {
     if (
@@ -101,7 +103,7 @@ export class Blog extends Component {
     return (
       <>
       
-        <div className="card1" >
+        <div className="card1"  data-aos="zoom-in-left">
         <div className="slide-containe">
         <Link to={kk}> 
        

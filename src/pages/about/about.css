@@ -11,7 +11,9 @@
 /*  */
 .about h2 {
   font-family: "Carter One", cursive;
+  text-align: center;
 }
+
 .details {
   padding: 2rem;
 }
