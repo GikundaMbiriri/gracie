@@ -26,22 +26,20 @@ import Rotation from 'react-rotation'
 import AOS from 'aos';
 import "aos/dist/aos.css";
 export class Blog extends Component {
-  likedScream = () => {
-    if (
-      this.props.user.likes &&
-      this.props.user.likes.find(
-        (like) => like.blogId === this.props.scream.blogId
-      )
-    )
-      return true;
-    else
-    { return false;}
-  };
+  constructor(props){
+    super(props);
+
+    this.state = {
+       like:false
+    }}
+
+
   likeScream = () => {
-    this.props.likeScream(this.props.scream.blogId);
-  };
+this.props.scream.likeCount++; 
+this.setState({like:true}) };
   unlikeScream = () => {
-    this.props.unlikeScream(this.props.scream.blogId);
+    this.props.scream.likeCount--;
+    this.setState({like:false})
   };
 
   render() {
@@ -72,16 +70,7 @@ export class Blog extends Component {
      
     }
     //const images=Object.keys(image);
-    const likeButton = !authenticated ? (
-      <Tooltip title="like" >
-    <IconButton onClick={this.likeScream} >
-    <Link to="/login">
-          <FavoriteBorder style={{color:"#a841a3"}} />
-        </Link>
-    </IconButton>
-  </Tooltip>
-     
-    ) : this.likedScream() ? (
+    const likeButton = this.state.like ? (
       <Tooltip title="Undo like" >
         <IconButton onClick={this.unlikeScream} >
         <Favorite style={{color:"#a841a3"}} />
@@ -127,7 +116,6 @@ and therefore we are doing the best we can    {catchy}</p>
             <span>{commentCount} </span>
             </div>
             <Btn />
-
             </div>
   </div>
 </div>
