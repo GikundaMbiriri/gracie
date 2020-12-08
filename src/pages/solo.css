@@ -11,7 +11,10 @@
   max-width: 600px;
   margin-bottom: 10px;
 }
-
+.greatness {
+  width: 90vw;
+  margin: auto;
+}
 .messaging {
   max-width: 600px;
   margin-top: 20px;
@@ -35,20 +38,28 @@
   display: inline-block;
 }
 .comment {
-  margin: 20px;
+  margin: 10px;
   width: 60vw;
-  padding: 10px;
+  padding: 5px;
 }
 .fa-paper-plane {
   font-size: 20px;
   margin: 0 10px;
 }
-
+.yt {
+  width: 50vw;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.be-comment {
+  width: 70vw;
+  margin-left: 20px;
+}
 .be-comment-block {
   margin-bottom: 50px !important;
   border: 1px solid #edeff2;
   border-radius: 2px;
-  padding: 50px 70px;
+  /* padding: 50px 40px; */
   border: 1px solid #ffffff;
 }
 
@@ -153,4 +164,12 @@
 
 .form-group textarea.form-input {
   height: 150px;
+}
+@media screen and (max-width: 550px) {
+  .be-comment {
+    width: 100vw;
+  }
+  .yt {
+    width: 90vw;
+  }
 }
