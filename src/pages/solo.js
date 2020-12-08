@@ -35,7 +35,10 @@ const  handleSubmit=(event)=>{
 	setName('')
 	setEmail('')
   }
-let k=<p>loading</p>
+let k= <div className="cover">
+<div className="loader">  <div className="circle"></div>
+  <div className="circle"></div>
+  <div className="circle"></div></div></div>
 dayjs.extend(relativeTime);
 
   const {body,createdAt,loading,comments}=props.scream

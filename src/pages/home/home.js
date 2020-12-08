@@ -44,10 +44,8 @@ const Home = (props) => {
           <img
             src={homepage}
             alt="homie"
-            // height={ww > 600 ? "500px" : "150px"}
-            // style={{
-            //   width: ww > 600 ? "100%" : ww,
-            // }}
+          
+            className="pm"
           />
          
 <div className="ona" data-aos="zoom-in-left">

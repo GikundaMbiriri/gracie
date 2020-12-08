@@ -3,9 +3,10 @@
   flex: 1;
   align-items: flex-start;
 }
-img {
+.pm {
   width: 50vw;
   height: 70vh;
+  object-fit: cover;
 }
 .onai {
   display: none;
@@ -117,15 +118,17 @@ img {
   .home {
     display: block;
   }
-  img {
-    width: 100vw;
+  .pm {
+    width: 96vw;
     height: 65vh;
+    object-fit: cover;
   }
   .msee {
     display: none;
   }
   .onai {
     display: block;
+    width: 90vw;
   }
   .ona {
     display: none;
