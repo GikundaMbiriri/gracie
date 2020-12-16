@@ -97,7 +97,7 @@ export const subscribe = (info) =>  {
   axios
     .post(
       "/subscribe",
-      info
+      info,
     ).then((res)=>{
       console.log(res.data)
     }).catch((err)=>{

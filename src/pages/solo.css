@@ -16,6 +16,10 @@
   width: 70vw;
   margin-left: 20px;
 }
+.fo {
+  margin-left: 0 !important;
+  padding: 0 !important;
+}
 .be-comment-block {
   margin-bottom: 50px !important;
   border: 1px solid #edeff2;

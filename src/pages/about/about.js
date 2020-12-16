@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import './about.css'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -8,10 +8,40 @@ import PropTypes from "prop-types";
 import Latest from '../../components/latest/Latest'
 import { connect } from "react-redux";
 import Subscribe from '../../components/subscribe/Subscribe'
+import AOS from 'aos';
+import "aos/dist/aos.css";
 function About(props) {
-
+  const [name,setName]=useState('');
+  const [email,setEmail]=useState('');
+  const [message,setMessage]=useState('');
+ const onNameChange = (event) => {
+    setName(event.target.value );
+  };
+const  onEmailChange = (event) => {
+    setEmail(event.target.value );
+  };
+ const onMessageChange = (event) => {
+    setMessage(event.target.value );
+  };
+  const  handleSubmit=(event)=>{
+    event.preventDefault()
+  
+      const variables={
+        name,email,message
+      }
+      props.Comment(variables,props.match.params.id)
+      
+    setMessage('')
+    setName('')
+    setEmail('')
+    }
     useEffect(() => {
         props.getScreams();
+      }, []);
+      useEffect(() => {
+        AOS.init({
+          duration : 2000
+        });
       }, []);
       const { screams, loading } = props.data;
 
@@ -44,7 +74,7 @@ For my listening audience, I gatchyu! I will keep uploading audio or podcast ver
 </div>
 <div>
 </div>
-<div className="con">
+{/* <div className="con">
   <div className="front">
     <h1 className="title">Faisal Ansari</h1>
     <span className="description">I am a graphic designer and art director. I am as well specialised in front end web design, user experience and creating identities. Throughout my career, I have worked with companies of all shapes and sizes that enriched my experience.</span>
@@ -65,8 +95,9 @@ For my listening audience, I gatchyu! I will keep uploading audio or podcast ver
     </div>
     <button className="send">Send</button>
   </div>
-</div>
+</div> */}
 <div className="details">
+
 find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
 
 <p>thisemail@2.com</p>
@@ -74,6 +105,30 @@ find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
 <p>blog photographer <a href="#">pizzes photography</a></p>
 <p>blog graphic designer <a href="#">ingenious</a></p>
 </div>
+<form className="form-block yt">
+		<h4>leave a comment</h4>
+		<div >
+			<div>
+				<div className="form-group ">
+					<input class="form-control" onChange={onNameChange} value={name} type="text" placeholder="Your name"/>
+				</div>
+			</div>
+			<div>
+			<div class="form-group">
+    <input type="email" class="form-control" onChange={onEmailChange} value={email} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+			</div>
+			<div >									
+				<div className="form-group">
+					<textarea className="form-control" onChange={onMessageChange} value={message} required="" placeholder="Your text"></textarea>
+				</div>
+			</div>
+			
+		</div>
+		<button className="btn btn-primary" onClick={handleSubmit}>submit</button>
+
+	</form>
         </div>
     )
 }

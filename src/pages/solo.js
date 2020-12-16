@@ -10,6 +10,7 @@ const Solo =  (props) => {
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [message,setMessage]=useState('');
+  const [sub,setSub]=useState('0')
  const onNameChange = (event) => {
     setName(event.target.value );
   };
@@ -19,6 +20,14 @@ const  onEmailChange = (event) => {
  const onMessageChange = (event) => {
     setMessage(event.target.value );
   };
+const onSub=(event)=>{
+	if(sub==='0'){
+		setSub('1')
+	}
+	if(sub==='1'){
+		setSub('0')
+	}
+}
   useEffect( () =>  {
    props.getScream(props.match.params.id);
 
@@ -27,13 +36,14 @@ const  handleSubmit=(event)=>{
 	event.preventDefault()
 
     const variables={
-      name,email,message
+      name,email,message,sub
     }
     props.Comment(variables,props.match.params.id)
     
 	setMessage('')
 	setName('')
 	setEmail('')
+	setSub('0')
   }
 let k= <div className="cover">
 <div className="loader">  <div className="circle"></div>
@@ -75,22 +85,36 @@ dayjs.extend(relativeTime);
 		<div >
 			<div>
 				<div className="form-group ">
-					<input class="form-control" onChange={onNameChange} value={name} type="text" placeholder="Your name"/>
+					<input className="form-control" onChange={onNameChange} value={name} type="text" placeholder="Your name"/>
 				</div>
 			</div>
 			<div>
-			<div class="form-group">
-    <input type="email" class="form-control" onChange={onEmailChange} value={email} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			<div className="form-group">
+    <input type="email" className="form-control" onChange={onEmailChange} value={email} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
+
 			</div>
+			<div>
+
+
+			</div>	
+			  {/* <div className="form-group">
+  <input className="form-check-input" type="checkbox" onChange={onSub} value={sub} id="defaultCheck1"/>
+  <label className="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div> */}
 			<div >									
 				<div className="form-group">
 					<textarea className="form-control" onChange={onMessageChange} value={message} required="" placeholder="Your text"></textarea>
+					<input type="checkbox" className="fo" onChange={onSub} value={sub}  checked={sub==="1"}/>
+					notify me via email
 				</div>
 			</div>
 			
 		</div>
+		
 		<button className="btn btn-primary" onClick={handleSubmit}>submit</button>
 
 	</form></>
