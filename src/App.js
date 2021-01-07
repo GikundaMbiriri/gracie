@@ -4,6 +4,8 @@ import home from "./pages/home/home";
 import about from './pages/about1/about'
 import about1 from './pages/about/about'
 import audio from './pages/audio/audio'
+import logo from './logo.svg'
+//import logo from './images/pic1.jpg'
 import Footer from './components/Footer'
 import Tiny from "./pages/tiny";
 import Solo from "./pages/solo";
@@ -19,6 +21,7 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import axios from "axios";
 import './App.css'
+
 axios.defaults.baseURL =
   "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/";
   const theme = createMuiTheme({
@@ -69,6 +72,14 @@ axios.defaults.baseURL =
     },
   });
 function App() {
+  
+const SvgComponent =()=>(
+  <object data={logo} width={200} height={100}>
+    APP logo svg
+  </object>
+)
+
+
   const token = localStorage.FBIdToken;
   if (token) {
     const decodedToken = jwtDecode(token);
@@ -88,7 +99,12 @@ function App() {
 <div className="hatari">
 
 <div className="mzii">
-          <h1 className="pizzes">Pizzes</h1>
+          {/* <h1 className="pizzes">Pizzes</h1> */}
+         <div className="svg" >
+           <SvgComponent/>
+           {/* <img src={logo} style={{width:"250px",height:"70px"}}/> */}
+         </div>
+
           </div>
           <Navbar />
           </div>
@@ -99,7 +115,7 @@ function App() {
             <Route exact path="/about1" component={about} />
             <Route exact path="/about" component={about1} />
 
-<Route exact path='/audio' component={audio}/>
+            <Route exact path='/audio' component={audio}/>
             <Route exact path="/login" component={login} />
             <Route exact path="/signup" component={signup} />
 

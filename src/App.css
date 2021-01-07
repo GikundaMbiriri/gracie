@@ -23,9 +23,13 @@
   background-size: cover; */
   font-size: 5rem;
 }
+.svg {
+  width: 200px;
+  height: 100px;
+}
 .mzii {
   margin: 0 auto;
-  width: 300px;
+  width: 200px;
   height: 100px;
   background-color: white;
 }
