@@ -95,7 +95,7 @@ function Footer() {
   </div>
 
   <div class="footer-copyright text-center py-3 last">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> Zaggies.com</a>
+    <a href="https://mdbootstrap.com/"> pizzes.com</a>
   </div>
 
 </footer>
