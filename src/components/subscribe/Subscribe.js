@@ -16,11 +16,12 @@ function Subscribe() {
         
 
         subscribe(info).finally(() => {
-            setTimeout(() => setLoading(false), 1000)
+            setTimeout(() => setLoading(false), 0)
         })
         
+        
     }
-   
+   //subscribe popup
     return (
         <div>
             <div id="container">

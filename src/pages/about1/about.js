@@ -190,3 +190,5 @@ About.propTypes = {
   });
   
 export default  connect(mapStateToProps, { getScreams })(About);
+//move the image
+//design the contact part

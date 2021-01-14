@@ -41,6 +41,8 @@ const Home = (props) => {
   <div className="circle"></div>
   <div className="circle"></div></div></div></>):(<> <div className="home">
         <div className="side-img">
+          {/* <h1>remove margin top</h1> */}
+          
           <img
             src={homepage}
             alt="homie"
@@ -59,7 +61,7 @@ const Home = (props) => {
             <Blog key={screams[scream].blogId} scream={screams[scream]} />
           ))}{" "}
       </div>
-      <div  className="onai" data-aos="zoom-in-left">
+      <div  className="onai" >
       <Subscribe/>
 </div>
       </div>  </>)

@@ -74,7 +74,7 @@ axios.defaults.baseURL =
 function App() {
   
 const SvgComponent =()=>(
-  <object data={logo} width={200} height={50}>
+  <object data={logo} width={220} height={85}>
     APP logo svg
   </object>
 )
@@ -102,7 +102,7 @@ const SvgComponent =()=>(
           <h1 className="pizzes">Pizzes</h1>
          <div className="svg" >
            <SvgComponent/>
-           <img src={logo} style={{width:"250px",height:"70px"}}/>
+           
          </div>
 
           </div>

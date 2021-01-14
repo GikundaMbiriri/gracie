@@ -59,7 +59,7 @@ else{
             <div className="outside">
                 <div className="about">
             <h2  >ABOUT PIZZES</h2>
-            <i >Re-define. Renew. Transform.</i>
+            <i className="italic" >Re-define. Renew. Transform.</i>
             <p> A warm welcome to the Pizzes blog page! </p>
            
               <p>

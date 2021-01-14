@@ -92,7 +92,7 @@ this.setState({like:true}) };
     return (
       <>
       
-        <div className="card1"  data-aos="zoom-in-left">
+        <div className="card1"  >
         <div className="slide-containe">
         <Link to={kk}> 
        

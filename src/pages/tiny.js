@@ -258,5 +258,6 @@ class Tiny extends React.Component {
     );
   }
 }
-
+//bg color
+//fonts
 export default Tiny;

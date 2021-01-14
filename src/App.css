@@ -13,7 +13,7 @@
   font-family: "Henny Penny", cursive;
   text-align: center;
   color: #2b072586;
-
+  /* color: blanchedalmond; */
   /* background: url(./images/plant.jpg);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -21,17 +21,20 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; */
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 .svg {
   width: 200px;
   height: 100px;
+  margin-top: 0;
+  padding-top: 0;
 }
 .mzii {
   margin: 0 auto;
   width: 220px;
-  height: 100px;
+  height: 150px;
   background-color: white;
+  border-radius: 5px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -11,6 +11,7 @@
   width: 50vw;
   padding: 2rem;
 }
+
 .about p {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 600;
@@ -18,13 +19,13 @@
 }
 .about i {
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 600;
+  font-weight: bolder;
   font-size: 18px;
 }
 /*  */
 .about h2 {
   font-family: "Carter One", cursive;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .details {
