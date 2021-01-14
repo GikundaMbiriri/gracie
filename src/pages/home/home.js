@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import homepage from "../../images/pic1.jpg";
+import homepage from "../../images/home1.jpg";
 import './home.css'
 import PropTypes from "prop-types";
 import Blog from "../../components/Blog";

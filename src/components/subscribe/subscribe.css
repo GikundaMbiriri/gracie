@@ -35,13 +35,14 @@
 }
 .teke {
   display: flex;
-  justify-content: space-between;
+  /* padding: 0px 100px; */
+  /* justify-content: space-evenly; */
 }
 .reject {
   background-color: #ed0a3f;
   font-family: "Abel", sans-serif;
   padding: 0.5em 1.9em;
-  margin: 2.3em 0 0 0;
+  margin: 2.3em 0 0 20px;
   border-radius: 7px;
   font-size: 1.4em;
   cursor: pointer;

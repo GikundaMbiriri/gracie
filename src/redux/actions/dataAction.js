@@ -92,9 +92,9 @@ export const deleteScream = (blogId) => (dispatch) => {
     })
     .catch((err) => console.log(err));
 };
-export const subscribe = (info) =>  {
+export const subscribe =  (info) =>  {
   console.log(info)
-  axios
+  return axios
     .post(
       "/subscribe",
       info,

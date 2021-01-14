@@ -1,3 +1,6 @@
+.modal {
+  z-index: +1 !important;
+}
 .mt-100 {
   margin-top: 100px;
 }

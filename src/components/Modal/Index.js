@@ -9,7 +9,7 @@ import ShareSharpIcon from '@material-ui/icons/ShareSharp';
 import "./modal.css";
 const Index = () => {
   return (
-    <div>
+    <div className="co">
       <div>
         {" "}
         <div
@@ -19,7 +19,9 @@ const Index = () => {
         >
 <ShareSharpIcon style={{color:"#a841a3"}}/>        </div>{" "}
       </div>
-      <div
+      <div  className="co">
+      <div 
+      
         className="modal fade"
         id="exampleModal"
         tabIndex="-1"
@@ -30,7 +32,6 @@ const Index = () => {
         <div className="modal-dialog" role="document">
           <div className="modal-content col-12">
             <div className="modal-header">
-              <h5 className="modal-title">Share</h5>{" "}
               <button
                 type="button"
                 className="close"
@@ -119,7 +120,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="modal-footer">
+            <div className="modal-footer" style={{zIndex:"1"}}>
               {" "}
               <label style={{ fontWeight: "600" }}>
                 Page Link <span className="message"></span>
@@ -140,7 +141,7 @@ const Index = () => {
                 </button>{" "}
               </div>
             </div>
-          </div>
+          </div></div>
         </div>
       </div>
     </div>
