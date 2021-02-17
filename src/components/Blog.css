@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap");
 .Acard-body {
   margin-top: 10px;
   padding-right: 30px;
@@ -14,6 +15,10 @@
   height: 150px;
   width: 260px;
   object-fit: cover;
+}
+.tran h3 {
+  font-style: italic;
+  font-family: "Advent Pro", sans-serif;
 }
 .ikoni {
   display: flex;

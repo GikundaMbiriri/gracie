@@ -99,9 +99,8 @@ this.setState({like:true}) };
           <img  className="card-img-top" src={image[0]}    alt="..."/> 
  </Link> </div>
   <div className="tran">
-      <h3>{topic}</h3>
-    <p className="ca">ddddddddddddddd and we are looking for the best talent here
-and therefore we are doing the best we can    {catchy}</p>
+     <Link to={kk} style={{textDecoration:"none"}}> <h3>{topic}</h3></Link>
+    <p className="ca"dangerouslySetInnerHTML={{ __html: body }}/>
     <div className="ikoni"
     
     >

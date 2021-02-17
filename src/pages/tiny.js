@@ -1,7 +1,7 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
-
+import "../pages/p.css";
 class Tiny extends React.Component {
   state = {
     body: "",
@@ -70,6 +70,95 @@ class Tiny extends React.Component {
   render() {
     return (
       <>
+       <div
+          className="modal fade"
+          id="exampleModal"
+          tabIndex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          data-backdrop="false"
+        >
+          <div className="modal-dialog finish" role="document">
+            <div className="modal-content">
+              <div className="modal-header ">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  Let's finish up
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <form>
+                  <div className="form-group">
+                    <label htmlFor="recipient-name" className="col-form-label">
+                      Topic:
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="recipient-name"
+                      onChange={this.onTopicChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="recipient-name" >
+                      Topic:
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="recipient-name"
+                      onChange={this.onTopicChange}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="message-text" className="col-form-label">
+                      catchy statement:
+                    </label>
+                    <textarea
+                      className="form-control"
+                      id="message-text"
+                      onChange={this.onCatchyChange}
+                    ></textarea>
+                  </div>
+                  <div className="form-group">
+                    <input
+                      accept="image/*"
+                      id="icon-button-file"
+                      type="file"
+                      onChange={this.handleImageChange}
+                    />
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  onClick={this.onSubmit}
+                  data-dismiss="modal"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <Editor
           initialValue="<p>This is the initial content of the editor</p>"
           apiKey="xmyra79e9kyeql4uxcc3tid6iaitg1tif93ra4j6o1yll1sf"
@@ -86,6 +175,7 @@ class Tiny extends React.Component {
               "undo redo | formatselect | bold italic backcolor | \
             alignleft aligncenter alignright alignjustify | \
             bullist numlist outdent indent|fontselect | removeformat |fontsizeselect ",
+            
             file_picker_types: "image",
             /* and here's our custom image picker*/
             file_picker_callback: function (cb, value, meta) {
@@ -178,83 +268,7 @@ class Tiny extends React.Component {
           submit
         </button>
 
-        <div
-          className="modal fade"
-          id="exampleModal"
-          tabIndex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">
-                  Let's finish up
-                </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
-                <form>
-                  <div className="form-group">
-                    <label htmlFor="recipient-name" className="col-form-label">
-                      Topic:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="recipient-name"
-                      onChange={this.onTopicChange}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="message-text" className="col-form-label">
-                      catchy statement:
-                    </label>
-                    <textarea
-                      className="form-control"
-                      id="message-text"
-                      onChange={this.onCatchyChange}
-                    ></textarea>
-                  </div>
-                  <div className="form-group">
-                    <input
-                      accept="image/*"
-                      id="icon-button-file"
-                      type="file"
-                      onChange={this.handleImageChange}
-                    />
-                  </div>
-                </form>
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  onClick={this.onSubmit}
-                  data-dismiss="modal"
-                >
-                  Submit
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </>
+             </>
     );
   }
 }

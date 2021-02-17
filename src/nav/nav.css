@@ -8,7 +8,11 @@
   height: 600px !important;
 }
 .navbar {
-  background-color: #a841a3;
+  /* background-image: url("../images/home1.jpg"); */
+  /* background-color: #a841a3; */
+}
+.site-navbar {
+  display: none;
 }
 .nav-link {
   font-family: "Barlow Condensed", sans-serif;
@@ -45,3 +49,113 @@
   background-color: #a841a3;
   border-radius: 1rem;
 }
+.nav-toggler {
+  border: 3px solid #fff;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+.nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+@media screen and (max-width: 550px) {
+  .navbar {
+    display: none;
+  }
+  .nav-toggler {
+    display: block;
+    margin-top: 100px;
+  }
+  .site-navbar {
+    min-height: 60px;
+    display: block;
+  }
+  .site-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    /* border-top: 1px solid #444; */
+    background-color: rgba(0, 0, 0, 0.75);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 1;
+  }
+
+  .site-navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .site-navbar ul li a {
+    padding: 25px;
+  }
+  .site-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .site-navbar ul.open {
+    max-height: 100vh;
+    overflow: visible;
+  }
+
+  .navbar-area {
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid #000;
+  }
+  .site-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  .site-navbar ul li a {
+    color: #fff;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  /* navbar regular css end */
+
+  /* nav-toggler css start */
+  /* navbar css for mobile end */
+}
+/* mobile breakpoint end */

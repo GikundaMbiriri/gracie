@@ -1,9 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import './nav.css'
 const Navbar = (props) => {
+  const [cake,setCake]=useState(true)
+
   const { authenticated, email } = props;
   return (
     <>
@@ -31,7 +33,7 @@ const Navbar = (props) => {
                   </Link>
                 </li>
        
-                {email == "gracemwende101@gmail.com" ? (
+                {email == "gracemwende101@gmail.com"  || "petermbiriri8957@gmail.com"? (
                   <>
                     <li className="nav-item" >
                       <Link className="nav-link" to="/tiny" style={{color:'white'}}>
@@ -70,26 +72,31 @@ const Navbar = (props) => {
   </div>` `
         </div>
       </nav>
-      <div className="modal fade" id="myModal" data-backdrop="true">
-    <div className="modal-dialog"  >
-      <div className="modal-content" >
-      
-        <div className="modal-header">
-          <h4 className="modal-title">Modal Heading</h4>
-          <button type="button" className="close" data-dismiss="modal">&times;</button>
+      {/* <div className="modal fade" id="myModal" data-backdrop="true"> */}
+      <nav className="site-navbar">
+        {/* <a href="#home" className="site-logo">Salimia Doctor</a> */}
+
+        <ul className={cake?'':'open'} onClick={()=>cake?'':setCake(!cake)}>
+          <li><Link to="/">home</Link></li>
+          <li><Link  to="/audio">podcast</Link ></li>
+          <li className="nav-item dropdown">
+                  <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>About us</Link>
+                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about" >About Pizzes</Link></div>
+        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about1" >About blogger</Link></div>
+
         </div>
-        
-        <div className="modal-body">
-      
-        </div>
-        
-        <div className="modal-footer">
-          <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
+                </li>
+              
+          <li><Link  to="/">contact</Link ></li>
+        </ul>
+
+        <button className={cake?'nav-toggler':'nav-toggler toggler-open'} onClick={()=>setCake(!cake)}>
+          <span></span>
+        </button>
+      </nav>
+  {/* </div> */}
     </>
   );
 };

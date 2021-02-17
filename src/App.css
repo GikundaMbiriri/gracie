@@ -3,7 +3,16 @@
   text-align: center;
 }
 .hatari {
-  background-color: #a841a3;
+  /* background-color: #a841a3; */
+  /* background-color: rgba(243, 7, 137, 0.596); */
+  background: linear-gradient(rgba(0, 0, 0, 0.563), rgba(243, 7, 137, 0.596)),
+    url("./images/ima.jpg") no-repeat center;
+  /* background: linear-gradient(
+      rgba(219, 96, 96, 0.863),
+      rgba(243, 7, 137, 0.596)
+    ),
+    url("./images/ima.jpg") no-repeat center; */
+  background-size: 100% 100%;
 }
 .App-logo {
   height: 40vmin;
@@ -12,7 +21,8 @@
 .pizzes {
   font-family: "Henny Penny", cursive;
   text-align: center;
-  color: #2b072586;
+  color: rgba(201, 31, 172, 0.69);
+  /* color: #2b072586; */
   /* color: blanchedalmond; */
   /* background: url(./images/plant.jpg);
   -webkit-text-fill-color: transparent;
@@ -24,18 +34,24 @@
   font-size: 4.5rem;
 }
 .svg {
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin-top: 0;
   padding-top: 0;
 }
 .mzii {
+  margin: 0 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+/* .mzii {
   margin: 0 auto;
   width: 220px;
   height: 150px;
-  background-color: white;
+   background-color: white; 
   border-radius: 5px;
-}
+} */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -67,6 +83,8 @@
 }
 @media screen and (max-width: 550px) {
   .mzii {
-    background-color: white;
+    align-items: flex-start;
+  }
+  .svg {
   }
 }

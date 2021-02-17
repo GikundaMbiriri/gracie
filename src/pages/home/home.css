@@ -1,28 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Long+Cang&display=swap");
 .home {
   display: flex;
   flex: 1;
   align-items: flex-start;
 }
+.pod {
+  background-image: linear-gradient(
+    to left,
+    rgba(255, 146, 202, 0.507) 0%,
+    rgba(230, 32, 59, 0.822) 100%
+  );
+  /* background-image: linear-gradient(
+    to left,
+    rgba(255, 146, 202, 0.507) 0%,
+    rgba(230, 32, 59, 0.822) 100%
+  ); */
+  font-family: "Abel", sans-serif;
+  padding: 0.5em 1.9em;
+  margin: 2.3em 0 0 0;
+  border-radius: 7px;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  transition: 0.3s linear;
+}
 .pm {
   width: 50vw;
-  height: 65vh;
-  object-fit: cover;
+  height: 75vh;
+  display: table;
+  background: linear-gradient(
+      rgba(146, 5, 71, 0.541),
+      rgba(218, 127, 173, 0.596)
+    ),
+    url("../../images/download.jpg");
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.er {
+  display: table-cell;
+  vertical-align: middle;
+}
+.te {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.on {
+  font-family: "Dancing Script", cursive;
+}
+/* .on h1 {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  letter-spacing: 0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 8px 8px #ff1f8f, 20px 20px #000000;
+} */
+.pm p {
+  background-color: #f6f6f6;
+}
+.slider {
+  z-index: 1;
+  color: #a10702;
 }
 .onai {
   display: none;
 }
 .side-img {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.msee {
+/* .msee {
   margin: 0 auto;
   padding: 20px;
   display: inline-block;
   text-align: center;
-}
+  position: absolute;
+} */
 .badge {
   padding: 10px;
 }
@@ -119,9 +183,8 @@
     display: block;
   }
   .pm {
-    width: 100vw;
+    width: 96.5vw;
     height: 61vh;
-    object-fit: cover;
   }
   .msee {
     display: none;

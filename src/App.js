@@ -5,7 +5,7 @@ import about from './pages/about1/about'
 import about1 from './pages/about/about'
 import audio from './pages/audio/audio'
 import logo from './logo.svg'
-//import logo from './images/pic1.jpg'
+
 import Footer from './components/Footer'
 import Tiny from "./pages/tiny";
 import Solo from "./pages/solo";
@@ -74,7 +74,7 @@ axios.defaults.baseURL =
 function App() {
   
 const SvgComponent =()=>(
-  <object data={logo} width={220} height={85}>
+  <object data={logo} width={150} height={150}>
     APP logo svg
   </object>
 )
@@ -99,14 +99,14 @@ const SvgComponent =()=>(
 <div className="hatari">
 
 <div className="mzii">
-          <h1 className="pizzes">Pizzes</h1>
+         
          <div className="svg" >
            <SvgComponent/>
-           
+           {/* <img src={logo1}/> */}
          </div>
-
+         <Navbar />
           </div>
-          <Navbar />
+        
           </div>
           <Switch>
             <Route exact path="/" component={home} />

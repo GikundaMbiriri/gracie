@@ -101,8 +101,7 @@ this.setState({like:true}) };
  </Link> </div>
   <div className="tran">
       <h3>{topic}</h3>
-    <p className="c">ddddddddddddddd and we are looking for the best talent here
-and therefore we are doing the best we can    {catchy}</p>
+    <p className="c"dangerouslySetInnerHTML={{ __html: body }}/>
     <div className="ikoni"
     
     >

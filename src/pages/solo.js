@@ -1,11 +1,15 @@
 import React, { useEffect,useState } from "react";
-import { getScream,Comment } from "../redux/actions/dataAction";
+import { getScream,Comment,getScreams } from "../redux/actions/dataAction";
 import { connect } from "react-redux";
 import './solo.css'
 import relativeTime from "dayjs/plugin/relativeTime";
-
-import dayjs from 'dayjs'
-
+import banner from "../images/images.jpg";
+import dayjs from 'dayjs';
+import Subscribe from '../components/subscribe/Subscribe'
+import Latest from "../components/latest/Latest"
+import StyledHeader from "../components/StyledHeader"
+import AOS from 'aos';
+import "aos/dist/aos.css";
 const Solo =  (props) => {
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
@@ -32,6 +36,24 @@ const onSub=(event)=>{
    props.getScream(props.match.params.id);
 
   }, [props.scream.comments]);
+  useEffect(()=>{
+	  props.getScreams();
+  },[]);
+  useEffect(() => {
+	AOS.init({
+	  duration : 2000
+	});
+  }, []);
+  const { screams } = props.data;
+
+  let success;
+  if(screams[0]){
+   success=<Latest scream={screams[0]}/>
+  }
+  else{
+	  success=<p>loading</p>
+  
+  }
 const  handleSubmit=(event)=>{
 	event.preventDefault()
 
@@ -51,7 +73,8 @@ let k= <div className="cover">
   <div className="circle"></div></div></div>
 dayjs.extend(relativeTime);
 
-  const {body,createdAt,loading,comments}=props.scream
+  const {body,createdAt,loading,comments}=props.scream;
+  
   if(comments){
      k= comments.map((comment)=>
    ( <>
@@ -120,8 +143,17 @@ dayjs.extend(relativeTime);
 	</form></>
   }
  
-  return( <><div className="greatness" dangerouslySetInnerHTML={{ __html: body }} />
-
+  return( <>
+  <StyledHeader img={banner} className="banner">
+	  <div >
+	  </div>
+  </StyledHeader>
+<div className="carrier">
+  <div className="greatness" dangerouslySetInnerHTML={{ __html: body }} />
+<div className="very"><div className="ff">{success}</div>
+<Subscribe/>
+</div>
+</div>
 
 <div>  <div className="be-comment-block">
 {p}  <div>{k}</div>
@@ -131,5 +163,6 @@ dayjs.extend(relativeTime);
 };
 const mapStateToProps = (state) => ({
   scream: state.data.scream,
+  data:state.data
 });
-export default connect(mapStateToProps, { getScream,Comment })(Solo);
+export default connect(mapStateToProps, { getScream,Comment,getScreams })(Solo);
