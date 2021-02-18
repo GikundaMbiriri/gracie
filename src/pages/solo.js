@@ -3,7 +3,7 @@ import { getScream,Comment,getScreams } from "../redux/actions/dataAction";
 import { connect } from "react-redux";
 import './solo.css'
 import relativeTime from "dayjs/plugin/relativeTime";
-import banner from "../images/images.jpg";
+import banner from "../images/pic2.jpg";
 import dayjs from 'dayjs';
 import Subscribe from '../components/subscribe/Subscribe'
 import Latest from "../components/latest/Latest"
@@ -145,7 +145,11 @@ dayjs.extend(relativeTime);
  
   return( <>
   <StyledHeader img={banner} className="banner">
-	  <div >
+	  <div className="hey">
+		  <h1 className="tt">It's about Time</h1>
+		  <div className="very"><div className="fg"><i className="fa fa-clock-o"></i>
+					{dayjs(createdAt).fromNow()}</div>
+					</div>
 	  </div>
   </StyledHeader>
 <div className="carrier">

@@ -79,7 +79,7 @@ const Home = (props) => {
   <div>
      <h3 className="pizzes">Pizzes</h3>
      <p>
-Pizzes is an inspirational blog, and more than just a blog website, 
+Pizzes is an inspirational blog, but more than just a blog website, 
 Pizzes is a place. A place where you will experience peace, inspiration, and truth.
  It’s a place where we shall discuss truths behind the tough, deep,
   and sensitive unspoken issues that we as young people have to carry and deal with, 
