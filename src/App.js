@@ -3,7 +3,8 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import home from "./pages/home/home";
 import about from './pages/about1/about'
 import about1 from './pages/about/about'
-import audio from './pages/audio/audio'
+import audio from './pages/podcast/podcast';
+
 import logo from './logo.svg'
 
 import Footer from './components/Footer'

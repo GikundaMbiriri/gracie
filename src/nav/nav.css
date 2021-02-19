@@ -20,6 +20,9 @@
   font-size: 1.3em;
   border-radius: 1rem;
 }
+.dropdown-toggle {
+  font-family: "Barlow Condensed", sans-serif;
+}
 .nav-link:hover {
   background-color: #c5b0c4;
 }
@@ -91,6 +94,7 @@
   .nav-toggler {
     display: block;
     margin-top: 100px;
+    z-index: 1;
   }
   .site-navbar {
     min-height: 60px;
