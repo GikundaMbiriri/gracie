@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Long+Cang&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,300&display=swap");
 .greatness {
   width: 50vw;
   margin: auto;
@@ -9,7 +9,9 @@
   margin-left: 50px;
 }
 .tt {
-  font-family: "Dancing Script", cursive;
+  font-family: "Newsreader", serif;
+  font-weight: bolder;
+  font-size: 60px;
 }
 .fa-paper-plane {
   font-size: 20px;
