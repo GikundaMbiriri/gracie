@@ -5,6 +5,13 @@
   width: 50vw;
   margin: auto;
 }
+.pl {
+  width: 50vw;
+  margin: auto;
+}
+.pl h2 {
+  text-transform: uppercase;
+}
 .ff {
   margin-left: 50px;
 }

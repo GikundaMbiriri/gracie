@@ -73,7 +73,7 @@ let k= <div className="cover">
   <div className="circle"></div></div></div>
 dayjs.extend(relativeTime);
 
-  const {body,createdAt,loading,comments}=props.scream;
+  const {body,createdAt,topic,loading,comments}=props.scream;
   
   if(comments){
      k= comments.map((comment)=>
@@ -146,14 +146,16 @@ dayjs.extend(relativeTime);
   return( <>
   <StyledHeader img={banner} className="banner">
 	  <div className="hey">
-		  <h1 className="tt">It's about <br/>Time</h1>
+		  <h1 className="tt">{topic}</h1>
 		  <div className="very"><div className="fg"><i className="fa fa-clock-o"></i>
 					{dayjs(createdAt).fromNow()}</div>
 					</div>
 	  </div>
   </StyledHeader>
 <div className="carrier">
+	<div className="pl"><h2>{topic}</h2>
   <div className="greatness" dangerouslySetInnerHTML={{ __html: body }} />
+  </div>
 <div className="very"><div className="ff">{success}</div>
 <Subscribe/>
 </div>

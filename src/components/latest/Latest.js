@@ -100,7 +100,7 @@ this.setState({like:true}) };
         </div>
  </Link> </div>
   <div className="tran">
-      <h3>{topic}</h3>
+     <Link to={kk}><h3>{topic}</h3></Link> 
     <p className="c"dangerouslySetInnerHTML={{ __html: body }}/>
     <div className="ikoni"
     
