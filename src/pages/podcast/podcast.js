@@ -22,7 +22,7 @@ function podcast() {
     <h2>Available episodes</h2>
     <div className="dg">
         
-        <b>Eps 1-Its about time</b>
+        <b>Eps 1-Its about t</b>
         <p>#pizzes eps1 <span>3 days ago</span></p>
         <audio controls>
   <source src="horse.ogg" type="audio/ogg"/>
