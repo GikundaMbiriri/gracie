@@ -107,17 +107,7 @@ class Tiny extends React.Component {
                       onChange={this.onTopicChange}
                     />
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="recipient-name" >
-                      Topic:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="recipient-name"
-                      onChange={this.onTopicChange}
-                    />
-                  </div>
+             
                   <div className="form-group">
                     <label htmlFor="message-text" className="col-form-label">
                       catchy statement:

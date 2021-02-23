@@ -14,6 +14,8 @@
     "aos": "^2.3.4",
     "aos-animations": "0.0.7",
     "axios": "^0.18.0",
+    "browserslist": "^4.16.3",
+    "caniuse-lite": "^1.0.30001191",
     "dayjs": "^1.8.31",
     "formik": "^1.5.8",
     "gh-pages": "^3.1.0",
