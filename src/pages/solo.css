@@ -11,6 +11,8 @@
 }
 .pl h2 {
   text-transform: uppercase;
+  font-family: "Newsreader", serif;
+  font-weight: bolder;
 }
 .ff {
   margin-left: 50px;

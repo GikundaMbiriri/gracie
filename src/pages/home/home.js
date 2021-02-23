@@ -11,6 +11,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import { Facebook,Instagram,EmailOutlined } from '@material-ui/icons';
+import { Link } from "react-router-dom";
 
 const Home = (props) => {
   useEffect(() => {
@@ -64,9 +65,9 @@ const Home = (props) => {
 </div>  </div>
 
 <div className="te">
-  <Facebook style={{fontSize:"40px",marginRight:"10px"}}/>
-  <Instagram style={{fontSize:"40px",marginRight:"10px"}}/>
-  <EmailOutlined style={{fontSize:"40px",marginRight:"10px"}}/>
+  <Link style={{textDecoration:"none", color:"black"}}><Facebook style={{fontSize:"40px",marginRight:"10px"}}/></Link>
+  <Link><Instagram style={{fontSize:"40px",marginRight:"10px"}}/></Link>
+  <Link><EmailOutlined style={{fontSize:"40px",marginRight:"10px"}}/></Link>
 </div>
 
          </div>

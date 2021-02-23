@@ -41,6 +41,15 @@
   .kali {
     height: 100vh;
   }
+  .cont {
+    text-align: left;
+  }
+  .dg {
+    margin-left: 20px;
+  }
+  .kl {
+    height: 700px;
+  }
   .hj {
     margin-left: 100px;
   }

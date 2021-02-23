@@ -9,8 +9,20 @@ import Subscribe from '../components/subscribe/Subscribe'
 import Latest from "../components/latest/Latest"
 import StyledHeader from "../components/StyledHeader"
 import AOS from 'aos';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid'
 import "aos/dist/aos.css";
+const useStyles = makeStyles((theme) => ({
+	root: {
+	  '& > *': {
+		margin: theme.spacing(1),
+		width: '40ch',
+	  },
+	},
+  }));
 const Solo =  (props) => {
+	const classes = useStyles();
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [message,setMessage]=useState('');
@@ -107,34 +119,20 @@ dayjs.extend(relativeTime);
 		<h4>leave a comment</h4>
 		<div >
 			<div>
-				<div className="form-group ">
-					<input className="form-control" onChange={onNameChange} value={name} type="text" placeholder="Your name"/>
-				</div>
-			</div>
-			<div>
-			<div className="form-group">
-    <input type="email" className="form-control" onChange={onEmailChange} value={email} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-
-			</div>
-			<div>
-
-
-			</div>	
-			  {/* <div className="form-group">
-  <input className="form-check-input" type="checkbox" onChange={onSub} value={sub} id="defaultCheck1"/>
-  <label className="form-check-label" for="defaultCheck1">
-    Default checkbox
-  </label>
-</div> */}
-			<div >									
-				<div className="form-group">
-					<textarea className="form-control" onChange={onMessageChange} value={message} required="" placeholder="Your text"></textarea>
-					<input type="checkbox" className="fo" onChange={onSub} value={sub}  checked={sub==="1"}/>
-					notify me via email
-				</div>
-			</div>
+			<form className={classes.root} noValidate autoComplete="off">
+			<Grid container spacing={24}>
+    <Grid item xs={4}>
+			<TextField id="outlined-basic" label="name"   onChange={onNameChange} value={name} variant="outlined" />
+			</Grid>
+			<Grid item xs={4}>
+      <TextField id="outlined-basic" label="Email"  onChange={onEmailChange} value={email} variant="outlined" />
+	  </Grid>
+	  <Grid item xs={4}>
+      <TextField id="outlined-basic" label="comment"  variant="outlined" multiline  onChange={onMessageChange} value={message}
+  rows={4}/></Grid>
+  </Grid>
+    </form>	
+					</div>
 			
 		</div>
 		
@@ -153,7 +151,11 @@ dayjs.extend(relativeTime);
 	  </div>
   </StyledHeader>
 <div className="carrier">
+	<p></p>
+	<br/>
+
 	<div className="pl"><h2>{topic}</h2>
+	
   <div className="greatness" dangerouslySetInnerHTML={{ __html: body }} />
   </div>
 <div className="very"><div className="ff">{success}</div>

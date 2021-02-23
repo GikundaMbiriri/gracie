@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 .Acard-body {
   margin-top: 10px;
   padding-right: 30px;
@@ -18,7 +19,10 @@
 }
 .tran h3 {
   font-style: italic;
-  font-family: "Advent Pro", sans-serif;
+  font-weight: bolder;
+  color: black;
+  font-family: "Lobster", cursive;
+  /* font-family: "Advent Pro", sans-serif; */
 }
 .ikoni {
   display: flex;
