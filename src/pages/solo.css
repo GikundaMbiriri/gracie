@@ -130,11 +130,15 @@
 .carrier {
   display: flex;
   flex-wrap: wrap;
+  width: 100vw;
 }
 
 @media screen and (max-width: 550px) {
   .be-comment {
     width: 90vw;
+  }
+  .carrier {
+    width: 60vw;
   }
   .yt {
     width: 90vw;
