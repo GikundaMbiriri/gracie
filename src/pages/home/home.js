@@ -65,14 +65,16 @@ const Home = (props) => {
 </div>  </div>
 
 <div className="te">
-  <Link style={{textDecoration:"none", color:"black"}}><Facebook style={{fontSize:"40px",marginRight:"10px"}}/></Link>
-  <Link><Instagram style={{fontSize:"40px",marginRight:"10px"}}/></Link>
-  <Link><EmailOutlined style={{fontSize:"40px",marginRight:"10px"}}/></Link>
+  <a style={{textDecoration:"none", color:"black"}} href="https://www.facebook.com/gracey.lovey" ><Facebook style={{fontSize:"40px",marginRight:"10px"}}/></a>
+  <a style={{textDecoration:"none", color:"black"}} href="https://www.instagram.com/_gray.cee/"><Instagram style={{fontSize:"40px",marginRight:"10px"}}/></a>
+  <Link></Link>
+  <a style={{textDecoration:"none", color:"black"}} href=""><EmailOutlined style={{fontSize:"40px",marginRight:"10px"}}/></a>
+
 </div>
 
          </div>
 <div className="ona" data-aos="zoom-in-left">
-<Subscribe />
+<Subscribe  />
 </div>
         </div>
         
@@ -93,7 +95,7 @@ Pizzes is a place. A place where you will experience peace, inspiration, and tru
           ))}{" "}
       </div>
       <div  className="onai" >
-      <Subscribe/>
+      <Subscribe id="1"/>
 </div>
       </div>  </>)
   return (

@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 //import 'react-slideshow-image/dist/styles.css'
 import './Blog.css'
+import {
+  WhatsappShareButton,
+  FacebookShareButton,
+  TwitterShareButton,
+  InstapaperShareButton,
+} from "react-share";
+import ShareSharpIcon from '@material-ui/icons/ShareSharp';
 import { Link } from "react-router-dom";
 import Btn from "./Modal/Index";
 //import { Zoom } from 'react-slideshow-image';
@@ -30,10 +37,17 @@ export class Blog extends Component {
     super(props);
 
     this.state = {
-       like:false
+       like:false,
+        lj:false
     }}
 
+mm=()=>{
+  if(!this.state.lj)
 
+  { this.setState({lj:true})}
+ 
+  this.setState({lj:false})
+}
   likeScream = () => {
 this.props.scream.likeCount++; 
 this.setState({like:true}) };
@@ -62,6 +76,7 @@ this.setState({like:true}) };
         credentials: { name, email },
       },
     } = this.props;
+    
     const kk = `/solo/${blogId}`;
     const inds={
       indicators:false,
@@ -114,8 +129,17 @@ this.setState({like:true}) };
             </MyButton>
             <span>{commentCount} </span>
             </div>
-            <Btn />
+            {/* <Btn /> */}
+            <div className={this.state.lj?'show':'hide'}>
+              hello
             </div>
+            <MyButton tip="share">
+              <WhatsappShareButton url="hero.com">
+              <ShareSharpIcon style={{color:"#a841a3"}} onClick={this.mm}  />
+              </WhatsappShareButton>
+            </MyButton>
+            </div>
+         
   </div>
 </div>
         {/* <Card className={classes.card}>

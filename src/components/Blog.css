@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap");
 .Acard-body {
   margin-top: 10px;
   padding-right: 30px;
 }
-
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
 .card1 {
   width: 270px;
-  height: 300px;
+  height: 305px;
   padding: 5px;
   margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -21,8 +27,9 @@
   font-style: italic;
   font-weight: bolder;
   color: black;
-  font-family: "Lobster", cursive;
+  font-family: "DM Serif Display", serif;
   /* font-family: "Advent Pro", sans-serif; */
+  font-size: 25px;
 }
 .ikoni {
   display: flex;

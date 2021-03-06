@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import './solo.css'
 import relativeTime from "dayjs/plugin/relativeTime";
 import banner from "../images/pic2.jpg";
+import avatar from '../images/avt.jpg';
 import dayjs from 'dayjs';
 import Subscribe from '../components/subscribe/Subscribe'
 import Latest from "../components/latest/Latest"
@@ -16,10 +17,12 @@ import "aos/dist/aos.css";
 const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > *': {
-		margin: theme.spacing(1),
-		width: '40ch',
+		flexGrow: 1,
 	  },
 	},
+	inner:{
+	width:'100%'
+	}
   }));
 const Solo =  (props) => {
 	const classes = useStyles();
@@ -93,7 +96,7 @@ dayjs.extend(relativeTime);
 	<div className="be-comment">
 		<div className="be-img-comment">	
 			<a href="blog-detail-2.html">
-				<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" className="be-ava-comment"/>
+				<img src={avatar} alt="" className="be-ava-comment"/>
 			</a>
 		</div>
 		<div className="be-comment-content">
@@ -120,15 +123,15 @@ dayjs.extend(relativeTime);
 		<div >
 			<div>
 			<form className={classes.root} noValidate autoComplete="off">
-			<Grid container spacing={24}>
-    <Grid item xs={4}>
-			<TextField id="outlined-basic" label="name"   onChange={onNameChange} value={name} variant="outlined" />
+			<Grid container spacing={3}>
+    <Grid item xs={12}>
+			<TextField  item xs={12} className={classes.inner}   label="name"   onChange={onNameChange} value={name} variant="outlined" />
 			</Grid>
-			<Grid item xs={4}>
-      <TextField id="outlined-basic" label="Email"  onChange={onEmailChange} value={email} variant="outlined" />
+			<Grid item xs={12}>
+      <TextField id="outlined-basic" className={classes.inner}   label="Email"  onChange={onEmailChange} value={email} variant="outlined" />
 	  </Grid>
-	  <Grid item xs={4}>
-      <TextField id="outlined-basic" label="comment"  variant="outlined" multiline  onChange={onMessageChange} value={message}
+	  <Grid item xs={12}>
+      <TextField id="outlined-basic" className={classes.inner}  label="comment"  variant="outlined" multiline  onChange={onMessageChange} value={message}
   rows={4}/></Grid>
   </Grid>
     </form>	
