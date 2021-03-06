@@ -30,7 +30,7 @@
 }
 .cont {
   color: white;
-  width: 100vw;
+  width: 98vw;
   text-align: center;
 }
 .dg {
@@ -46,6 +46,7 @@
   }
   .kali {
     height: 100vh;
+    /* width: 96.8vw; */
   }
   .cont {
     text-align: left;

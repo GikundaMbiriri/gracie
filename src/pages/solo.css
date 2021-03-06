@@ -148,8 +148,12 @@
   .carrier {
     width: 60vw;
   }
+  .very {
+    width: 100vw;
+  }
   .yt {
     width: 90vw;
+    margin-left: 0;
   }
   .greatness {
     width: 90vw;

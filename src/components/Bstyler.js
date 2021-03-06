@@ -8,6 +8,7 @@ const StyledHero = styled.div`
   ), url(${(props) => props.img}) center/cover no-repeat;
  
   background-size: 100% 100%;
+  // width:96.7vw
   
   }
 `;

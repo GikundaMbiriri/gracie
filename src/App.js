@@ -109,6 +109,7 @@ const SvgComponent =()=>(
           </div>
         
           </div>
+          <div className="gh">
           <Switch>
             <Route exact path="/" component={home} />
             <Route exact path="/tiny" component={Tiny} />
@@ -121,6 +122,7 @@ const SvgComponent =()=>(
             <Route exact path="/signup" component={signup} />
 
           </Switch>
+          </div>
           <Footer/>
         </Router>
       </Provider>
