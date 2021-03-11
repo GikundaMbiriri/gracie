@@ -1,0 +1,23 @@
+.yes {
+  background-color: blanchedalmond;
+  padding-top: 100px;
+  padding-left: 100px;
+
+  height: 500px;
+}
+.lls {
+  width: 500px;
+}
+@media screen and (max-width: 550px) {
+  .yes {
+    width: 100vw;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 200px;
+    height: auto;
+  }
+  .lls {
+    width: 90vw;
+    margin: auto;
+  }
+}

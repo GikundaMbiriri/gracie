@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Long+Cang&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 .pl {
   width: 50vw;
   margin: auto;
@@ -25,7 +25,7 @@
 .greatness {
   width: 50vw;
   margin: auto;
-  font-weight: lighter;
+  font-family: "DM Sans", sans-serif;
 }
 .fa-paper-plane {
   font-size: 20px;

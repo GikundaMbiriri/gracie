@@ -50,7 +50,7 @@ const Navbar = (props) => {
                   </Link>
                 </li>
                 <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                  <Link className="nav-link" to="/" style={{color:'white'}} >
+                  <Link className="nav-link" to="/contact" style={{color:'white'}} >
                     contact
                   </Link>
                 
@@ -89,7 +89,7 @@ const Navbar = (props) => {
         </div>
                 </li>
               
-          <li><Link  to="/">contact</Link ></li>
+          <li><Link  to="/contact">contact</Link ></li>
         </ul>
 
         <button className={cake?'nav-toggler':'nav-toggler toggler-open'} onClick={()=>setCake(!cake)}>
