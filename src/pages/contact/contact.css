@@ -8,6 +8,12 @@
 .lls {
   width: 500px;
 }
+.mm {
+  padding-top: 10px;
+}
+.po {
+  height: 20px;
+}
 @media screen and (max-width: 550px) {
   .yes {
     width: 100vw;
