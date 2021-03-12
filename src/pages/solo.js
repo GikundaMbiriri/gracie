@@ -147,6 +147,7 @@ dayjs.extend(relativeTime);
   return( <>
   <StyledHeader img={banner} className="banner">
 	  <div className="hey">
+	  <div className="we"/>
 		  <h1 className="tt">{topic}</h1>
 		  <div className="very"><div className="fg"><i className="fa fa-clock-o"></i>
 					{dayjs(createdAt).fromNow()}</div>
@@ -154,8 +155,7 @@ dayjs.extend(relativeTime);
 	  </div>
   </StyledHeader>
 <div className="carrier">
-	<p></p>
-	<br/>
+	<div className="we"/>
 
 	<div className="pl"><h2>{topic}</h2>
 	
