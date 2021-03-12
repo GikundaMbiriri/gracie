@@ -8,7 +8,7 @@ import Bstyler from "../../components/Bstyler";
 import './contact.css';
 function contact() {
     return (
-        <div className=" container yes">
+        <div className="  yes">
            
             <div className="in">
                 <h6>Get in touch_____</h6>
@@ -39,6 +39,7 @@ function contact() {
                 <input className="form-control mm" type="text" placeholder="Default input"/>
                 <div className="po"></div>
 <input className="form-control mm" type="text" placeholder="Default input"/>
+<div className="ddg"/>
                 </div>
                 </div>
 

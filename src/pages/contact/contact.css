@@ -1,12 +1,17 @@
 .yes {
-  background-color: blanchedalmond;
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.563),
+    rgba(243, 7, 137, 0.596)
+  );
   padding-top: 100px;
   padding-left: 100px;
-
-  height: 500px;
 }
 .lls {
   width: 500px;
+}
+.ddg {
+  height: 200px;
 }
 .mm {
   padding-top: 10px;
@@ -19,7 +24,7 @@
     width: 100vw;
     padding-top: 10px;
     padding-left: 10px;
-    margin-bottom: 200px;
+
     height: auto;
   }
   .lls {

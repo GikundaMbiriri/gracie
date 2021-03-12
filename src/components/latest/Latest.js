@@ -12,6 +12,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 //import { Carousel } from 'react-responsive-carousel';
 import CrossfadeImage from 'react-crossfade-image';
 import {
+  WhatsappShareButton,
+  FacebookShareButton,
+  TwitterShareButton,
+  InstapaperShareButton,
+} from "react-share";
+import ShareSharpIcon from '@material-ui/icons/ShareSharp';
+import {
   likeScream,
   unlikeScream,
   getScream,
@@ -115,7 +122,11 @@ this.setState({like:true}) };
             </MyButton>
             <span>{commentCount} </span>
             </div>
-            <Btn />
+            <MyButton tip="share">
+              <WhatsappShareButton url="hero.com">
+              <ShareSharpIcon style={{color:"#a841a3"}} onClick={this.mm}  />
+              </WhatsappShareButton>
+            </MyButton>
 
             </div>
   </div>
