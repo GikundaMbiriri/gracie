@@ -29,7 +29,9 @@
 .greatness {
   width: 50vw;
   margin: auto;
-  font-family: "DM Sans", sans-serif;
+  /* font-family: "DM Sans", sans-serif; */
+  font-family: "DM Serif Display" !important;
+  font-weight: 100px;
 }
 .fa-paper-plane {
   font-size: 20px;
