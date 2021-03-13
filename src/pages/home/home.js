@@ -50,27 +50,29 @@ const Home = (props) => {
           
             className="pm"
           /> */}
-         {/* <div className="pm">
+         <div className="pm">
            <div className="er">
-           <div className="on" >
+           <div className="on" data-aos="zoom-in-left">
            <h1 style={{color:"white"}}>Redefine </h1>
 </div>
-<div className="on" >
+<div className="on" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
            <h1 style={{color:"white"}}>Renew</h1>
 </div>
-<div className="on" >
+<div className="on" data-aos="zoom-in-right">
            <h1 style={{color:"white"}}>Transform</h1>
 </div>  </div>
 
 <div className="te">
   <a style={{textDecoration:"none", color:"black"}} href="https://www.facebook.com/gracey.lovey" ><Facebook style={{fontSize:"40px",marginRight:"10px"}}/></a>
   <a style={{textDecoration:"none", color:"black"}} href="https://www.instagram.com/_gray.cee/"><Instagram style={{fontSize:"40px",marginRight:"10px"}}/></a>
-
+  <Link></Link>
   <a style={{textDecoration:"none", color:"black"}} href=""><EmailOutlined style={{fontSize:"40px",marginRight:"10px"}}/></a>
 
 </div>
 
-         </div> */}
+         </div>
 <div className="ona" data-aos="zoom-in-left">
 <Subscribe  />
 </div>

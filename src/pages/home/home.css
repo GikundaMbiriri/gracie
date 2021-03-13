@@ -4,6 +4,7 @@
   display: flex;
   flex: 1;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 /* .pod {
   background-image: linear-gradient(
@@ -79,6 +80,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 /* .msee {
   margin: 0 auto;
