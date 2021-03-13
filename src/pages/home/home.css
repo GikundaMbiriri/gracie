@@ -29,8 +29,8 @@
   transition: 0.3s linear;
 } */
 .pm {
-  width: 50%;
-  height: 75%;
+  width: 50vw;
+  height: 75vh;
   display: table;
   background: linear-gradient(
       rgba(146, 5, 71, 0.541),

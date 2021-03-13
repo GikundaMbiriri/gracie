@@ -50,7 +50,7 @@ const Home = (props) => {
           
             className="pm"
           /> */}
-         <div className="pm">
+         {/* <div className="pm">
            <div className="er">
            <div className="on" >
            <h1 style={{color:"white"}}>Redefine </h1>
@@ -70,7 +70,7 @@ const Home = (props) => {
 
 </div>
 
-         </div>
+         </div> */}
 <div className="ona" data-aos="zoom-in-left">
 <Subscribe  />
 </div>
