@@ -182,8 +182,11 @@
   .home {
     display: block;
   }
+  .side-img {
+    width: 100%;
+  }
   .pm {
-    width: 96.5vw;
+    width: 100%;
     height: 61vh;
   }
   .msee {
