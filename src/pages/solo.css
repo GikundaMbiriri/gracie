@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+html,body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .pl {
   width: 50vw;
   margin: auto;
