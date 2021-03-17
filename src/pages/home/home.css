@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Long+Cang&display=swap");
+html,body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .home {
   display: flex;
   flex: 1;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 /* .pod {
   background-image: linear-gradient(
@@ -80,7 +83,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 /* .msee {
   margin: 0 auto;

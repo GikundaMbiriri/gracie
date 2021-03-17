@@ -29,6 +29,7 @@ const Solo =  (props) => {
   const [name,setName]=useState('');
   const [email,setEmail]=useState('');
   const [message,setMessage]=useState('');
+  const [value,setValue]=useState(Math.floor(Math.random() * 3) + 1)
   const [sub,setSub]=useState('0')
  const onNameChange = (event) => {
     setName(event.target.value );
@@ -39,6 +40,7 @@ const  onEmailChange = (event) => {
  const onMessageChange = (event) => {
     setMessage(event.target.value );
   };
+  let l;
 const onSub=(event)=>{
 	if(sub==='0'){
 		setSub('1')
@@ -50,20 +52,27 @@ const onSub=(event)=>{
   useEffect( () =>  {
    props.getScream(props.match.params.id);
 
+
   }, [props.scream.comments]);
   useEffect(()=>{
 	  props.getScreams();
+	 
   },[]);
+  console.log("skkkdk")
   useEffect(() => {
 	AOS.init({
 	  duration : 2000
 	});
   }, []);
   const { screams } = props.data;
-
+const pl=Math.floor(Math.random() * 3) + 1
   let success;
+if(l){
+	console.log(l)
+}
+
   if(screams[0]){
-   success=<Latest scream={screams[0]}/>
+   success=<Latest scream={screams[value]}/>
   }
   else{
 	  success=<p>loading</p>
