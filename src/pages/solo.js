@@ -153,7 +153,7 @@ dayjs.extend(relativeTime);
 	</form></>
   }
  
-  return( <>
+  return( <div className="py">
   <StyledHeader img={banner} className="banner">
 	  <div className="hey">
 	  <div className="we"/>
@@ -179,7 +179,7 @@ dayjs.extend(relativeTime);
 {p}  <div>{k}</div>
 </div></div>
 
-  </>);
+  </div>);
 };
 const mapStateToProps = (state) => ({
   scream: state.data.scream,
