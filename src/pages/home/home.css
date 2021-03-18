@@ -37,10 +37,15 @@ html,body{
   height: 75vh;
   display: table;
   background: linear-gradient(
+    rgba(146, 5, 71, 0.541),
+    rgba(218, 127, 173, 0.596)
+  ),
+  url("../../images/Two.jpg");
+  /* background: linear-gradient(
       rgba(146, 5, 71, 0.541),
       rgba(218, 127, 173, 0.596)
     ),
-    url("../../images/download.jpg");
+    url("../../images/pic1.jpg"); */
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;

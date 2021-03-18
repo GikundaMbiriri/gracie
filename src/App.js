@@ -6,7 +6,7 @@ import about1 from './pages/about/about'
 import audio from './pages/podcast/podcast';
 import contact from './pages/contact/contact';
 import logo from './logo.svg'
-
+import Solo1 from "./pages/solo1";
 import Footer from './components/Footer'
 import Tiny from "./pages/tiny";
 import Solo from "./pages/solo";
@@ -114,6 +114,7 @@ const SvgComponent =()=>(
             <Route exact path="/" component={home} />
             <Route exact path="/tiny" component={Tiny} />
             <Route exact path="/solo/:id" component={Solo} />
+            <Route exact path="/solo1/:id" component={Solo1} />
             <Route exact path="/about1" component={about} />
             <Route exact path="/about" component={about1} />
             <Route exact path='/contact' component={contact}/>

@@ -67,7 +67,7 @@ this.setState({like:true}) };
         credentials: { name, email },
       },
     } = this.props;
-    const kk = `/solo/${blogId}`;
+    const kk = `/solo1/${blogId}`;
     const inds={
       indicators:false,
       arrows:false,

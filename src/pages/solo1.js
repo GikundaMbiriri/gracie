@@ -72,7 +72,7 @@ if(l){
 }
 
   if(screams[0]){
-   success=<Latest scream={screams[0]}/>
+   success=<Latest scream={screams[value]}/>
   }
   else{
 	  success=<p>loading</p>
