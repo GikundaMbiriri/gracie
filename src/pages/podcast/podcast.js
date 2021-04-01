@@ -4,6 +4,7 @@ import picha from "../../images/download.jpg";
 import grace from '../../images/grace.jpeg';
 import Bstyler from "../../components/Bstyler";
 import './podcast.css';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 function podcast() {
     return (
         <div>
@@ -12,6 +13,13 @@ function podcast() {
                
                
                </Styler>  */}
+               <div className="subs"> <AnchorLink href="#1">
+<button className="btn btn-primary">
+    subscribe
+</button>
+               </AnchorLink></div>
+              
+               
                <div className="kali">
                    <div className="pic">
                        <h2 className="hj">Pizzes Podcast</h2>
@@ -61,7 +69,10 @@ function podcast() {
 </div>
                </Bstyler>
 
+
+               <div id="1">djsj</div>
         </div>
+       
     )
 }
 

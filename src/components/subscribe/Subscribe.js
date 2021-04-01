@@ -17,6 +17,8 @@ function Subscribe() {
 
         subscribe(info).finally(() => {
             setTimeout(() => setLoading(false), 0)
+        }).catch(()=>{
+            setTimeout(() => setLoading(false), 0)
         })
         
         

@@ -33,6 +33,9 @@
   width: 98vw;
   text-align: center;
 }
+.subs {
+  background-color: black;
+}
 .dg {
   width: 40vw;
   margin: auto;
@@ -46,6 +49,7 @@
   }
   .kali {
     height: 100vh;
+    width: 100%;
     /* width: 96.8vw; */
   }
   .cont {
@@ -56,6 +60,7 @@
   }
   .kl {
     height: 700px;
+    width: 100%;
   }
   .hj {
     margin-top: 200px;

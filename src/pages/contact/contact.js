@@ -15,7 +15,7 @@ function contact() {
                 
                 <div className="lls">
                 <h5>Contact Us</h5>
-                <p >Whether you have a question about features, , pricing, enquiries, or anything else, our team is ready to answer all your questions</p>
+                <p >For any questions about content,service providers or any other inquiries,Reach out to us via:</p>
                 <div className="iconi"></div>
                 <div className="row">
                     <div className="col">
