@@ -128,19 +128,19 @@ dayjs.extend(relativeTime);
   let p=null;
   if(body){
     p=<>  <form className="form-block yt">
-		<h4>leave a comment</h4>
+		<h4>Leave a Comment</h4>
 		<div >
 			<div>
 			<form className={classes.root} noValidate autoComplete="off">
 			<Grid container spacing={3}>
     <Grid item xs={12}>
-			<TextField  item xs={12} className={classes.inner}   label="name"   onChange={onNameChange} value={name} variant="outlined" />
+			<TextField  item xs={12} className={classes.inner}   label="Name"   onChange={onNameChange} value={name} variant="outlined" />
 			</Grid>
 			<Grid item xs={12}>
       <TextField id="outlined-basic" className={classes.inner}   label="Email"  onChange={onEmailChange} value={email} variant="outlined" />
 	  </Grid>
 	  <Grid item xs={12}>
-      <TextField id="outlined-basic" className={classes.inner}  label="comment"  variant="outlined" multiline  onChange={onMessageChange} value={message}
+      <TextField id="outlined-basic" className={classes.inner}  label="Comment"  variant="outlined" multiline  onChange={onMessageChange} value={message}
   rows={4}/></Grid>
   </Grid>
     </form>	
@@ -148,7 +148,7 @@ dayjs.extend(relativeTime);
 			
 		</div>
 		
-		<button className="btn btn-primary" onClick={handleSubmit}>submit</button>
+		<button className="btn btn-primary" onClick={handleSubmit}>Submit</button>
 
 	</form></>
   }
