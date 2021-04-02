@@ -49,35 +49,39 @@ const onSub=(event)=>{
 		setSub('0')
 	}
 }
+const { screams } = props.data;
+useEffect(()=>{
+	props.getScreams();
+   
+},[]);
+let success;
+if(screams[0]){
+	success=<Latest scream={screams[0]}/>
+   }
+   else{
+	   success=<p>loading</p>
+   
+   }
   useEffect( () =>  {
    props.getScream(props.match.params.id);
 
 
   }, [props.scream.comments]);
-  useEffect(()=>{
-	  props.getScreams();
-	 
-  },[]);
+
   console.log("skkkdk")
   useEffect(() => {
 	AOS.init({
 	  duration : 2000
 	});
   }, []);
-  const { screams } = props.data;
+ 
 const pl=Math.floor(Math.random() * 3) + 1
-  let success;
+ 
 if(l){
 	console.log(l)
 }
 
-  if(screams[0]){
-   success=<Latest scream={screams[0]}/>
-  }
-  else{
-	  success=<p>loading</p>
-  
-  }
+
 const  handleSubmit=(event)=>{
 	event.preventDefault()
 

@@ -3,6 +3,7 @@ import Styler from '../../components/PodcastStyle';
 import picha from "../../images/download.jpg";
 import grace from '../../images/grace.jpeg';
 import Bstyler from "../../components/Bstyler";
+import Subscribe from '../../components/subscribe/Subscribe'
 import './podcast.css';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 function podcast() {
@@ -70,7 +71,7 @@ function podcast() {
                </Bstyler>
 
 
-               <div id="1">djsj</div>
+               <div id="1"><Subscribe  /></div>
         </div>
        
     )
