@@ -9,6 +9,7 @@ import {
   LOADING_UI,
   POST_SCREAM,
   SET_SCREAM,
+  SET_EMAILS,
   STOP_LOADING_UI,
   CLEAR_DATA,SEND_COMMENT
 } from "../types";
@@ -50,6 +51,23 @@ export const getScreams = () => (dispatch) => {
     .catch((err) => {
       dispatch({
         type: SET_SCREAMS,
+        payload: {},
+      });
+    });
+};
+export const getEmails = () => (dispatch) => {
+  dispatch({ type: LOADING_DATA });
+  axios
+    .get("https://us-central1-zigzag-d2feb.cloudfunctions.net/api/emails")
+    .then((res) => {
+      dispatch({
+        type: SET_EMAILS,
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      dispatch({
+        type: SET_EMAILS,
         payload: {},
       });
     });

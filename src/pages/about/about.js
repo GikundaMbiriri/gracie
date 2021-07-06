@@ -107,7 +107,7 @@ For my listening audience, I gatchyu! I will keep uploading audio or podcast ver
     <button className="send">Send</button>
   </div>
 </div> */}
-<div className="details">
+{/* <div className="details">
 
 find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
 
@@ -115,8 +115,8 @@ find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
 <p>website developer <a href="#">mgikunda</a></p>
 <p>blog photographer <a href="#">pizzes photography</a></p>
 <p>blog graphic designer <a href="#">ingenious</a></p>
-</div>
-<form className="form-block yt">
+</div> */}
+{/* <form className="form-block yt">
 		<h4>leave a comment</h4>
 		<div >
 			<div>
@@ -139,7 +139,7 @@ find us on <FacebookIcon /> <InstagramIcon/> <EmailIcon/>
 		</div>
 		<button className="btn btn-primary" onClick={handleSubmit}>submit</button>
 
-	</form>
+	</form> */}
         </div>
     )
 }

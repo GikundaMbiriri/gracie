@@ -33,7 +33,7 @@ const Navbar = (props) => {
                   </Link>
                 </li>
        
-                {email == "gracemwende101@gmail.com"  || "petermbiriri8957@gmail.com"? (
+                {/* {email == "gracemwende101@gmail.com"  || "petermbiriri8957@gmail.com"? (
                   <>
                     <li className="nav-item" >
                       <Link className="nav-link" to="/tiny" style={{color:'white'}}>
@@ -43,7 +43,7 @@ const Navbar = (props) => {
                   </>
                 ) : (
                   <></>
-                )}
+                )} */}
                 <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                   <Link className="nav-link" to="/audio" style={{color:'white'}}>
                     Podcast
@@ -51,7 +51,7 @@ const Navbar = (props) => {
                 </li>
                 <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                   <Link className="nav-link" to="/contact" style={{color:'white'}} >
-                    contact
+                    Contact
                   </Link>
                 
                 </li>

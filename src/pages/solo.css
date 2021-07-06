@@ -86,7 +86,6 @@ body {
   color: #ffffff;
   display: table;
   width: 80vw;
-  margin-left: 20px;
 }
 .very {
   display: table-row;
@@ -161,8 +160,11 @@ body {
   .carrier {
     width: 60vw;
   }
-  .very {
+  .hey {
     width: 100vw;
+  }
+  .very {
+    width: 80vw;
   }
   .yt {
     width: 90vw;

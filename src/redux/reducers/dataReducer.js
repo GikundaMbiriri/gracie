@@ -8,11 +8,13 @@ import {
   POST_SCREAM,
   SET_SCREAM,
   STOP_LOADING_UI,
+  SET_EMAILS,
   CLEAR_DATA,SEND_COMMENT
 } from "../types";
 const initialState = {
   screams: {},
   scream: {},
+  emails:{},
   loading: false,
 };
 export default function (state = initialState, action) {
@@ -29,6 +31,13 @@ export default function (state = initialState, action) {
         loading: false,
         scream:{}
       };
+      case SET_EMAILS:
+        return {
+          ...state,
+       emails:action.payload,
+        loading: false,
+     
+        }
     case SET_SCREAM:
       return {
         ...state,

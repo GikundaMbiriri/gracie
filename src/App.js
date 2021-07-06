@@ -1,6 +1,8 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import home from "./pages/home/home";
+import admin from "./pages/Admin/admin";
+import editor from "./pages/Admin/editor";
 import about from './pages/about1/about'
 import about1 from './pages/about/about'
 import audio from './pages/podcast/podcast';
@@ -117,6 +119,7 @@ const SvgComponent =()=>(
             <Route exact path="/solo1/:id" component={Solo1} />
             <Route exact path="/about1" component={about} />
             <Route exact path="/about" component={about1} />
+            <Route exact path="/admin/panel/:id" component={editor} />
             <Route exact path='/contact' component={contact}/>
             <Route exact path='/audio' component={audio}/>
             <Route exact path="/login" component={login} />

@@ -14,11 +14,11 @@ function podcast() {
                
                
                </Styler>  */}
-               <div className="subs"> <AnchorLink href="#1">
+               {/* <div className="subs"> <AnchorLink href="#1">
 <button className="btn btn-primary">
     subscribe
 </button>
-               </AnchorLink></div>
+               </AnchorLink></div> */}
               
                
                <div className="kali">
@@ -35,7 +35,7 @@ function podcast() {
         <p>#pizzes eps1 <span>3 days ago</span></p>
         <audio controls>
   <source src="horse.ogg" type="audio/ogg"/>
-  <source src="horse.mp3" type="audio/mpeg"/>
+  <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/Paul_Clement_-_Amenifanyia_Amani_(official_music_video)(128k).mp3?alt=media&token=954660cc-24ae-4723-a1f2-64eaa7d7c66d" type="audio/mpeg"/>
   Your browser does not support the audio element.
 </audio>
     </div>
@@ -45,7 +45,7 @@ function podcast() {
         <p>#pizzes eps1 <span>3 days ago</span></p>
         <audio controls>
   <source src="horse.ogg" type="audio/ogg"/>
-  <source src="horse.mp3" type="audio/mpeg"/>
+  <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/Paul_Clement_-_Amenifanyia_Amani_(official_music_video)(128k).mp3?alt=media&token=954660cc-24ae-4723-a1f2-64eaa7d7c66d" type="audio/mpeg"/>
   Your browser does not support the audio element.
 </audio>
     </div>  <div className="dg">

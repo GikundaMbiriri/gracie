@@ -66,7 +66,7 @@ if(screams[0]){
    props.getScream(props.match.params.id);
 
 
-  }, [props.scream.comments]);
+  }, []);
 
   console.log("skkkdk")
   useEffect(() => {
@@ -172,7 +172,7 @@ dayjs.extend(relativeTime);
 
 	<div className="pl"><h2>{topic}</h2>
 	
-  <div className="greatnes" dangerouslySetInnerHTML={{ __html: body }} />
+  <div className="greatness" dangerouslySetInnerHTML={{ __html: body }} />
   </div>
 <div className="very"><div className="ff">{success}</div>
 <Subscribe/>
