@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Long+Cang&display=swap");
-html,body{
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -37,10 +38,10 @@ html,body{
   height: 75vh;
   display: table;
   background: linear-gradient(
-    rgba(146, 5, 71, 0.541),
-    rgba(218, 127, 173, 0.596)
-  ),
-  url("../../images/Two.jpg");
+      rgba(146, 5, 71, 0.541),
+      rgba(218, 127, 173, 0.596)
+    ),
+    url("../../images/mpi.jpeg");
   /* background: linear-gradient(
       rgba(146, 5, 71, 0.541),
       rgba(218, 127, 173, 0.596)

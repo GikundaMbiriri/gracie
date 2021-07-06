@@ -34,39 +34,12 @@ function podcast() {
         <b>Eps 1-Its about t</b>
         <p>#pizzes eps1 <span>3 days ago</span></p>
         <audio controls>
-  <source src="horse.ogg" type="audio/ogg"/>
-  <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/Paul_Clement_-_Amenifanyia_Amani_(official_music_video)(128k).mp3?alt=media&token=954660cc-24ae-4723-a1f2-64eaa7d7c66d" type="audio/mpeg"/>
+
+  <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/grahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.mpeg?alt=media&token=643a5195-6bbd-488d-9b77-ade2fd4af145" type="audio/mpeg"/>
   Your browser does not support the audio element.
 </audio>
     </div>
-    <div className="dg">
-        
-        <b>Eps 1-Its about time</b>
-        <p>#pizzes eps1 <span>3 days ago</span></p>
-        <audio controls>
-  <source src="horse.ogg" type="audio/ogg"/>
-  <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/Paul_Clement_-_Amenifanyia_Amani_(official_music_video)(128k).mp3?alt=media&token=954660cc-24ae-4723-a1f2-64eaa7d7c66d" type="audio/mpeg"/>
-  Your browser does not support the audio element.
-</audio>
-    </div>  <div className="dg">
-        
-        <b>Eps 1-Its about time</b>
-        <p>#pizzes eps1 <span>3 days ago</span></p>
-        <audio controls>
-  <source src="horse.ogg" type="audio/ogg"/>
-  <source src="horse.mp3" type="audio/mpeg"/>
-  Your browser does not support the audio element.
-</audio>
-    </div>  <div className="dg">
-        
-        <b>Eps 1-Its about time</b>
-        <p>#pizzes eps1 <span>3 days ago</span></p>
-        <audio controls>
-  <source src="horse.ogg" type="audio/ogg"/>
-  <source src="horse.mp3" type="audio/mpeg"/>
-  Your browser does not support the audio element.
-</audio>
-    </div>
+    
 </div>
                </Bstyler>
 

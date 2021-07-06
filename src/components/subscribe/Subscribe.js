@@ -2,7 +2,9 @@ import React,{useState} from 'react'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import './subscribe.css'
 import {subscribe} from '../../redux/actions/dataAction'
+import {  useToasts ,ToastProvider} from 'react-toast-notifications';
 function Subscribe() {
+    const { addToast } = useToasts();
     const [emei,setEmei]=useState('')
     const [loading, setLoading] = useState(false);
     const handleClick=(event)=>{
@@ -17,14 +19,17 @@ function Subscribe() {
 
         subscribe(info).finally(() => {
             setTimeout(() => setLoading(false), 0)
+           addToast('YOU ARE NOW SUBSCRIBED',{appearance:'success',autoDismissTimeout:5000,autoDismiss:true,});
         }).catch(()=>{
             setTimeout(() => setLoading(false), 0)
+            addToast('There was a problem', { appearance: 'error' });
         })
         
         
     }
    //subscribe popup
     return (
+        <ToastProvider>
         <div>
             <div id="container">
 	<h5>Ready to rise to Greatness?</h5>
@@ -40,6 +45,7 @@ function Subscribe() {
 	</form>
 </div>
         </div>
+        </ToastProvider>
     )
 }
 

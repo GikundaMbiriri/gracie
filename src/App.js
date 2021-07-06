@@ -24,7 +24,7 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import axios from "axios";
 import './App.css'
-
+import {ToastProvider} from 'react-toast-notifications';
 axios.defaults.baseURL =
   "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/";
   const theme = createMuiTheme({
@@ -111,6 +111,7 @@ const SvgComponent =()=>(
           </div>
         
           </div>
+          <ToastProvider>
           <div className="gh">
           <Switch>
             <Route exact path="/" component={home} />
@@ -127,6 +128,7 @@ const SvgComponent =()=>(
 
           </Switch>
           </div>
+          </ToastProvider>
           <Footer/>
         </Router>
       </Provider>
