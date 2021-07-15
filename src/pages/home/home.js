@@ -10,7 +10,7 @@ import { getScreams } from "../../redux/actions/dataAction";
 import ScrollAnimation from "react-animate-on-scroll";
 import AOS from 'aos';
 import "aos/dist/aos.css";
-import { Facebook,Instagram,EmailOutlined } from '@material-ui/icons';
+import { Facebook,Instagram,EmailOutlined,Twitter } from '@material-ui/icons';
 import { Link } from "react-router-dom";
 
 const Home = (props) => {
@@ -65,10 +65,10 @@ const Home = (props) => {
 </div>  </div>
 
 <div className="te">
-  <a style={{textDecoration:"none", color:"black"}} href="https://www.facebook.com/gracey.lovey" ><Facebook style={{fontSize:"40px",marginRight:"10px"}}/></a>
-  <a style={{textDecoration:"none", color:"black"}} href="https://www.instagram.com/_gray.cee/"><Instagram style={{fontSize:"40px",marginRight:"10px"}}/></a>
+  <a style={{textDecoration:"none", color:"black"}} href="https://www.facebook.com/profile.php?id=100064840879936" ><Facebook style={{fontSize:"40px",marginRight:"10px"}}/></a>
+  <a style={{textDecoration:"none", color:"black"}} href="https://www.instagram.com/pizzes._/?utm_medium=copy_link"><Instagram style={{fontSize:"40px",marginRight:"10px"}}/></a>
   <Link></Link>
-  <a style={{textDecoration:"none", color:"black"}} href=""><EmailOutlined style={{fontSize:"40px",marginRight:"10px"}}/></a>
+  <a style={{textDecoration:"none", color:"black"}} href="https://twitter.com/MissKanyasya?s=08"><Twitter style={{fontSize:"40px",marginRight:"10px"}}/></a>
 
 </div>
 

@@ -24,63 +24,64 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import axios from "axios";
 import './App.css'
-import {ToastProvider} from 'react-toast-notifications';
+import { ToastProvider } from 'react-toast-notifications';
 axios.defaults.baseURL =
   "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/";
-  const theme = createMuiTheme({
-    palette: {
-      light: "#33c9dc",
-      main: "#00bxd4",
-      dark: "#008394",
-      contrastText: "#fff",
+const theme = createMuiTheme({
+  palette: {
+    light: "#33c9dc",
+    main: "#00bxd4",
+    dark: "#008394",
+    contrastText: "#fff",
+  },
+  secondary: {
+    light: "#ff6333",
+    main: "#ff3d00",
+    dark: "b22a00",
+    contrastText: "#fff",
+  },
+  spread: {
+    typography: {
+      useNextVariants: true,
     },
-    secondary: {
-      light: "#ff6333",
-      main: "#ff3d00",
-      dark: "b22a00",
-      contrastText: "#fff",
+    form: {
+      textAlign: "center",
     },
-    spread: {
-      typography: {
-        useNextVariants: true,
-      },
-      form: {
-        textAlign: "center",
-      },
-      image: {
-        margin: "20px auto 20px auto",
-        width: 40,
-        height:40,
-        borderRadius:"50%"
+    image: {
+      margin: "20px auto 20px auto",
+      width: 40,
+      height: 40,
+      borderRadius: "50%"
 
-      },
-      pageTitle: {
-        margin: "10px auto 10px auto",
-      },
-      TextField: {
-        margin: "10px auto 10px auto",
-      },
-      button: {
-        marginTop: 20,
-        position: "relative",
-      },
-      customError: {
-        color: "red",
-        fontSize: "0.8rem",
-        marginTop: 10,
-      },
-      progress: {
-        position: "absolute",
-      },
     },
-  });
+    pageTitle: {
+      margin: "10px auto 10px auto",
+    },
+    TextField: {
+      margin: "10px auto 10px auto",
+    },
+    button: {
+      marginTop: 20,
+      position: "relative",
+    },
+    customError: {
+      color: "red",
+      fontSize: "0.8rem",
+      marginTop: 10,
+    },
+    progress: {
+      position: "absolute",
+    },
+  },
+});
 function App() {
-  
-const SvgComponent =()=>(
-  <object data={logo} width={150} height={150}>
+
+  const SvgComponent = () =>
+
+  (<object data={logo} width={150} height={150}>
     APP logo svg
-  </object>
-)
+  </object>)
+
 
 
   const token = localStorage.FBIdToken;
@@ -99,37 +100,37 @@ const SvgComponent =()=>(
     <>
       <Provider store={store}>
         <Router>
-<div className="hatari">
+          <div className="hatari">
 
-<div className="mzii">
-         
-         <div className="svg" >
-           <SvgComponent/>
-           {/* <img src={logo1}/> */}
-         </div>
-         <Navbar />
-          </div>
-        
+            <div className="mzii">
+
+              <div className="svg" >
+                <SvgComponent />
+                {/* <img src={logo1}/> */}
+              </div>
+              <Navbar />
+            </div>
+
           </div>
           <ToastProvider>
-          <div className="gh">
-          <Switch>
-            <Route exact path="/" component={home} />
-            <Route exact path="/tiny" component={Tiny} />
-            <Route exact path="/solo/:id" component={Solo} />
-            <Route exact path="/solo1/:id" component={Solo1} />
-            <Route exact path="/about1" component={about} />
-            <Route exact path="/about" component={about1} />
-            <Route exact path="/admin/panel/:id" component={editor} />
-            <Route exact path='/contact' component={contact}/>
-            <Route exact path='/audio' component={audio}/>
-            <Route exact path="/login" component={login} />
-            <Route exact path="/signup" component={signup} />
+            <div className="gh">
+              <Switch>
+                <Route exact path="/" component={home} />
+                <Route exact path="/tiny" component={Tiny} />
+                <Route exact path="/solo/:id" component={Solo} />
+                <Route exact path="/solo1/:id" component={Solo1} />
+                <Route exact path="/about1" component={about} />
+                <Route exact path="/about" component={about1} />
+                <Route exact path="/admin/panel/:id" component={editor} />
+                <Route exact path='/contact' component={contact} />
+                <Route exact path='/audio' component={audio} />
+                <Route exact path="/login" component={login} />
+                <Route exact path="/signup" component={signup} />
 
-          </Switch>
-          </div>
+              </Switch>
+            </div>
           </ToastProvider>
-          <Footer/>
+          <Footer />
         </Router>
       </Provider>
     </>

@@ -46,6 +46,7 @@
 @media screen and (max-width: 550px) {
   .pic {
     width: 90vw;
+    height: 70vh;
   }
   .kali {
     height: 100vh;
