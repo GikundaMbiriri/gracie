@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import homepage from "../../images/home1.jpg";
+import homepage1 from "../../images/home.jpeg";
+import homepage2 from "../../images/home2.jpeg";
+import homepage3 from "../../images/home3.jpeg";
+import homepage4 from "../../images/home4.jpeg";
 import './home.css'
 import PropTypes from "prop-types";
 import Blog from "../../components/Blog";
@@ -9,6 +13,8 @@ import { connect } from "react-redux";
 import { getScreams } from "../../redux/actions/dataAction";
 import ScrollAnimation from "react-animate-on-scroll";
 import AOS from 'aos';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import "aos/dist/aos.css";
 import { Facebook,Instagram,EmailOutlined,Twitter } from '@material-ui/icons';
 import { Link } from "react-router-dom";
@@ -40,17 +46,34 @@ const Home = (props) => {
   <div className="cover">
 <div className="loader">  <div className="circle"></div>
   <div className="circle"></div>
-  <div className="circle"></div></div></div></>):(<> <div className="home">
-        <div className="side-img" >
+  <div className="circle"></div></div></div></>):(<> 
+  <div className="home">
+        <div className="side-img">
+          <div className="pm">
+          <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}>
+                <div>
+                    <img src={homepage1}/>
+                  
+                </div>
+                <div>
+                    <img src={homepage2}/>
+                  
+                </div>
+                <div>
+                    <img src={homepage3}/>
+                  
+                </div>
+                <div>
+                    <img src={homepage4}/>
+                  
+                </div>
+               
+            </Carousel>
+          </div>
           {/* <h1>remove margin top</h1> */}
           
-          {/* <img
-            src={homepage}
-            alt="homie"
-          
-            className="pm"
-          /> */}
-         <div className="pm">
+         
+         {/* <div className="pm">
            <div className="er">
            <div className="on" data-aos="zoom-in-left">
            <h1 style={{color:"white"}}>Redefine </h1>
@@ -72,7 +95,7 @@ const Home = (props) => {
 
 </div>
 
-         </div>
+         </div> */}
 <div className="ona" data-aos="zoom-in-left">
 <Subscribe  />
 </div>
