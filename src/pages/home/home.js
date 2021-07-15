@@ -50,7 +50,17 @@ const Home = (props) => {
   <div className="home">
         <div className="side-img">
           <div className="pm">
-          <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}>
+
+    
+
+
+
+
+
+
+
+
+           <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false}>
                 <div>
                     <img src={homepage1}/>
                   
@@ -68,7 +78,7 @@ const Home = (props) => {
                   
                 </div>
                
-            </Carousel>
+            </Carousel> 
           </div>
           {/* <h1>remove margin top</h1> */}
           

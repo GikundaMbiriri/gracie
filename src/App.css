@@ -97,5 +97,7 @@ body {
     align-items: flex-start;
   }
   .svg {
+    height: 70px;
+    width: 70px;
   }
 }

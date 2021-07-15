@@ -81,6 +81,11 @@ function App() {
   (<object data={logo} width={150} height={150}>
     APP logo svg
   </object>)
+  const SvgComponen = () =>
+
+  (<object data={logo} width={70} height={70}>
+    APP logo svg
+  </object>)
 
 
 
@@ -105,7 +110,8 @@ function App() {
             <div className="mzii">
 
               <div className="svg" >
-                <SvgComponent />
+                {window.innerWidth>550?<SvgComponent />:<SvgComponen />}
+                
                 {/* <img src={logo1}/> */}
               </div>
               <Navbar />
