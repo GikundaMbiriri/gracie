@@ -184,6 +184,9 @@ body {
   margin-right: 0px;
   justify-content: space-evenly;
 }
+.pm {
+  z-index: -1;
+}
 @media screen and (max-width: 550px) {
   .home {
     display: block;
@@ -194,6 +197,7 @@ body {
   .pm {
     width: 100%;
     height: 61vh;
+    z-index: -1;
   }
   .pm img {
     height: 61vh;
