@@ -12,7 +12,7 @@ export const loginUser = (userData, history) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
     .post(
-      "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/login",
+      "https://us-central1-pizzes-2f536.cloudfunctions.net/api/login",
       userData
     )
     .then((res) => {

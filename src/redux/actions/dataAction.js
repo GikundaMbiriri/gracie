@@ -18,7 +18,7 @@ export const getScream = (blogId) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
     .get(
-      `https://us-central1-zigzag-d2feb.cloudfunctions.net/api/one/${blogId}`
+      `https://us-central1-pizzes-2f536.cloudfunctions.net/api/one/${blogId}`
     )
     .then((res) => {
       dispatch({ type: SET_SCREAM, payload: res.data });
@@ -30,7 +30,7 @@ export const Comment = (commentData,blogId) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
     .post(
-      `https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog/${blogId}/comment`,commentData
+      `https://us-central1-pizzes-2f536.cloudfunctions.net/api/blog/${blogId}/comment`,commentData
     )
     .then((res) => {
       dispatch({ type: SEND_COMMENT, payload: res.data });
@@ -41,7 +41,7 @@ export const Comment = (commentData,blogId) => (dispatch) => {
 export const getScreams = () => (dispatch) => {
   dispatch({ type: LOADING_DATA });
   axios
-    .get("https://us-central1-zigzag-d2feb.cloudfunctions.net/api/screams")
+    .get("https://us-central1-pizzes-2f536.cloudfunctions.net/api/screams")
     .then((res) => {
       dispatch({
         type: SET_SCREAMS,
@@ -58,7 +58,7 @@ export const getScreams = () => (dispatch) => {
 export const getEmails = () => (dispatch) => {
   dispatch({ type: LOADING_DATA });
   axios
-    .get("https://us-central1-zigzag-d2feb.cloudfunctions.net/api/emails")
+    .get("https://us-central1-pizzes-2f536.cloudfunctions.net/api/emails")
     .then((res) => {
       dispatch({
         type: SET_EMAILS,
@@ -76,7 +76,7 @@ export const getEmails = () => (dispatch) => {
 export const likeScream = (blogId) => (dispatch) => {
   axios
     .get(
-      `https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog/${blogId}/like`
+      `https://us-central1-pizzes-2f536.cloudfunctions.net/api/blog/${blogId}/like`
     )
     .then((res) => {
       dispatch({
@@ -89,7 +89,7 @@ export const likeScream = (blogId) => (dispatch) => {
 };
 export const unlikeScream = (blogId) => (dispatch) => {
   axios
-    .get(`https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog/${blogId}/unlike`)
+    .get(`https://us-central1-pizzes-2f536.cloudfunctions.net/api/blog/${blogId}/unlike`)
     .then((res) => {
       dispatch({
         type: UNLIKE_SCREAM,
@@ -103,7 +103,7 @@ export const unlikeScream = (blogId) => (dispatch) => {
 export const deleteScream = (blogId) => (dispatch) => {
   axios
     .delete(
-      `https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog/${blogId}`
+      `https://us-central1-pizzes-2f536.cloudfunctions.net/api/blog/${blogId}`
     )
     .then(() => {
       dispatch({ type: DELETE_SCREAM, payload: blogId });
@@ -125,7 +125,7 @@ export const postScream = (newScream) => (dispatch) => {
   dispatch({ type: LOADING_UI });
   axios
     .post(
-      "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog",
+      "https://us-central1-pizzes-2f536.cloudfunctions.net/api/blog",
       newScream
     )
     .then((res) => {
