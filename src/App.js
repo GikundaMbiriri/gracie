@@ -26,7 +26,7 @@ import axios from "axios";
 import './App.css'
 import { ToastProvider } from 'react-toast-notifications';
 axios.defaults.baseURL =
-  "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/";
+  "https://us-central1-pizzes-2f536.cloudfunctions.net/api/";
 const theme = createMuiTheme({
   palette: {
     light: "#33c9dc",
