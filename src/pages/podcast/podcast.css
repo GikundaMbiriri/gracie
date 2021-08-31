@@ -4,6 +4,14 @@
   height: 1000px;
   width: 98.8vw;
 }
+.add {
+  background-color: #eee;
+  padding: 30px;
+}
+.add h2 {
+  text-align: center;
+  color: rgba(201, 31, 172, 0.69);
+}
 .kali {
   width: 98.8vw;
   height: 50vw;

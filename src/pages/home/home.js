@@ -4,7 +4,11 @@ import homepage1 from "../../images/home.jpeg";
 import homepage2 from "../../images/home2.jpeg";
 import homepage3 from "../../images/home3.jpeg";
 import homepage4 from "../../images/home4.jpeg";
+import latest from '../../images/latest001.jpeg'
+import latest1 from '../../images/latest002.jpeg'
+import latest2 from '../../images/latest003.jpeg'
 import './home.css'
+import Slider from "react-slick";
 import PropTypes from "prop-types";
 import Blog from "../../components/Blog";
 import Latest from "../../components/latest/Latest";
@@ -20,6 +24,14 @@ import { Facebook,Instagram,EmailOutlined,Twitter } from '@material-ui/icons';
 import { Link } from "react-router-dom";
 
 const Home = (props) => {
+  const settings = {
+    dots: true,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   useEffect(() => {
     props.getScreams();
   }, []);
@@ -54,27 +66,40 @@ const Home = (props) => {
     
 
 
+{/* 
 
-
-
+          <Slider {...settings}>
+          <div>
+          <img src={homepage1}/>
+          </div>
+          <div>
+          <img src={homepage2}/>
+          </div>
+          <div>
+          <img src={homepage3}/>
+          </div>
+          <div>
+          <img src={homepage4}/>
+          </div>
+        </Slider> */}
 
 
 
            <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false}>
                 <div>
-                    <img src={homepage1}/>
+                    <img src={latest} style={{objectFit:'cover'}}/>
                   
                 </div>
                 <div>
-                    <img src={homepage2}/>
+                    <img src={homepage2} style={{objectFit:'cover'}} />
                   
                 </div>
                 <div>
-                    <img src={homepage3}/>
+                    <img style={{objectFit:'cover'}} src={latest1}/>
                   
                 </div>
                 <div>
-                    <img src={homepage4}/>
+                    <img  style={{objectFit:'cover'}} src={latest2}/>
                   
                 </div>
                

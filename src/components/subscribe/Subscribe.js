@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import './subscribe.css'
 import {subscribe} from '../../redux/actions/dataAction'
+import emailjs from 'emailjs-com';
 import {  useToasts ,ToastProvider} from 'react-toast-notifications';
 function Subscribe() {
     const { addToast } = useToasts();
@@ -19,6 +20,8 @@ function Subscribe() {
 
         subscribe(info).finally(() => {
             setTimeout(() => setLoading(false), 0)
+            emailjs.sendForm('service_6b0drai', 'template_aezob69', event.target, 'user_ssflsnLfCXLbhunoR8lgP')
+
            addToast('YOU ARE NOW SUBSCRIBED',{appearance:'success',autoDismissTimeout:5000,autoDismiss:true,});
         }).catch(()=>{
             setTimeout(() => setLoading(false), 0)

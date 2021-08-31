@@ -5,6 +5,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import emailjs from 'emailjs-com';
+import{ Link} from 'react-router-dom';
 import Bstyler from "../../components/Bstyler";
 import './contact.css';
 
@@ -34,16 +35,25 @@ return  (
                     <div className="iconi"></div>
                     <div className="row">
                         <div className="col">
-                        <TwitterIcon/>
+                          <a href="https://twitter.com/MissKanyasya?s=08">
+                            <TwitterIcon/>
+                          </a>
+                        
                         </div>
                         <div className="col">
-                        <FacebookIcon/>
+                            <a href="https://www.facebook.com/profile.php?id=100064840879936">
+                            <FacebookIcon/>
+                            </a>
+                        
                         </div>
                         <div className="col">
                             <YouTubeIcon/>
                         </div>
                         <div className="col">
-                           <InstagramIcon/>
+                            <a href="https://instagram.com/pizzes._?utm_medium=copy_link">
+                            <InstagramIcon/>
+                            </a>
+                          
                         </div>
                     </div>
                     <h2>Send me a message</h2>
