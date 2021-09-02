@@ -20,7 +20,7 @@ function Subscribe() {
 
         subscribe(info).finally(() => {
             setTimeout(() => setLoading(false), 0)
-            emailjs.sendForm('service_6b0drai', 'template_aezob69', event.target, 'user_ssflsnLfCXLbhunoR8lgP')
+            // emailjs.sendForm('service_6b0drai', 'template_aezob69', event.target, 'user_ssflsnLfCXLbhunoR8lgP')
 
            addToast('YOU ARE NOW SUBSCRIBED',{appearance:'success',autoDismissTimeout:5000,autoDismiss:true,});
         }).catch(()=>{

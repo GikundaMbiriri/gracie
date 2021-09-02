@@ -20,6 +20,9 @@
   font-size: 1.3em;
   border-radius: 1rem;
 }
+.dropdown-item {
+  font-family: "Barlow Condensed", sans-serif;
+}
 .dropdown-toggle {
   font-family: "Barlow Condensed", sans-serif;
 }

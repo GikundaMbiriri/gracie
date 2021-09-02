@@ -101,15 +101,15 @@ let k= <div className="cover">
   <div className="circle"></div></div></div>
 dayjs.extend(relativeTime);
 
-  const {body,createdAt,topic,loading,comments}=props.scream;
-  
+  const {body,createdAt,topic,loading,comments,image}=props.scream;
+  console.log('these images'+image);
   if(comments){
      k= comments.map((comment)=>
    ( <>
 	<div className="be-comment">
 		<div className="be-img-comment">	
 			<a href="blog-detail-2.html">
-				<img src={avatar} alt="" className="be-ava-comment"/>
+				<img src={image[0]} alt="" className="be-ava-comment"/>
 			</a>
 		</div>
 		<div className="be-comment-content">
@@ -158,7 +158,7 @@ dayjs.extend(relativeTime);
   }
  
   return( <div className="py">
-  <StyledHeader img={banner} className="banner">
+  <StyledHeader img={image?image[0]:banner} className="banner">
 	  <div className="hey">
 	  <div className="we"/>
 		  <h1 className="tt">{topic}</h1>

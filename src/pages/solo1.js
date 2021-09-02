@@ -97,8 +97,8 @@ let k= <div className="cover">
   <div className="circle"></div></div></div>
 dayjs.extend(relativeTime);
 
-  const {body,createdAt,topic,loading,comments}=props.scream;
-  
+  const {body,createdAt,topic,loading,comments,image}=props.scream;
+  console.log(image);
   if(comments){
      k= comments.map((comment)=>
    ( <>
@@ -154,7 +154,7 @@ dayjs.extend(relativeTime);
   }
  
   return( <>
-  <StyledHeader img={banner} className="banner">
+  <StyledHeader img={image?image[0]:banner} className="banner">
 	  <div className="hey">
 	  <div className="we"/>
 		  <h1 className="tt">{topic}</h1>
