@@ -42,8 +42,8 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
     <h2>Available episodes</h2>
     <div className="dg">
         
-        <b>Eps 1-Its About Time.</b>
-        <p>#pizzes eps1 <span>3 days ago</span></p>
+        <b>Episode 1-It's About Time.</b>
+        <p></p>
         <audio controls>
 
   <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/grahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.mpeg?alt=media&token=643a5195-6bbd-488d-9b77-ade2fd4af145" type="audio/mpeg"/>

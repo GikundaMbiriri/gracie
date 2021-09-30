@@ -8,6 +8,7 @@ import avatar from '../images/avt.jpg';
 import dayjs from 'dayjs';
 import Subscribe from '../components/subscribe/Subscribe'
 import Latest from "../components/latest/Latest"
+import Blog from "../components/Blog"
 import StyledHeader from "../components/StyledHeader"
 import AOS from 'aos';
 import { makeStyles } from '@material-ui/core/styles';
@@ -72,7 +73,11 @@ if(l){
 }
 
   if(screams[0]){
-   success=<Latest scream={screams[value]}/>
+   success=
+   <>
+   <h2 className="ldd">Previous Article</h2>
+   <Blog scream={screams[value]}/>
+   </>
   }
   else{
 	  success=<p>loading</p>
@@ -154,7 +159,7 @@ dayjs.extend(relativeTime);
   }
  
   return( <>
-  <StyledHeader img={image?image[0]:banner} className="banner">
+  {image?<> <StyledHeader img={image?image[0]:banner} className="banner">
 	  <div className="hey">
 	  <div className="we"/>
 		  <h1 className="tt">{topic}</h1>
@@ -177,7 +182,11 @@ dayjs.extend(relativeTime);
 
 <div>  <div className="be-comment-block">
 {p}  <div>{k}</div>
-</div></div>
+</div></div></>:<div className="cover">
+<div className="loader">  <div className="circle"></div>
+  <div className="circle"></div>
+  <div className="circle"></div></div></div>}
+ 
 
   </>);
 };

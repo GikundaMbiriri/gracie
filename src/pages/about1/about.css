@@ -14,8 +14,14 @@
   font-weight: 600;
   font-size: 18px;
 }
+.ggf {
+  padding-left: 70px;
+}
 @media screen and (max-width: 550px) {
   .aboutB {
     width: 80vw;
+  }
+  .ggf {
+    padding-left: 0;
   }
 }

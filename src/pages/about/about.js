@@ -47,7 +47,9 @@ const  onEmailChange = (event) => {
 
 let success;
 if(screams[0]){
- success=<Latest scream={screams[0]}/>
+ success=<div className="ggf">
+   	 <h2 className="ldd">Latest Article</h2>
+   <Latest scream={screams[0]}/></div>
 }
 else{
     success=<p>loading</p>

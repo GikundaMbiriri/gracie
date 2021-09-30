@@ -56,7 +56,9 @@ useEffect(()=>{
 },[]);
 let success;
 if(screams[0]){
-	success=<Latest scream={screams[0]}/>
+	success=<>
+	 <h2 className="ldd">Latest Article</h2>
+	<Latest scream={screams[0]}/></>
    }
    else{
 	   success=<p>loading</p>
@@ -156,34 +158,39 @@ dayjs.extend(relativeTime);
 
 	</form></>
   }
+ const kll=image?<div className="py">
+
+ <StyledHeader img={image?image[0]:banner} className="banner">
+	 <div className="hey">
+	 <div className="we"/>
+		 <h1 className="tt">{topic}</h1>
+		 <div className="very"><div className="fg"><i className="fa fa-clock-o"></i>
+				   {dayjs(createdAt).fromNow()}</div>
+				   </div>
+	 </div>
+ </StyledHeader>
+ <div className="carrier">
+   <div className="we"/>
  
-  return( <div className="py">
-  <StyledHeader img={image?image[0]:banner} className="banner">
-	  <div className="hey">
-	  <div className="we"/>
-		  <h1 className="tt">{topic}</h1>
-		  <div className="very"><div className="fg"><i className="fa fa-clock-o"></i>
-					{dayjs(createdAt).fromNow()}</div>
-					</div>
-	  </div>
-  </StyledHeader>
-<div className="carrier">
-	<div className="we"/>
-
-	<div className="pl"><h2>{topic}</h2>
-	
-  <div className="greatness" dangerouslySetInnerHTML={{ __html: body }} />
-  </div>
-<div className="very"><div className="ff">{success}</div>
-<Subscribe/>
-</div>
-</div>
-
-<div>  <div className="be-comment-block">
-{p}  <div>{k}</div>
-</div></div>
-
-  </div>);
+   <div className="pl"><h2>{topic}</h2>
+   
+ <div className="greatness" dangerouslySetInnerHTML={{ __html: body }} />
+ </div>
+ <div className="very"><div className="ff">{success}</div>
+ <Subscribe/>
+ </div>
+ </div>
+ 
+ <div>  <div className="be-comment-block">
+ {p}  <div>{k}</div>
+ </div></div>
+ 
+ </div>:<>{k}</>
+  return(
+	  
+	 <>
+	{kll}
+	</>);
 };
 const mapStateToProps = (state) => ({
   scream: state.data.scream,

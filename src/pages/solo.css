@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 html,
 body {
   max-width: 100%;
@@ -152,7 +153,13 @@ body {
   flex-wrap: wrap;
   width: 100vw;
 }
-
+.ldd {
+  font-size: 32px;
+  font-family: "Italianno", cursive;
+  font-style: italic;
+  padding-left: 10px;
+  font-weight: 570;
+}
 @media screen and (max-width: 550px) {
   .be-comment {
     width: 90vw;

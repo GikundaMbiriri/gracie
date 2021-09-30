@@ -36,16 +36,9 @@ body {
 .pm {
   width: 50vw;
   height: 75vh;
-  display: table;
-
-  /* background: linear-gradient(
-      rgba(146, 5, 71, 0.541),
-      rgba(218, 127, 173, 0.596)
-    ),
-    url("../../images/pic1.jpg"); */
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+.pm img {
+  height: 75vh;
 }
 .er {
   display: table-cell;
@@ -184,9 +177,9 @@ body {
   margin-right: 0px;
   justify-content: space-evenly;
 }
-.pm {
+/* .pm {
   z-index: -1;
-}
+} */
 @media screen and (max-width: 550px) {
   .home {
     display: block;

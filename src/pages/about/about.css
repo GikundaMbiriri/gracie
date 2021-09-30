@@ -183,7 +183,9 @@ label {
   color: #2b2b2b;
   outline: none;
 }
-
+.ggf {
+  padding-left: 70px;
+}
 @media screen and (max-width: 550px) {
   .outside {
     display: block;
@@ -193,5 +195,8 @@ label {
   }
   .con {
     width: 25em;
+  }
+  .ggf {
+    padding-left: 0px;
   }
 }

@@ -114,7 +114,7 @@ export const subscribe =  (info) =>  {
   console.log(info)
   return axios
     .post(
-      "/subscribe",
+      "/pizza",
       info,
     ).then((res)=>{
       console.log(res.data)

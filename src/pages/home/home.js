@@ -66,28 +66,13 @@ const Home = (props) => {
     
 
 
-{/* 
 
-          <Slider {...settings}>
-          <div>
-          <img src={homepage1}/>
-          </div>
-          <div>
-          <img src={homepage2}/>
-          </div>
-          <div>
-          <img src={homepage3}/>
-          </div>
-          <div>
-          <img src={homepage4}/>
-          </div>
-        </Slider> */}
 
 
 
            <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false}>
                 <div>
-                    <img src={latest} style={{objectFit:'cover'}}/>
+                    <img src={latest} style={{objectFit:'cover'}} />
                   
                 </div>
                 <div>
@@ -99,7 +84,7 @@ const Home = (props) => {
                   
                 </div>
                 <div>
-                    <img  style={{objectFit:'cover'}} src={latest2}/>
+                    <img style={{objectFit:'cover'}}  src={latest2}/>
                   
                 </div>
                
