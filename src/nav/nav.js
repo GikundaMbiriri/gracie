@@ -59,8 +59,8 @@ const Navbar = (props) => {
                   <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" 
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{color:'white'}}>About us</Link>
                      <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about" >About Pizzes</Link></div>
-        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about1" >About blogger</Link></div>
+        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about" style={{color:"white"}} >About Pizzes</Link></div>
+        <div data-toggle="collapse" data-target=".navbar-collapse.show">  <Link className="dropdown-item" to="/about1" style={{color:"white"}} >About blogger</Link></div>
 
         </div>
                 </li>

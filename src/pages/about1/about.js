@@ -66,10 +66,18 @@ else{
                 <h2  >About Blogger</h2> 
 <div className="tr"   >
 <p>
-Grace Mwende Kanyasya is a phenomenal lady, who is known to be a hub of value, skill and resource.  She is a creative and inspirational writer, a communication and public relations professional, a project and event planner, an entrepreneur, a radio show host, and a digital media marketer. She has written for the Weekly Zag blog, The Tunda digital article page and is currently the main writer here at the PIZZES content page. She continues to strive to achieve her life mission, which is to create impactful and transformational content and forums that work towards shifting a generation to the next level of greatness, and to achieving the  best version of themselves.
+Grace Mwende Kanyasya is a phenomenal lady, who is known to be a hub of value, 
+skill and resource.  She is a creative and inspirational writer, a communication
+ and public relations professional, a project and event planner, an entrepreneur,
+  a radio show host, and a digital creator. She has written for the Weekly Zag blog, 
+  The Tunda digital article page and is currently the main writer here at the PIZZES content page.
+   She continues to strive to achieve her life mission, which is to create impactful and
+    transformational content and forums that work towards shifting a generation to the next level
+     of greatness, and to achieving the  best version of themselves.
 </p>
 <p>
-A Welcome to Pizzes! A place where we re-define, renew, and transform people, mindsets, and lives into greatness.
+A warm Welcome to Pizzes! A place where we re-define, renew, and transform people, 
+mindsets, and lives into greatness.
 </p>
 </div>
 </div>

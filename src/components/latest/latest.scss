@@ -3,7 +3,16 @@
 
   padding-right: 30px;
 }
-
+.gds {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.psa {
+  font-size: 22px;
+  color: #a841a3;
+}
 .car {
   width: 270px;
   height: 300px;

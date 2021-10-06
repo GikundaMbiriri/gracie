@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 //import 'react-slideshow-image/dist/styles.css'
 import './Blog.css'
+import { AiFillFacebook,AiFillTwitterCircle,AiOutlineInstagram,AiOutlineMail,AiOutlineWhatsApp } from 'react-icons/ai'
+import {FaTelegramPlane} from 'react-icons/fa'
 import {
   WhatsappShareButton,
   FacebookShareButton,
   TwitterShareButton,
-  InstapaperShareButton,
+  EmailShareButton,
+  TelegramShareButton,
 } from "react-share";
 import ShareSharpIcon from '@material-ui/icons/ShareSharp';
 import { Link } from "react-router-dom";
+import Modal from 'react-modal';
 import Btn from "./Modal/Index";
 //import { Zoom } from 'react-slideshow-image';
 import dayjs from "dayjs";
@@ -32,15 +36,33 @@ import DeleteScream from "./DeleteScream";
 import Rotation from 'react-rotation'
 import AOS from 'aos';
 import "aos/dist/aos.css";
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    width:'80vw',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 export class Blog extends Component {
   constructor(props){
     super(props);
 
     this.state = {
        like:false,
-        lj:false
+        lj:false,
+        isOpen:false
     }}
-
+openModal=()=>{
+  this.setState({isOpen:true})
+  console.log(this.state.isOpen);
+}
+closeModal=()=>{
+  this.setState({isOpen:false})
+}
 mm=()=>{
   if(!this.state.lj)
 
@@ -78,6 +100,7 @@ this.setState({like:true}) };
     } = this.props;
     
     const kk = `/solo/${blogId}`;
+    const k = `pizzes.co.ke/#/solo/${blogId}`;
     const inds={
       indicators:false,
       arrows:false,
@@ -134,10 +157,39 @@ this.setState({like:true}) };
               hello
             </div>
             <MyButton tip="share">
-              <WhatsappShareButton url="hero.com">
-              <ShareSharpIcon style={{color:"#a841a3"}} onClick={this.mm}  />
-              </WhatsappShareButton>
+             
+              <ShareSharpIcon style={{color:"#a841a3"}} onClick={this.openModal}  />
+              
+              
             </MyButton>
+            <Modal
+        isOpen={this.state.isOpen}
+      
+        onRequestClose={this.closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+        
+      >
+<div>
+  <h6>Share this article </h6>
+  <div className="gds">
+  <WhatsappShareButton url={k}>
+    <AiOutlineWhatsApp className="psa"/>
+  </WhatsappShareButton>
+  <TwitterShareButton url={k}>
+    <AiFillTwitterCircle className="psa"/>
+  </TwitterShareButton>
+  < TelegramShareButton url={k}>
+    <FaTelegramPlane className="psa"/>
+  </ TelegramShareButton>
+  <FacebookShareButton url={k}>
+    <AiFillFacebook className="psa"/>
+  </FacebookShareButton>
+ 
+  </div>
+</div>
+
+      </Modal>
             </div>
          
   </div>

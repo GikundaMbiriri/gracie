@@ -11,6 +11,16 @@
 .show {
   display: block;
 }
+.gds {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.psa {
+  font-size: 22px;
+  color: #a841a3;
+}
 .card1 {
   width: 270px;
   height: 305px;

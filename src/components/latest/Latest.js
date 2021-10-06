@@ -1,5 +1,14 @@
 import React, { Component } from "react";
 //import 'react-slideshow-image/dist/styles.css'
+import { AiFillFacebook,AiFillTwitterCircle,AiOutlineInstagram,AiOutlineMail,AiOutlineWhatsApp } from 'react-icons/ai'
+import {FaTelegramPlane} from 'react-icons/fa'
+import {
+  WhatsappShareButton,
+  FacebookShareButton,
+  TwitterShareButton,
+  EmailShareButton,
+  TelegramShareButton,
+} from "react-share";
 import './latest.scss'
 import { Link } from "react-router-dom";
 import Btn from "../Modal/Index";
@@ -11,13 +20,9 @@ import { IconButton, Tooltip } from "@material-ui/core";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 //import { Carousel } from 'react-responsive-carousel';
 import CrossfadeImage from 'react-crossfade-image';
-import {
-  WhatsappShareButton,
-  FacebookShareButton,
-  TwitterShareButton,
-  InstapaperShareButton,
-} from "react-share";
+
 import ShareSharpIcon from '@material-ui/icons/ShareSharp';
+import Modal from 'react-modal';
 import {
   likeScream,
   unlikeScream,
@@ -30,15 +35,33 @@ import Favorite from "@material-ui/icons/Favorite";
 import relativeTime from "dayjs/plugin/relativeTime";
 import DeleteScream from "../DeleteScream";
 import Rotation from 'react-rotation'
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    width:'80vw',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 export class Latest extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-       like:false
+       like:false,
+       isOpen:false
     }}
 
-
+    openModal=()=>{
+      this.setState({isOpen:true})
+      console.log(this.state.isOpen);
+    }
+    closeModal=()=>{
+      this.setState({isOpen:false})
+    }
   likeScream = () => {
 this.props.scream.likeCount++; 
 this.setState({like:true}) };
@@ -68,6 +91,8 @@ this.setState({like:true}) };
       },
     } = this.props;
     const kk = `/solo1/${blogId}`;
+    const k = `pizzes.co.ke/#/solo1/${blogId}`;
+
     const inds={
       indicators:false,
       arrows:false,
@@ -123,10 +148,39 @@ this.setState({like:true}) };
             <span>{commentCount} </span>
             </div>
             <MyButton tip="share">
-              <WhatsappShareButton url="hero.com">
-              <ShareSharpIcon style={{color:"#a841a3"}} onClick={this.mm}  />
-              </WhatsappShareButton>
-            </MyButton>
+             
+             <ShareSharpIcon style={{color:"#a841a3"}} onClick={this.openModal}  />
+             
+             
+           </MyButton>
+           <Modal
+       isOpen={this.state.isOpen}
+     
+       onRequestClose={this.closeModal}
+       style={customStyles}
+       contentLabel="Example Modal"
+       
+     >
+<div>
+ <h6>Share this article </h6>
+ <div className="gds">
+ <WhatsappShareButton url={k}>
+   <AiOutlineWhatsApp className="psa"/>
+ </WhatsappShareButton>
+ <TwitterShareButton url={k}>
+   <AiFillTwitterCircle className="psa"/>
+ </TwitterShareButton>
+ < TelegramShareButton url={k}>
+   <FaTelegramPlane className="psa"/>
+ </ TelegramShareButton>
+ <FacebookShareButton url={k}>
+   <AiFillFacebook className="psa"/>
+ </FacebookShareButton>
+
+ </div>
+</div>
+
+     </Modal>
 
             </div>
   </div>
