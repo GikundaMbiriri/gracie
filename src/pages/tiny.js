@@ -25,7 +25,7 @@ class Tiny extends React.Component {
       console.log(variables);
       axios
         .post(
-          "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/blog",
+          "https://us-central1-pizzes-2f536.cloudfunctions.net/api/blog",
           variables
         )
         .then((response) => {
@@ -57,7 +57,7 @@ class Tiny extends React.Component {
 
     axios
       .post(
-        "https://us-central1-zigzag-d2feb.cloudfunctions.net/api/upload",
+        "https://us-central1-pizzes-2f536.cloudfunctions.net/api/upload",
         formData
       )
       .then((response) => {
