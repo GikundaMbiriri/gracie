@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 //import { TwitterIcon} from '@material-ui/icons';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import YouTubeIcon from '@material-ui/icons/YouTube';
+
 import InstagramIcon from '@material-ui/icons/Instagram';
 import ReactWhatsapp from 'react-whatsapp';
 import emailjs from 'emailjs-com';
@@ -68,8 +68,9 @@ return  (
                         
                         </div>
                         <div className="col">
+                            jjrf
                         <ReactWhatsapp number="0758462107" message="Hello World!!!" />
-                            <YouTubeIcon/>
+                           
                         </div>
                         <div className="col">
                             <a href="https://instagram.com/pizzes._?utm_medium=copy_link">
