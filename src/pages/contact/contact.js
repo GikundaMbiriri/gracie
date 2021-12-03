@@ -69,9 +69,10 @@ return  (
                         
                         </div>
                         <div className="col">
+                        
+                        <ReactWhatsapp number="+254758462107" message="Hello World!!!" >
                         <WhatsAppIcon />
-                        <ReactWhatsapp number="0758462107" message="Hello World!!!" />
-                           
+                        </ReactWhatsapp>
                         </div>
                         <div className="col">
                             <a href="https://instagram.com/pizzes._?utm_medium=copy_link">
