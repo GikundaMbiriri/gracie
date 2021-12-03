@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 //import { TwitterIcon} from '@material-ui/icons';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
-
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import ReactWhatsapp from 'react-whatsapp';
 import emailjs from 'emailjs-com';
@@ -11,6 +11,7 @@ import Bstyler from "../../components/Bstyler";
 import axios from "axios";
 import {  useToasts ,ToastProvider} from 'react-toast-notifications';
 import './contact.css';
+import { AiOutlineWhatsApp } from 'react-icons/ai'
 
 
 
@@ -68,7 +69,7 @@ return  (
                         
                         </div>
                         <div className="col">
-                            jjrf
+                        <WhatsAppIcon />
                         <ReactWhatsapp number="0758462107" message="Hello World!!!" />
                            
                         </div>
