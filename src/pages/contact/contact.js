@@ -70,7 +70,7 @@ return  (
                         </div>
                         <div className="col">
                         
-                        <ReactWhatsapp number="+254758462107" message="Hello World!!!" >
+                        <ReactWhatsapp number="+254758462107" className="dd" message="Hello World!!!" >
                         <WhatsAppIcon />
                         </ReactWhatsapp>
                         </div>
