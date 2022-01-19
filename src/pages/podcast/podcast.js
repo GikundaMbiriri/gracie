@@ -42,11 +42,11 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
     <h2>Available episodes</h2>
     <div className="dg">
         
-        <b>Episode 1-It's About Time.</b>
+        <b>Episode 1-Your Secret Place</b>
         <p></p>
         <audio controls>
 
-  <source src="https://firebasestorage.googleapis.com/v0/b/pizzes-2f536.appspot.com/o/pod.mpeg?alt=media&token=b1a63c5b-5856-44c4-8b3d-cd7f55708c50"/>
+  <source src="https://firebasestorage.googleapis.com/v0/b/pizzes-2f536.appspot.com/o/SECRET%20PLACE%20PODCAST%201(1).mp4?alt=media&token=fcc0d75d-7908-4547-8b39-da269b5a25c4"/>
   Your browser does not support the audio element.
 </audio>
     </div>
