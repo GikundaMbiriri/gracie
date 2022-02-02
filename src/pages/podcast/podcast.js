@@ -40,7 +40,7 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
                <Bstyler className="kl" img={grace}>
 <div className="cont">
     <h2>Available episodes</h2>
-    <div className="dg">
+<div className="dg">
         
         <b>Episode 1-Uncover.</b>
         <p></p>
@@ -52,11 +52,11 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
     </div>
     <div className="dg">
         
-        <b>Episode 2-It's About Time.</b>
+        <b>Episode 2-Your Secret Place</b>
         <p></p>
         <audio controls>
 
-  <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/grahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.mpeg?alt=media&token=643a5195-6bbd-488d-9b77-ade2fd4af145" type="audio/mpeg"/>
+  <source src="https://firebasestorage.googleapis.com/v0/b/pizzes-2f536.appspot.com/o/SECRET%20PLACE%20PODCAST%201(1).mp4?alt=media&token=fcc0d75d-7908-4547-8b39-da269b5a25c4"/>
   Your browser does not support the audio element.
 </audio>
     </div>
