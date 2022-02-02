@@ -42,11 +42,21 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
     <h2>Available episodes</h2>
     <div className="dg">
         
-        <b>Episode 1-Your Secret Place</b>
+        <b>Episode 1-Uncover.</b>
         <p></p>
         <audio controls>
 
-  <source src="https://firebasestorage.googleapis.com/v0/b/pizzes-2f536.appspot.com/o/SECRET%20PLACE%20PODCAST%201(1).mp4?alt=media&token=fcc0d75d-7908-4547-8b39-da269b5a25c4"/>
+  <source src="https://firebasestorage.googleapis.com/v0/b/pizzes-2f536.appspot.com/o/UNCOVER%20PODCAST.mp4?alt=media&token=e3cca35f-aec8-4f66-af28-ff9fb39aec0e" type="audio/mpeg"/>
+  Your browser does not support the audio element.
+</audio>
+    </div>
+    <div className="dg">
+        
+        <b>Episode 2-It's About Time.</b>
+        <p></p>
+        <audio controls>
+
+  <source src="https://firebasestorage.googleapis.com/v0/b/zigzag-d2feb.appspot.com/o/grahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.mpeg?alt=media&token=643a5195-6bbd-488d-9b77-ade2fd4af145" type="audio/mpeg"/>
   Your browser does not support the audio element.
 </audio>
     </div>
