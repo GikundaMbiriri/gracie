@@ -42,7 +42,7 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
     <h2>Available episodes</h2>
 <div className="dg">
         
-        <b>Episode 1-Uncover.</b>
+        <b>Episode 2-Uncover.</b>
         <p></p>
         <audio controls>
 
@@ -52,7 +52,7 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
     </div>
     <div className="dg">
         
-        <b>Episode 2-Your Secret Place</b>
+        <b>Episode 1-Your Secret Place</b>
         <p></p>
         <audio controls>
 
