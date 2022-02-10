@@ -4,7 +4,7 @@ import homepage1 from "../../images/home.jpeg";
 import homepage2 from "../../images/home2.jpeg";
 import homepage3 from "../../images/home3.jpeg";
 import homepage4 from "../../images/home4.jpeg";
-import front from '../../images/front.jpeg';
+import front from '../../images/front.jpg';
 import latest from '../../images/latest001.jpeg'
 import latest1 from '../../images/latest002.jpeg'
 import latest2 from '../../images/latest003.jpeg'
