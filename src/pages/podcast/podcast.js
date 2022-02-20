@@ -40,6 +40,16 @@ We get to hear the minds, voices and opinions of our readers, on the issues and 
                <Bstyler className="kl" img={grace}>
 <div className="cont">
     <h2>Available episodes</h2>
+    <div className="dg">
+        
+        <b>Red and Complete (a valentines edition)</b>
+        <p></p>
+        <audio controls>
+
+  <source src="https://firebasestorage.googleapis.com/v0/b/pizzes-2f536.appspot.com/o/RED%20AND%20COMPLETE%20PODCAST.mp4?alt=media&token=281654ed-cd30-464c-bc62-b0aea9a56f5e" type="audio/mpeg"/>
+  Your browser does not support the audio element.
+</audio>
+    </div>
 <div className="dg">
         
         <b>Episode 2-Uncover.</b>
