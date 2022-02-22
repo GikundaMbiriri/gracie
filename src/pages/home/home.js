@@ -72,7 +72,10 @@ const Home = (props) => {
 
 
            <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false}>
-         
+           <div>
+                    <img src={front} style={{objectFit:'cover'}} />
+                  
+                </div>
                 <div>
                     <img src={latest} style={{objectFit:'cover'}} />
                   
