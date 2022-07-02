@@ -9,16 +9,6 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 function podcast() {
     return (
         <div>
-           {/* <Styler className="kali" img={picha}>
-               <h3>here we go</h3>
-               
-               
-               </Styler>  */}
-               {/* <div className="subs"> <AnchorLink href="#1">
-<button className="btn btn-primary">
-    subscribe
-</button>
-               </AnchorLink></div> */}
               
                
                <div className="kali">
@@ -26,17 +16,7 @@ function podcast() {
                        <h2 className="hj">Pizzes Podcast</h2>
                    </div>
                </div>
-               {/* <div className="add">
-                   <h2>Pizzes Podcast</h2>
-                   <p>
-                   Where we bring the pizzes written content to life! Renew Re-define Transform.
-Pizzes podcast page is an inspirational platform,linked to the pizzes blog,  where we conduct extended discussions,
-  debates, and listen to the verbal  opinions of our readers concerning the written content posted on the  Pizzes blog page. 
-We get to hear the minds, voices and opinions of our readers, on the issues and topics that we write about,
- on the pizzes blog page. We also get to hear real life personal stories of readers of the Pizzes blog,
-  and how they relate with the written content on our blog page. Here is where we bring the written words to life
-                   </p>
-               </div> */}
+            
                <Bstyler className="kl" img={grace}>
 <div className="cont">
     <h2>Available episodes</h2>

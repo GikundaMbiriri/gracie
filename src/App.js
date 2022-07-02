@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import TagManager from "react-gtm-module";
 import home from "./pages/home/home";
 import admin from "./pages/Admin/admin";
 import editor from "./pages/Admin/editor";
-import about from './pages/about1/about'
-import about1 from './pages/about/about'
-import audio from './pages/podcast/podcast';
-import contact from './pages/contact/contact';
-import logo from './logo.svg'
+import about from "./pages/about1/about";
+import about1 from "./pages/about/about";
+import audio from "./pages/podcast/podcast";
+import contact from "./pages/contact/contact";
+import logo from "./logo.svg";
 import Solo1 from "./pages/solo1";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 import Tiny from "./pages/tiny";
 import Solo from "./pages/solo";
 import login from "./pages/login";
@@ -23,8 +24,8 @@ import { logoutUser, getUserData } from "./redux/actions/userAction";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import axios from "axios";
-import './App.css'
-import { ToastProvider } from 'react-toast-notifications';
+import "./App.css";
+import { ToastProvider } from "react-toast-notifications";
 axios.defaults.baseURL =
   "https://us-central1-pizzes-2f536.cloudfunctions.net/api/";
 const theme = createMuiTheme({
@@ -51,8 +52,7 @@ const theme = createMuiTheme({
       margin: "20px auto 20px auto",
       width: 40,
       height: 40,
-      borderRadius: "50%"
-
+      borderRadius: "50%",
     },
     pageTitle: {
       margin: "10px auto 10px auto",
@@ -75,19 +75,19 @@ const theme = createMuiTheme({
   },
 });
 function App() {
-
-  const SvgComponent = () =>
-
-  (<object data={logo} width={150} height={150}>
-    APP logo svg
-  </object>)
-  const SvgComponen = () =>
-
-  (<object data={logo} width={70} height={70}>
-    APP logo svg
-  </object>)
-
-
+  useEffect(() => {
+    TagManager.initialize({ gtmId: "GTM-PK6BDFR" });
+  }, []);
+  const SvgComponent = () => (
+    <object data={logo} width={150} height={150}>
+      APP logo svg
+    </object>
+  );
+  const SvgComponen = () => (
+    <object data={logo} width={70} height={70}>
+      APP logo svg
+    </object>
+  );
 
   const token = localStorage.FBIdToken;
   if (token) {
@@ -106,17 +106,14 @@ function App() {
       <Provider store={store}>
         <Router>
           <div className="hatari">
-
             <div className="mzii">
+              <div className="svg">
+                {window.innerWidth > 550 ? <SvgComponent /> : <SvgComponen />}
 
-              <div className="svg" >
-                {window.innerWidth>550?<SvgComponent />:<SvgComponen />}
-                
                 {/* <img src={logo1}/> */}
               </div>
               <Navbar />
             </div>
-
           </div>
           <ToastProvider>
             <div className="gh">
@@ -128,11 +125,10 @@ function App() {
                 <Route exact path="/about1" component={about} />
                 <Route exact path="/about" component={about1} />
                 <Route exact path="/admin/panel/:id" component={editor} />
-                <Route exact path='/contact' component={contact} />
-                <Route exact path='/audio' component={audio} />
+                <Route exact path="/contact" component={contact} />
+                <Route exact path="/audio" component={audio} />
                 <Route exact path="/login" component={login} />
                 <Route exact path="/signup" component={signup} />
-
               </Switch>
             </div>
           </ToastProvider>
